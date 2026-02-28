@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <!-- Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--Hamburger knap css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="hamburger.js"></script>
+    <title>About Me</title>
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav tabindex="0" class="grid-nav">
+        <a href="index.html" class="nav-logo">
+            <div>
+                <h4>MADS EMMERTSEN</h4>
+            </div>
+        </a>
+
+        <div class="nav-portfolio">
+            <p><a href="index.html">Portfolio</a></p>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="cs-aware.html">CS-Aware</a></li>
+                    <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+                    <li><a href="motostore.html">Motostore</a></li>
+                    <li><a href="property-advice.html">Property Advice</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-about">
+            <p><a href="about.html">About me</a></p>
+        </div>
+        <!--Hamburger knap-->
+        <button class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <!--Navigation-->
+    <!-- Dropdown for phone -->
+    <div class="links show" id="mobileNav">
+        <ul>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="cs-aware.html">CS-Aware</a></li>
+            <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+            <li><a href="motostore.html">Motostore</a></li>
+            <li><a href="property-advice.html">Property Advice</a></li>
+            <li><a href="about.html">About me</a></li>
+        </ul>
+    </div>
+    <!---->
+    <div class="grid">
+
+        <div class="padding"></div>
+        <div class="text-about-one">
+            <img src="images/profile_img.svg" alt="Profile Image" class="profile-img">
+        </div>
+        <div class="text-about-two">
+            <h1>Digital Design with a focus on systems and accessibility</h1>
+        </div>
+
+        <p class="text">I am a Digital Designer (Cand.IT) based in Aarhus, Denmark, with a passion for creating
+            structured, scalable, and inclusive digital experiences. For the past three years, I have been working
+            within the healthcare sector, transforming complex legacy systems into modern, user-centric web solutions.
+
+            My expertise lies in the technical execution of UI design. I thrive when building robust design systems in
+            Figma and ensuring that every component is not only visually polished but also fully accessible and WCAG 2.2
+            compliant.</p>
+        <span></span>
+        <p class="text"><b>Why my recent work is "missing"</b><br>
+            Due to strict Non-Disclosure Agreements (NDA) in my current role at NOVAX A/S, I cannot showcase my latest
+            healthcare projects publicly. However, I am always happy to walk you through my methodology, Figma
+            workflows,
+            and design system structures in a private setting.
+            <br><br>
+            Feel free to reach out if you want to know more.
+        </p>
+        <div class="padding"></div>
+        <div class="download-btn"><a href="resume.pdf" target="blank">Resume</a></div>
+    </div>
+
+
+    <div class="padding"></div>
+    <div class="grid-nav">
+        <div class="contacts">
+            <p class="bold">Contact me</p>
+            <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
+                <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
+            </a>
+            <br>
+            <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+        </div>
+    </div>
+</body>
+
+</html>
