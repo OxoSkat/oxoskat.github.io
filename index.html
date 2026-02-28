@@ -1,123 +1,126 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<!-- Google fonts -->
-<!-- Kanit -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
-<!-- Raleway -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
-<!--Hamburger knap css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-<script src="hamburger.js"></script>
-<title>Mads Emmertsen Portfolio</title>
-</head>
-<body>
-<!--Navigation-->
-<nav tabindex="0" class="grid-nav">
-    <a href="index.html" class="nav-logo">
-        <div>
-        <h4>MADS EMMERTSEN</h4>
-    </div>
-</a>
 
-    <div class="nav-portfolio">
-        <p><a href="index.html">Portfolio</a></p>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="cs-aware.html">CS-Aware</a></li>
-                <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-                <li><a href="motostore.html">Motostore</a></li>
-                <li><a href="property-advice.html">Property Advice</a></li>
-            </ul>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <!-- Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--Hamburger knap css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="hamburger.js"></script>
+    <title>Mads Emmertsen Portfolio</title>
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav tabindex="0" class="grid-nav">
+        <a href="index.html" class="nav-logo">
+            <div>
+                <h4>MADS EMMERTSEN</h4>
+            </div>
+        </a>
+
+        <div class="nav-portfolio">
+            <p><a href="index.html">Portfolio</a></p>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="cs-aware.html">CS-Aware</a></li>
+                    <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+                    <li><a href="motostore.html">Motostore</a></li>
+                    <li><a href="property-advice.html">Property Advice</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-about">
+            <p><a href="about.html">About me</a></p>
+        </div>
+        <!--Hamburger knap-->
+        <button class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <!--Navigation-->
+    <!-- Dropdown for phone -->
+    <div class="links show" id="mobileNav">
+        <ul>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="cs-aware.html">CS-Aware</a></li>
+            <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+            <li><a href="motostore.html">Motostore</a></li>
+            <li><a href="property-advice.html">Property Advice</a></li>
+            <li><a href="about.html">About me</a></li>
+        </ul>
+    </div>
+    <!---->
+    <div class="grid">
+        <div class="text-middle">
+            <h1>Digital Designer specializing in UI Production & Design Systems</h1>
+        </div>
+        <div class="text-middle-two">
+            <p>Currently shaping the future of healthcare IT at NOVAX A/S. I bridge the gap between complex user needs
+                and pixel-perfect, accessible interfaces.</p>
         </div>
     </div>
-    <div class="nav-about">
-        <p><a href="about.html">About me</a></p>
-    </div>
-    <!--Hamburger knap-->
-    <button class="nav-toggle" onclick="toggleNav()">
-        <i class="fas fa-bars"></i>
-        </button>
-</nav>
-<!--Navigation-->
-<!-- Dropdown for phone -->
-<div class="links show" id="mobileNav">
-    <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="cs-aware.html">CS-Aware</a></li>
-        <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-        <li><a href="motostore.html">Motostore</a></li>
-        <li><a href="property-advice.html">Property Advice</a></li>
-        <li><a href="about.html">About me</a></li>
-    </ul>
-</div>
-<!---->
-<div class="grid">
-    <div class="text-middle">
-        <h1>Hi i'm Mads Emmertsen</h1>
-    </div>
-    <div class="text-middle-two">
-        <p>I'm an aspiring UX&UI Designer with experience in conducting UX-research, creating user flows, building wireframes and low and high fidelity prototypes. I have a Master's degree in Digital Design, a study that has an emphasis on user centered design and the Design thinking process. I'm passionate about creating user experiences that get the user from A to Z with ease.</p>
-    </div>
-</div>
-<div class="padding"></div>
+    <div class="padding"></div>
 
-<div class="gridtwo">
-    <a href="cs-aware.html" class="linkbox"></a> 
-    <div class="project-img-box">
-            <img src="images/cs-aware-presentation.png" alt="cs-aware portfolio image" class="project-img"> 
+    <div class="gridtwo">
+        <a href="cs-aware.html" class="linkbox"></a>
+        <div class="project-img-box">
+            <img src="images/cs-aware-presentation.png" alt="cs-aware portfolio image" class="project-img">
+        </div>
+        <div class="gradientoverlay"></div>
+        <div class="textoverimg">
+            <h3>CS-AWARE</h3>
+        </div>
     </div>
-    <div class="gradientoverlay"></div>
-    <div class="textoverimg">
-        <h3>CS-AWARE</h3>
-    </div>     
-</div>
-<div class="padding"></div>
+    <div class="padding"></div>
 
-<div class="gridtwo">
-    <a href="institute-for-public-health.html" class="linkbox"></a>
-    <div class="project-img-box">
+    <div class="gridtwo">
+        <a href="institute-for-public-health.html" class="linkbox"></a>
+        <div class="project-img-box">
             <img src="images/institute-for-public-health.png" alt="healthd360 portfolio image" class="project-img">
+        </div>
+        <div class="gradientoverlay"></div>
+        <div class="textoverimg">
+            <h3>INSTITUTE FOR PUBLIC HEALTH</h3>
+        </div>
     </div>
-    <div class="gradientoverlay"></div>
-    <div class="textoverimg">
-        <h3>INSTITUTE FOR PUBLIC HEALTH</h3>
-    </div>   
-</div>
-<div class="padding"></div>
+    <div class="padding"></div>
 
-<div class="gridtwo">
-    <a href="motostore.html" class="linkbox"></a> 
-    <div class="project-img-box">
-            <img src="images/motostore.png" alt="motostore portfolio image" class="project-img"> 
+    <div class="gridtwo">
+        <a href="motostore.html" class="linkbox"></a>
+        <div class="project-img-box">
+            <img src="images/motostore.png" alt="motostore portfolio image" class="project-img">
+        </div>
+        <div class="gradientoverlay"></div>
+        <div class="textoverimg">
+            <h3>MOTOSTORE</h3>
+        </div>
     </div>
-    <div class="gradientoverlay"></div>
-    <div class="textoverimg">
-        <h3>MOTOSTORE</h3>
-    </div>     
-</div>
 
-<div class="padding"></div>
+    <div class="padding"></div>
 
-<div class="gridtwo">
-    <a href="property-advice.html" class="linkbox"></a>
-    <div class="project-img-box">
+    <div class="gridtwo">
+        <a href="property-advice.html" class="linkbox"></a>
+        <div class="project-img-box">
             <img src="images/propertyadvice.png" alt="property advice portfolio image" class="project-img">
+        </div>
+        <div class="gradientoverlay"></div>
+        <div class="textoverimg">
+            <h3>PROPERTY ADVICE</h3>
+        </div>
     </div>
-    <div class="gradientoverlay"></div>
-    <div class="textoverimg">
-        <h3>PROPERTY ADVICE</h3>
-    </div>      
-</div>
-<div class="padding"></div>
-<!-- out of use
+    <div class="padding"></div>
+    <!-- out of use
 <div class="gridtwo">
     <a href="dailyui.html" class="linkbox"></a>
     <div class="project-img-box">
@@ -127,19 +130,20 @@
     <div class="textoverimg">
         <h2>DAILYUI</h2>
     </div> 
-</div>--> 
+</div>-->
 
 
-<div class="padding"></div>
-<div class="grid-nav">
-    <div class="contacts">
-        <p class="bold">Contact me</p>
-        <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
-            <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
-        </a>
-        <br>
-        <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+    <div class="padding"></div>
+    <div class="grid-nav">
+        <div class="contacts">
+            <p class="bold">Contact me</p>
+            <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
+                <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
+            </a>
+            <br>
+            <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+        </div>
     </div>
-</div>
 </body>
+
 </html>
