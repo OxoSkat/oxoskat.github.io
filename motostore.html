@@ -1,119 +1,163 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<!-- Google fonts -->
-<!-- Kanit -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
-<!-- Raleway -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
-<!--Hamburger knap css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-<script src="hamburger.js"></script>
-<title>Motostore Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <!-- Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--Hamburger knap css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="hamburger.js"></script>
+    <title>Motostore Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" rel="stylesheet" />
 </head>
+
 <body>
-<!--Navigation-->
-<nav tabindex="0" class="grid-nav">
-    <a href="index.html" class="nav-logo">
-        <div>
-        <h4>MADS EMMERTSEN</h4>
-    </div>
-</a>
+    <!--Navigation-->
+    <nav tabindex="0" class="grid-nav">
+        <a href="index.html" class="nav-logo">
+            <div>
+                <h4>MADS EMMERTSEN</h4>
+            </div>
+        </a>
 
-    <div class="nav-portfolio">
-        <p><a href="index.html">Portfolio</a></p>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="cs-aware.html">CS-Aware</a></li>
-                <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-                <li><a href="motostore.html">Motostore</a></li>
-                <li><a href="property-advice.html">Property Advice</a></li>
-            </ul>
+        <div class="nav-portfolio">
+            <p><a href="index.html">Projects</a></p>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="cs-aware.html">CS-Aware</a></li>
+                    <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+                    <li><a href="motostore.html">Motostore</a></li>
+                    <li><a href="property-advice.html">Property Advice</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="nav-about">
-        <p><a href="about.html">About me</a></p>
-    </div>
-    <!--Hamburger knap-->
-    <button class="nav-toggle" onclick="toggleNav()">
-        <i class="fas fa-bars"></i>
+        <div class="nav-about">
+            <p><a href="about.html">About me</a></p>
+        </div>
+        <!--Hamburger knap-->
+        <button class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
         </button>
-</nav>
-<!--Navigation-->
-<!-- Dropdown for phone -->
-<div class="links show" id="mobileNav">
-    <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="cs-aware.html">CS-Aware</a></li>
-        <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-        <li><a href="motostore.html">Motostore</a></li>
-        <li><a href="property-advice.html">Property Advice</a></li>
-        <li><a href="about.html">About me</a></li>
-    </ul>
-</div>
-<!---->
+    </nav>
+    <!--Navigation-->
+    <!-- Dropdown for phone -->
+    
+    <div class="links show" id="mobileNav">
+        <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="cs-aware.html">CS-Aware</a></li>
+            <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+            <li><a href="motostore.html">Motostore</a></li>
+            <li><a href="property-advice.html">Property Advice</a></li>
+            <li><a href="about.html">About me</a></li>
+        </ul>
+    </div>
+    <!---->
 
-<div class="grid">
-    <div class="padding"></div>
+    <div class="grid">
+        <div class="padding"></div>
         <h1 class="title">Vilhelm Nellemann, designs for motostore.dk & honda-mc</h1>
-        <p class="tag-text-one">Duration: 2 months</p>
-        <p class="tag-text-two">Skills used: High fidelity prototyping, Component Design, User flow</p>
-        <p class="text">From May till June 2022 I worked at Vilhelm Nellemann Handelsselskab. During my stay I worked on creating designs for their two workshops motostore.dk and honda-mc.dk
+        <div class="tag-container-one">
+            <h4 class="tag-label">Duration</h4>
+            <p class="tag-text-one">2 months</p>
+        </div>
+        <div class="tag-container-two">
+            <h4 class="tag-label">Skills used</h4>
+            <div class="tags-wrapper">
+                <p class="tag-text-two">High fidelity prototyping</p>
+                <p class="tag-text-two">Component Design</p>
+                <p class="tag-text-two">User flow</p>
+            </div>
+        </div>
+        <p class="text">From May till June 2022 I worked at Vilhelm Nellemann Handelsselskab. During my stay I worked on
+            creating designs for their two workshops motostore.dk and honda-mc.dk
         </p>
         <h2 class="subtitle">Motostore mobile checkout</h2>
         <p class="text">One of the tasks I was given was to redesign their mobile checkout flow for motostore.</p>
         <div class="padding"></div>
         <img src="images/motostore.png" alt="motorstore design on mobile phones" class="centered-img">
         <div class="padding"></div>
-        <p class="text">I decided to use secondary research in order to get an idea about what’s important when creating a checkout flow. The insights I gained were these:</p>
+        <p class="text">I decided to use secondary research in order to get an idea about what’s important when creating
+            a checkout flow. The insights I gained were these:</p>
         <ul class="in-text-list-institute">
-            <li><p class="text">Reduce visual clutter</p></li>
-            <li><p class="text">Use buttons for progressing and make sure they are noticeable and centered on the screen</p></li>
-            <li><p class="text">Include a progress indicator to lessen the amount of failed checkouts due to burnout</p></li>
-            <li><p class="text">Floating labels inside text input boxes help remind the user of the type of information they are supposed to input</p></li>
+            <li>
+                <p class="text">Reduce visual clutter</p>
+            </li>
+            <li>
+                <p class="text">Use buttons for progressing and make sure they are noticeable and centered on the screen
+                </p>
+            </li>
+            <li>
+                <p class="text">Include a progress indicator to lessen the amount of failed checkouts due to burnout</p>
+            </li>
+            <li>
+                <p class="text">Floating labels inside text input boxes help remind the user of the type of information
+                    they are supposed to input</p>
+            </li>
         </ul>
-</div>
-<div class="padding"></div>
+    </div>
+    <div class="padding"></div>
 
-<div class="grid-three-elements">
-    <img src="images/vilhelm-nellemann/userflow-one.png" alt="userflow first image" class="threeimg-first">
-    <img src="images/vilhelm-nellemann/userflow-two.png" alt="userflow second image" class="threeimg-second">
-    <img src="images/vilhelm-nellemann/userflow-three.png" alt="userflow third image" class="threeimg-third">
-</div>
-<div class="padding"></div>
+    <div class="grid-three-elements">
+        <img src="images/vilhelm-nellemann/userflow-one.png" alt="userflow first image" class="threeimg-first">
+        <img src="images/vilhelm-nellemann/userflow-two.png" alt="userflow second image" class="threeimg-second">
+        <img src="images/vilhelm-nellemann/userflow-three.png" alt="userflow third image" class="threeimg-third">
+    </div>
+    <div class="padding"></div>
 
-<div class="grid">
-    <h2 class="subtitle">Atomic Design</h2>
-    <p class="text">I applied the atomic design philosophy when I designed the mobile checkout flow.
-        This meant that I built my design up using components (atoms), components build with components (molecules) and components combining several molecules (organisms).</p>
-    <div class="padding"></div>
-    <h2 class="subtitle-centered">Atoms</h2>
-    <img src="images/vilhelm-nellemann/atoms.png" alt="atom components" class="larger-img">
-    <h2 class="subtitle-centered">Molecules</h2>
-    <img src="images/vilhelm-nellemann/molecules.png" alt="molecule components" class="larger-img">
-    <h2 class="subtitle-centered">Organisms</h2>
-    <img src="images/vilhelm-nellemann/organisms.png" alt="organism components" class="larger-img">
-    <div class="padding"></div>
-    <h2 class="subtitle">Honda-mc.dk User Flow</h2>
-    <p class="text">For their webshop selling Honda motorcycles I was tasked with creating a user flow for how we could guide the user through the shopping experience.</p>
-    <img src="images/vilhelm-nellemann/honda-mc-userflow.png" alt="user flow of honda-mc" class="larger-img">
-    <div class="padding"></div>
-    <h4 class="subtitle">Here's the user journey step by step:</h4>
-    <ul class="in-text-list-institute">
-        <li><p class="text">The user finds a model on the front page that they like and they click on it</p></li>
-        <li><p class="text">This leads them to a page where they can choose between the normal version, the sports version and a version with electronic suspension</p></li>
-        <li><p class="text">After choosing the version they want the user is lead to a product page where they can choose between the color of the motorcycle</p></li>
-        <li><p class="text">At the top they have tabs where the user can select “dealer”(forhandler) which will show them a map of all the honda dealers in Denmark. The ones that don’t have the model the user is looking for are faded out</p></li>
-        <li><p class="text">If the user is looking for a repair shop they can click the radio button to show repair shops which are shown in black</p></li>
-    </ul>
-</div>
+    <div class="grid">
+        <h2 class="subtitle">Atomic Design</h2>
+        <p class="text">I applied the atomic design philosophy when I designed the mobile checkout flow.
+            This meant that I built my design up using components (atoms), components build with components (molecules)
+            and components combining several molecules (organisms).</p>
+        <div class="padding"></div>
+        <h2 class="subtitle-centered">Atoms</h2>
+        <img src="images/vilhelm-nellemann/atoms.png" alt="atom components" class="larger-img">
+        <h2 class="subtitle-centered">Molecules</h2>
+        <img src="images/vilhelm-nellemann/molecules.png" alt="molecule components" class="larger-img">
+        <h2 class="subtitle-centered">Organisms</h2>
+        <img src="images/vilhelm-nellemann/organisms.png" alt="organism components" class="larger-img">
+        <div class="padding"></div>
+        <h2 class="subtitle">Honda-mc.dk User Flow</h2>
+        <p class="text">For their webshop selling Honda motorcycles I was tasked with creating a user flow for how we
+            could guide the user through the shopping experience.</p>
+        <img src="images/vilhelm-nellemann/honda-mc-userflow.png" alt="user flow of honda-mc" class="larger-img">
+        <div class="padding"></div>
+        <h4 class="subtitle">Here's the user journey step by step:</h4>
+        <ul class="in-text-list-institute">
+            <li>
+                <p class="text">The user finds a model on the front page that they like and they click on it</p>
+            </li>
+            <li>
+                <p class="text">This leads them to a page where they can choose between the normal version, the sports
+                    version and a version with electronic suspension</p>
+            </li>
+            <li>
+                <p class="text">After choosing the version they want the user is lead to a product page where they can
+                    choose between the color of the motorcycle</p>
+            </li>
+            <li>
+                <p class="text">At the top they have tabs where the user can select “dealer”(forhandler) which will show
+                    them a map of all the honda dealers in Denmark. The ones that don’t have the model the user is
+                    looking for are faded out</p>
+            </li>
+            <li>
+                <p class="text">If the user is looking for a repair shop they can click the radio button to show repair
+                    shops which are shown in black</p>
+            </li>
+        </ul>
+    </div>
 
     <div class="padding"></div>
     <div class="grid-nav">
@@ -127,4 +171,7 @@
         </div>
     </div>
 </body>
+
 </html>
+
+

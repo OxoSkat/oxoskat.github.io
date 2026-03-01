@@ -1,165 +1,277 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<!-- Google fonts -->
-<!-- Kanit -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
-<!-- Raleway -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
-<!--Hamburger knap css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-<script src="hamburger.js"></script>
-<title>Mads Emmertsen Healthd360</title>
-</head>
-<body>
-<!--Navigation-->
-<nav tabindex="0" class="grid-nav">
-    <a href="index.html" class="nav-logo">
-        <div>
-        <h4>MADS EMMERTSEN</h4>
-    </div>
-</a>
 
-    <div class="nav-portfolio">
-        <p><a href="index.html">Portfolio</a></p>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="cs-aware.html">CS-Aware</a></li>
-                <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-                <li><a href="motostore.html">Motostore</a></li>
-                <li><a href="property-advice.html">Property Advice</a></li>
-            </ul>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <!-- Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--Hamburger knap css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="hamburger.js"></script>
+    <title>Mads Emmertsen Healthd360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav tabindex="0" class="grid-nav">
+        <a href="index.html" class="nav-logo">
+            <div>
+                <h4>MADS EMMERTSEN</h4>
+            </div>
+        </a>
+
+        <div class="nav-portfolio">
+            <p><a href="index.html">Projects</a></p>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="cs-aware.html">CS-Aware</a></li>
+                    <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+                    <li><a href="motostore.html">Motostore</a></li>
+                    <li><a href="property-advice.html">Property Advice</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="nav-about">
-        <p><a href="about.html">About me</a></p>
-    </div>
-    <!--Hamburger knap-->
-    <button class="nav-toggle" onclick="toggleNav()">
-        <i class="fas fa-bars"></i>
+        <div class="nav-about">
+            <p><a href="about.html">About me</a></p>
+        </div>
+        <!--Hamburger knap-->
+        <button class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
         </button>
-</nav>
-<!--Navigation-->
-<!-- Dropdown for phone -->
-<div class="links show" id="mobileNav">
-    <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="cs-aware.html">CS-Aware</a></li>
-        <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-        <li><a href="motostore.html">Motostore</a></li>
-        <li><a href="property-advice.html">Property Advice</a></li>
-        <li><a href="about.html">About me</a></li>
-    </ul>
-</div>
-<!---->
-<div class="grid">
-    <div class="padding"></div>        
+    </nav>
+    <!--Navigation-->
+    <!-- Dropdown for phone -->
+    
+    <div class="links show" id="mobileNav">
+        <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="cs-aware.html">CS-Aware</a></li>
+            <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+            <li><a href="motostore.html">Motostore</a></li>
+            <li><a href="property-advice.html">Property Advice</a></li>
+            <li><a href="about.html">About me</a></li>
+        </ul>
+    </div>
+    <!---->
+    <div class="grid">
+        <div class="padding"></div>
         <h1 class="title">
             Institute for Public Health</h1>
-        <p class="tag-text-one">Duration: 4 months</p>
-        <p class="tag-text-two">Skills used: Planning, hosting & facilitating workshops, prototyping, user testing</p>
-        <p class="text">During my internship at the Institute for Public Health I worked on several projects where I had the chance to use some of the UX methodologies that I had learnt studying digital design. From my internship, I will be highlighting three projects I worked on: Healthd360, Digital Learning Material and the conference “Knowledge for Change”.
+        <div class="tag-container-one">
+            <h4 class="tag-label">Duration</h4>
+            <p class="tag-text-one">4 months</p>
+        </div>
+        <div class="tag-container-two">
+            <h4 class="tag-label">Skills used</h4>
+            <div class="tags-wrapper">
+                <p class="tag-text-two">Planning</p>
+                <p class="tag-text-two">Hosting & facilitating workshops</p>
+                <p class="tag-text-two">Prototyping</p>
+                <p class="tag-text-two">User testing</p>
+            </div>
+        </div>
+        <p class="text">During my internship at the Institute for Public Health I worked on several projects where I had
+            the chance to use some of the UX methodologies that I had learnt studying digital design. From my
+            internship, I will be highlighting three projects I worked on: Healthd360, Digital Learning Material and the
+            conference “Knowledge for Change”.
         </p>
-    <div class="padding"></div>
-    <h2 class="subtitle">HealthD360</h2>
-    <p class="text">HealthD360 aimed to combine health data from Danish citizens’ phones and wearables with health data available from the Danish public health system. I worked on a work package that was focused on improving mental health for children and young adults. Here I helped plan and conduct a workshop with teachers, ppr psychologists and social worker to gain insights about their issues with helping children with poor mental health.</p>
-    <div class="padding"></div>
-    <h2 class="subtitle">Challenge</h2>
-    <p class="text">How can we use digital tools to improve the mental health of young children?</p>
-    <h2 class="subtitle">Workshop: Problems & Solutions</h2>
-    <p class="text-half">This specific workshop was looking into how data could help students with low attendance in school. The workshop was divided into two parts. During the first part the participants discussed the reasons for low attendance. The insights were as follows:
-    </p>
-    <ul class="in-text-list-half">
-        <li><p>Lack of social or educational resources for the child</p></li>
-        <li><p>Problems in the home causing despair for the child</p></li>
-        <li><p>Undiscovered diagnoses</p></li>
-        <li><p>Loneliness and isolation</p></li>
-        <li><p>Too many demands of the child</p></li>
-    </ul>
-    <img src="images/institute-for-public-health/healthd360-workshop-1.png" alt="image from a workshop" class="img-half-right">
-    <div class="padding"></div>
-</div>
-<div class="padding"></div>
-<div class="grid">
-    <img src="images/institute-for-public-health/healthd360-workshop-2.png" alt="image from a workshop" class="img-half-left">
-    <p class="text-half-right">The second part of the workshop mixed the groups up and gave them the assignment to discuss potential solutions based on their previous discussions. Some of the insights that could be incorporated into the HealthD360 project were:
-    </p>
-    <ul class="in-text-list-half-right">
-        <li><p class="text">Sharing of data on attendance between teachers and school nurses to increase collaboration
-        </p></li>
-        <li><p class="text">Data about sleep and activity might be able to help with mental health
-        </p></li>
-        <li><p class="text">Adaptive algorithms to set the right goals for children (in terms of scale)</p></li>
-        <li><p class="text">Counting tags on social media in order to pin point children who might be socially isolated</p></li>
-        <li><p class="text">A system that allows children to report their mood when entering class (like red, yellow and green buttons)</p></li>
-    </ul>   <p class="text-half-right">The insight was used for a later workshop in Hammel that focused on ideation of digital concepts.</p>
- 
-    <div class="padding"></div>
-    <h2 class="subtitle">Digital Learning Material</h2>
-    <p class="text">During my internship, I got the chance to take the lead with a colleague on creating a prototype for a digital learning material. This was supposed to improve the learning experience for new students by incorporating multiple ways of gathering information and by attaching assignments that activated the students when they had to read a subject matter.</p>
-    <h2 class="subtitle">Challenge</h2>
-    <p class="text">How can we improve the learning experience of students just entering university?</p>
-    <h2 class="subtitle">Workshop: Study habits and resources</h2>
-    <p class="text">We hosted an initial workshop with students who had volunteered to help us with the project. This workshop focused on which resources the students used and preferred to use. The workshop was divided into three parts:</p>
-    <ul class="in-text-list-institute">
-        <li><p class="text">Current sources of information</p></li>
-        <li><p class="text">Where would I like to find information</p></li>
-        <li><p class="text">Ideas for the digital learning material</p></li>
-    </ul>
-    <h2 class="subtitle">Prototype</h2>
-    <p class="text">After the workshop we decided that the digital learning material, should be built as an interactive pdf. Drawing upon insights gained from the workshop we thought this medium made sense. There were a couple of reasons for this:</p>
-    <ul class="in-text-list-institute">
-        <li><p class="text">The students used video a lot as a supplement to the texts they were told to read. Because of this we decided to make small videos of 2-5 minutes duration each week talking with the professor who was an expert on the subject the students were going to study that week. These videos were linked to from the digital learning material.</p></li>
-        <li><p class="text">Student used websites to understand the meaning of technical terms or Latin words. The interactive pdf would let us create hover functions for these types of words meaning that the students wouldn’t have to interrupt their reading flow to look up words on the internet.</p></li>
-        <li><p class="text">The students found cases important for knowledge to grow roots. Therefore, we added a case assignment for each week’s subject and a link in the digital learning material to a website where the students had to upload their answers.</p></li>
-    </ul>
-</div>
-<div class="padding"></div>
-<div class="grid-three-elements">
-    <img src="images/institute-for-public-health/undervisningsmaterial-forside.png" alt="front page for the digital learning material" class="threeimg-first-institute">
-    <img src="images/institute-for-public-health/undervisningsmateriale-indhold.png" alt="content page for the digital learning material" class="threeimg-second-institute">
-    <img src="images/institute-for-public-health/undervisningsmateriale-case.png" alt="case page for the digital learning material" class="threeimg-third-institute">
-</div>
-<div class="padding"></div>
-<div class="grid">
-    <h2 class="title-half">User Test</h2>
-    <p class="text-half">We then invited the volunteer back to test our prototype and give us feedback on it. In general the students liked all the features, but had some critiques of the information architecture.</p>
-    <img src="images/institute-for-public-health/undervisningsmateriale-test.jpeg" alt="image of participants testing the prototype" class="img-half-right" style="grid-row:1/4; max-height: 400px;">
-</div>
-<div class="padding"></div>
-<div class="grid">
-    <h2 class="subtitle">Conference: Knowledge for Change</h2>
-    <p class="text">I helped a PhD. student plan and host a conference with scientist, social workers, fund representatives and clinicians about vulnerable families. I helped shape the format of the conference and helped document and facilitate the workshops that was conducted half-way through the conference.</p>
-    <h4 class="subtitle">Insights</h4>
-    <ul class="in-text-list-institute">
-        <li><p class="text">Efforts should be made on the family’s premises</p></li>
-        <li><p class="text">Relation between family and the helper is important (<em>too often vulnerable families are thrown between different social workers and psychologist which means they have to build trust over and over again</em>)</p></li>
-        <li><p class="text">Any effort should be led and coordinated by few and should be carried out by the same people throughout the procedure</p></li>
-        <li><p class="text">The approach and communication should be characterized by positivity, recognition and empathy</p></li>
-        <li><p class="text">Efforts should be interdisciplinary (<em>currently the different disciplines are competing for funding</em>)</p></li>
-        <li><p class="text">Physical frameworks should be established to create social networks between vulnerable families</p></li>
-        <li><p class="text">Current and future initiatives need to be evaluated and the experiences should be  passed on</p></li>
-    </ul>
-
-</div>
-    
-    <div class="padding"></div>
-<div class="grid-nav">
-    <div class="contacts">
-        <p class="bold">Contact me</p>
-        <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
-            <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
-        </a>
-        <br>
-        <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+        <div class="padding"></div>
+        <h2 class="subtitle">HealthD360</h2>
+        <p class="text">HealthD360 aimed to combine health data from Danish citizens’ phones and wearables with health
+            data available from the Danish public health system. I worked on a work package that was focused on
+            improving mental health for children and young adults. Here I helped plan and conduct a workshop with
+            teachers, ppr psychologists and social worker to gain insights about their issues with helping children with
+            poor mental health.</p>
+        <div class="padding"></div>
+        <h2 class="subtitle">Challenge</h2>
+        <p class="text">How can we use digital tools to improve the mental health of young children?</p>
+        <h2 class="subtitle">Workshop: Problems & Solutions</h2>
+        <p class="text-half">This specific workshop was looking into how data could help students with low attendance in
+            school. The workshop was divided into two parts. During the first part the participants discussed the
+            reasons for low attendance. The insights were as follows:
+        </p>
+        <ul class="in-text-list-half">
+            <li>
+                <p>Lack of social or educational resources for the child</p>
+            </li>
+            <li>
+                <p>Problems in the home causing despair for the child</p>
+            </li>
+            <li>
+                <p>Undiscovered diagnoses</p>
+            </li>
+            <li>
+                <p>Loneliness and isolation</p>
+            </li>
+            <li>
+                <p>Too many demands of the child</p>
+            </li>
+        </ul>
+        <img src="images/institute-for-public-health/healthd360-workshop-1.png" alt="image from a workshop"
+            class="img-half-right">
+        <div class="padding"></div>
     </div>
-</div>
+    <div class="padding"></div>
+    <div class="grid">
+        <img src="images/institute-for-public-health/healthd360-workshop-2.png" alt="image from a workshop"
+            class="img-half-left">
+        <p class="text-half-right">The second part of the workshop mixed the groups up and gave them the assignment to
+            discuss potential solutions based on their previous discussions. Some of the insights that could be
+            incorporated into the HealthD360 project were:
+        </p>
+        <ul class="in-text-list-half-right">
+            <li>
+                <p class="text">Sharing of data on attendance between teachers and school nurses to increase
+                    collaboration
+                </p>
+            </li>
+            <li>
+                <p class="text">Data about sleep and activity might be able to help with mental health
+                </p>
+            </li>
+            <li>
+                <p class="text">Adaptive algorithms to set the right goals for children (in terms of scale)</p>
+            </li>
+            <li>
+                <p class="text">Counting tags on social media in order to pin point children who might be socially
+                    isolated</p>
+            </li>
+            <li>
+                <p class="text">A system that allows children to report their mood when entering class (like red, yellow
+                    and green buttons)</p>
+            </li>
+        </ul>
+        <p class="text-half-right">The insight was used for a later workshop in Hammel that focused on ideation of
+            digital concepts.</p>
+
+        <div class="padding"></div>
+        <h2 class="subtitle">Digital Learning Material</h2>
+        <p class="text">During my internship, I got the chance to take the lead with a colleague on creating a prototype
+            for a digital learning material. This was supposed to improve the learning experience for new students by
+            incorporating multiple ways of gathering information and by attaching assignments that activated the
+            students when they had to read a subject matter.</p>
+        <h2 class="subtitle">Challenge</h2>
+        <p class="text">How can we improve the learning experience of students just entering university?</p>
+        <h2 class="subtitle">Workshop: Study habits and resources</h2>
+        <p class="text">We hosted an initial workshop with students who had volunteered to help us with the project.
+            This workshop focused on which resources the students used and preferred to use. The workshop was divided
+            into three parts:</p>
+        <ul class="in-text-list-institute">
+            <li>
+                <p class="text">Current sources of information</p>
+            </li>
+            <li>
+                <p class="text">Where would I like to find information</p>
+            </li>
+            <li>
+                <p class="text">Ideas for the digital learning material</p>
+            </li>
+        </ul>
+        <h2 class="subtitle">Prototype</h2>
+        <p class="text">After the workshop we decided that the digital learning material, should be built as an
+            interactive pdf. Drawing upon insights gained from the workshop we thought this medium made sense. There
+            were a couple of reasons for this:</p>
+        <ul class="in-text-list-institute">
+            <li>
+                <p class="text">The students used video a lot as a supplement to the texts they were told to read.
+                    Because of this we decided to make small videos of 2-5 minutes duration each week talking with the
+                    professor who was an expert on the subject the students were going to study that week. These videos
+                    were linked to from the digital learning material.</p>
+            </li>
+            <li>
+                <p class="text">Student used websites to understand the meaning of technical terms or Latin words. The
+                    interactive pdf would let us create hover functions for these types of words meaning that the
+                    students wouldn’t have to interrupt their reading flow to look up words on the internet.</p>
+            </li>
+            <li>
+                <p class="text">The students found cases important for knowledge to grow roots. Therefore, we added a
+                    case assignment for each week’s subject and a link in the digital learning material to a website
+                    where the students had to upload their answers.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="padding"></div>
+    <div class="grid-three-elements">
+        <img src="images/institute-for-public-health/undervisningsmaterial-forside.png"
+            alt="front page for the digital learning material" class="threeimg-first-institute">
+        <img src="images/institute-for-public-health/undervisningsmateriale-indhold.png"
+            alt="content page for the digital learning material" class="threeimg-second-institute">
+        <img src="images/institute-for-public-health/undervisningsmateriale-case.png"
+            alt="case page for the digital learning material" class="threeimg-third-institute">
+    </div>
+    <div class="padding"></div>
+    <div class="grid">
+        <h2 class="title-half">User Test</h2>
+        <p class="text-half">We then invited the volunteer back to test our prototype and give us feedback on it. In
+            general the students liked all the features, but had some critiques of the information architecture.</p>
+        <img src="images/institute-for-public-health/undervisningsmateriale-test.jpeg"
+            alt="image of participants testing the prototype" class="img-half-right"
+            style="grid-row:1/4; max-height: 400px;">
+    </div>
+    <div class="padding"></div>
+    <div class="grid">
+        <h2 class="subtitle">Conference: Knowledge for Change</h2>
+        <p class="text">I helped a PhD. student plan and host a conference with scientist, social workers, fund
+            representatives and clinicians about vulnerable families. I helped shape the format of the conference and
+            helped document and facilitate the workshops that was conducted half-way through the conference.</p>
+        <h4 class="subtitle">Insights</h4>
+        <ul class="in-text-list-institute">
+            <li>
+                <p class="text">Efforts should be made on the family’s premises</p>
+            </li>
+            <li>
+                <p class="text">Relation between family and the helper is important (<em>too often vulnerable families
+                        are thrown between different social workers and psychologist which means they have to build
+                        trust over and over again</em>)</p>
+            </li>
+            <li>
+                <p class="text">Any effort should be led and coordinated by few and should be carried out by the same
+                    people throughout the procedure</p>
+            </li>
+            <li>
+                <p class="text">The approach and communication should be characterized by positivity, recognition and
+                    empathy</p>
+            </li>
+            <li>
+                <p class="text">Efforts should be interdisciplinary (<em>currently the different disciplines are
+                        competing for funding</em>)</p>
+            </li>
+            <li>
+                <p class="text">Physical frameworks should be established to create social networks between vulnerable
+                    families</p>
+            </li>
+            <li>
+                <p class="text">Current and future initiatives need to be evaluated and the experiences should be passed
+                    on</p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="padding"></div>
+    <div class="grid-nav">
+        <div class="contacts">
+            <p class="bold">Contact me</p>
+            <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
+                <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
+            </a>
+            <br>
+            <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+        </div>
+    </div>
 </body>
+
 </html>
+
+

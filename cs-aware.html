@@ -1,156 +1,195 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<!-- Google fonts -->
-<!-- Kanit -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
-<!-- Raleway -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
-<!--Hamburger knap css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-<link rel="stylesheet" href="carousel.css">
-<script src="hamburger.js"></script>
-<script src="carousel.js"></script>
-<title>Mads Emmertsen Portfolio</title>
-</head>
-<body>
-<!--Navigation-->
-<nav tabindex="0" class="grid-nav">
-    <a href="index.html" class="nav-logo">
-        <div>
-        <h4>MADS EMMERTSEN</h4>
-    </div>
-</a>
 
-    <div class="nav-portfolio">
-        <p><a href="index.html">Portfolio</a></p>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="cs-aware.html">CS-Aware</a></li>
-                <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-                <li><a href="motostore.html">Motostore</a></li>
-                <li><a href="property-advice.html">Property Advice</a></li>
-            </ul>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <!-- Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--Hamburger knap css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="carousel.css">
+    <script src="hamburger.js"></script>
+    <script src="carousel.js"></script>
+    <title>Mads Emmertsen Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav tabindex="0" class="grid-nav">
+        <a href="index.html" class="nav-logo">
+            <div>
+                <h4>MADS EMMERTSEN</h4>
+            </div>
+        </a>
+
+        <div class="nav-portfolio">
+            <p><a href="index.html">Projects</a></p>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="cs-aware.html">CS-Aware</a></li>
+                    <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+                    <li><a href="motostore.html">Motostore</a></li>
+                    <li><a href="property-advice.html">Property Advice</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="nav-about">
-        <p><a href="about.html">About me</a></p>
-    </div>
-    <!--Hamburger knap-->
-    <button class="nav-toggle" onclick="toggleNav()">
-        <i class="fas fa-bars"></i>
+        <div class="nav-about">
+            <p><a href="about.html">About me</a></p>
+        </div>
+        <!--Hamburger knap-->
+        <button class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
         </button>
-</nav>
-<!--Navigation-->
-<!-- Dropdown for phone -->
-<div class="links show" id="mobileNav">
-    <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="cs-aware.html">CS-Aware</a></li>
-        <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-        <li><a href="motostore.html">Motostore</a></li>
-        <li><a href="property-advice.html">Property Advice</a></li>
-        <li><a href="about.html">About me</a></li>
-    </ul>
-</div>
-<!---->
-<div class="grid">
-    <div class="padding"></div>        
+    </nav>
+    <!--Navigation-->
+    <!-- Dropdown for phone -->
+    
+    <div class="links show" id="mobileNav">
+        <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="cs-aware.html">CS-Aware</a></li>
+            <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+            <li><a href="motostore.html">Motostore</a></li>
+            <li><a href="property-advice.html">Property Advice</a></li>
+            <li><a href="about.html">About me</a></li>
+        </ul>
+    </div>
+    <!---->
+    <div class="grid">
+        <div class="padding"></div>
         <h1 class="title">CS-Aware Cybersecurity Platform</h1>
-        <p class="tag-text-one">Duration: 2 months</p>
-        <p class="tag-text-two">Skills used: Personas, Wireframing, High fidelity prototyping, Component design</p>
-        <h2 class="title-half">Challenge</h2>
-        <p class="text-half">From September to October 2022 I worked as a UX/UI design intern at Rheasoft in Tranbjerg. Rheasoft had previously built a demo version of the software, but they weren’t satisfied with the design of their demo. I was tasked with redesigning Rheasofts cybersecurity platform.</p>
-            <div class="images-slideshow">
-                <div class="imageSlides fade" style="display: block;">
-                    <img src="images/cs-aware/overview-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/threats-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/information-sharing-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/dashboard-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/some-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/infrastructure-map-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/about-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/sign-in-desktop.png">
-                </div>
-                <div class="imageSlides fade">
-                    <img src="images/cs-aware/sign-up-desktop.png">
-                </div>
-                <a class="slider-btn previous" onclick="setSlides(-1)">❮</a>
-                <a class="slider-btn next" onclick="setSlides(1)">❯</a>
+        <div class="tag-container-one">
+            <h4 class="tag-label">Duration</h4>
+            <p class="tag-text-one">2 months</p>
         </div>
-            <div class="padding"></div>
+        <div class="tag-container-two">
+            <h4 class="tag-label">Skills used</h4>
+            <div class="tags-wrapper">
+                <p class="tag-text-two">Personas</p>
+                <p class="tag-text-two">Wireframing</p>
+                <p class="tag-text-two">High fidelity prototyping</p>
+                <p class="tag-text-two">Component design</p>
+            </div>
+        </div>
+        <h2 class="title-half">Challenge</h2>
+        <p class="text-half">From September to October 2022 I worked as a UX/UI design intern at Rheasoft in Tranbjerg.
+            Rheasoft had previously built a demo version of the software, but they weren’t satisfied with the design of
+            their demo. I was tasked with redesigning Rheasofts cybersecurity platform.</p>
+        <div class="images-slideshow">
+            <div class="imageSlides fade" style="display: block;">
+                <img src="images/cs-aware/overview-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/threats-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/information-sharing-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/dashboard-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/some-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/infrastructure-map-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/about-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/sign-in-desktop.png">
+            </div>
+            <div class="imageSlides fade">
+                <img src="images/cs-aware/sign-up-desktop.png">
+            </div>
+            <a class="slider-btn previous" onclick="setSlides(-1)">❮</a>
+            <a class="slider-btn next" onclick="setSlides(1)">❯</a>
+        </div>
+        <div class="padding"></div>
     </div>
     <div class="grid">
         <h2 class="subtitle">The Users</h2>
-        <p class="text">While I wasn’t tasked with conducting UX-research, Rheasoft had some journals that had been published during their European project also named “CS-Aware” where UX-research had been done. I drew upon this research to gain some idea of the potential users.</p>
+        <p class="text">While I wasn’t tasked with conducting UX-research, Rheasoft had some journals that had been
+            published during their European project also named “CS-Aware” where UX-research had been done. I drew upon
+            this research to gain some idea of the potential users.</p>
         <span></span>
-        <p class="text">Two users were identified. The system administrator responsible for the IT-infrastructure and the manager of the department.</p>
+        <p class="text">Two users were identified. The system administrator responsible for the IT-infrastructure and
+            the manager of the department.</p>
         <div class="padding"></div>
-        <img src="images/cs-aware/persona-one.png" alt="Image of persona one, Claus the systems administrator" class="twoimg-first-cs-aware">
-        <img src="images/cs-aware/persona-two.png" alt="Image of persona two, Eric the IT manager" class="twoimg-second-cs-aware">
+        <img src="images/cs-aware/persona-one.png" alt="Image of persona one, Claus the systems administrator"
+            class="twoimg-first-cs-aware">
+        <img src="images/cs-aware/persona-two.png" alt="Image of persona two, Eric the IT manager"
+            class="twoimg-second-cs-aware">
         <div class="padding"></div>
         <h2 class="subtitle">Wireframing</h2>
-        <p class="text">I started my design by making a set of wireframes for mobile and for desktop in order to get an idea of how i wanted elements to be placed in the screens.</p>
+        <p class="text">I started my design by making a set of wireframes for mobile and for desktop in order to get an
+            idea of how i wanted elements to be placed in the screens.</p>
         <div class="padding"></div>
-        <img src="images/cs-aware/wireframe-desktop-dashboard.png" alt="wireframe of the dashboard page for desktop" class="centered-img">
+        <img src="images/cs-aware/wireframe-desktop-dashboard.png" alt="wireframe of the dashboard page for desktop"
+            class="centered-img">
         <div class="padding"></div>
-        <img src="images/cs-aware/wireframe-desktop-some.png" alt="wireframe of the social media page for desktop" class="centered-img">
+        <img src="images/cs-aware/wireframe-desktop-some.png" alt="wireframe of the social media page for desktop"
+            class="centered-img">
         <div class="padding"></div>
-        <img src="images/cs-aware/wireframe-desktop-map.png" alt="wireframe of the infrastructure map page for desktop" class="centered-img">
+        <img src="images/cs-aware/wireframe-desktop-map.png" alt="wireframe of the infrastructure map page for desktop"
+            class="centered-img">
         <div class="padding"></div>
     </div>
-<div class="grid-three-elements">
-    <img src="images/cs-aware/wireframe-mobile-dashboard.png" alt="wireframe of the dashboard page for mobile" class="threeimg-first">
-    <img src="images/cs-aware/wireframe-mobile-some.png" alt="wireframe of the social media page for mobile" class="threeimg-second">
-    <img src="images/cs-aware/wireframe-mobile-map.png" alt="wireframe of the infrastructure map page for mobile" class="threeimg-third">
-</div>
-<div class="padding"></div>
-<div class="grid">
-    <h2 class="subtitle">Atomic design, building with components</h2>
-    <p class="text">I build my design using the atomic design philosophy. This philosophy breaks down design elements in small components called atoms, which can then be combined into larger components called molecules, which then in turn can be combined in to organisms. Following this philosophy ensures consistency and makes it easy to make changes across the entire design at a later stage.</p>
+    <div class="grid-three-elements">
+        <img src="images/cs-aware/wireframe-mobile-dashboard.png" alt="wireframe of the dashboard page for mobile"
+            class="threeimg-first">
+        <img src="images/cs-aware/wireframe-mobile-some.png" alt="wireframe of the social media page for mobile"
+            class="threeimg-second">
+        <img src="images/cs-aware/wireframe-mobile-map.png" alt="wireframe of the infrastructure map page for mobile"
+            class="threeimg-third">
+    </div>
     <div class="padding"></div>
-    
-    <img src="images/cs-aware/cs-aware-components.png" alt="atom components used in the cs-aware project" class="larger-img">
-    <div class="padding"></div>
-    <img src="images/cs-aware/molecules-organisms.png" alt="molecules and organisms used in the cs-aware project" class="larger-img">
+    <div class="grid">
+        <h2 class="subtitle">Atomic design, building with components</h2>
+        <p class="text">I build my design using the atomic design philosophy. This philosophy breaks down design
+            elements in small components called atoms, which can then be combined into larger components called
+            molecules, which then in turn can be combined in to organisms. Following this philosophy ensures consistency
+            and makes it easy to make changes across the entire design at a later stage.</p>
+        <div class="padding"></div>
 
-    <div class="padding"></div>
-    <h2 class="subtitle">Results</h2>
-    <p class="text">The final design ended up being in total 54 screen designs and 32 overlays across 6 resolutions. I handed over the design to two developers who’s now building the design using bootstrap and jQuery.</p>
-    
-</div>
-<!--Bottom contacts-->
+        <img src="images/cs-aware/cs-aware-components.png" alt="atom components used in the cs-aware project"
+            class="larger-img">
         <div class="padding"></div>
-<div class="grid-nav">
-    <div class="contacts">
-        <p class="bold">Contact me</p>
-        <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
-            <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
-        </a>
-        <br>
-        <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+        <img src="images/cs-aware/molecules-organisms.png" alt="molecules and organisms used in the cs-aware project"
+            class="larger-img">
+
+        <div class="padding"></div>
+        <h2 class="subtitle">Results</h2>
+        <p class="text">The final design ended up being in total 54 screen designs and 32 overlays across 6 resolutions.
+            I handed over the design to two developers who’s now building the design using bootstrap and jQuery.</p>
+
     </div>
-</div>
+    <!--Bottom contacts-->
+    <div class="padding"></div>
+    <div class="grid-nav">
+        <div class="contacts">
+            <p class="bold">Contact me</p>
+            <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
+                <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
+            </a>
+            <br>
+            <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+        </div>
+    </div>
 </body>
+
 </html>
+
+

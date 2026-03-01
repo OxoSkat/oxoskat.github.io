@@ -1,80 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<!-- Google fonts -->
-<!-- Kanit -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
-<!-- Raleway -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
-<!--Hamburger knap css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-<script src="hamburger.js"></script>
-<title>Mads Emmertsen Healthd360</title>
-</head>
-<body>
-<!--Navigation-->
-<nav tabindex="0" class="grid-nav">
-    <a href="index.html" class="nav-logo">
-        <div>
-        <h4>MADS EMMERTSEN</h4>
-    </div>
-</a>
 
-    <div class="nav-portfolio">
-        <p><a href="index.html">Portfolio</a></p>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="cs-aware.html">CS-Aware</a></li>
-                <li><a href="motostore.html">Motostore</a></li>
-                <li><a href="property-advice.html">Property Advice</a></li>
-                <li><a href="healthd360.html">HealthD360</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="nav-about">
-        <p><a href="about.html">About me</a></p>
-    </div>
-    <!--Hamburger knap-->
-    <button class="nav-toggle" onclick="toggleNav()">
-        <i class="fas fa-bars"></i>
-        </button>
-</nav>
-<!--Navigation-->
-            <!-- Dropdown for phone -->
-            <div class="links show" id="mobileNav">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <!-- Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--Hamburger knap css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="hamburger.js"></script>
+    <title>Mads Emmertsen Healthd360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav tabindex="0" class="grid-nav">
+        <a href="index.html" class="nav-logo">
+            <div>
+                <h4>MADS EMMERTSEN</h4>
+            </div>
+        </a>
+
+        <div class="nav-portfolio">
+            <p><a href="index.html">Projects</a></p>
+            <div class="dropdown-content">
                 <ul>
-                    <li><a href="index.html">Portfolio</a></li>
                     <li><a href="cs-aware.html">CS-Aware</a></li>
                     <li><a href="motostore.html">Motostore</a></li>
                     <li><a href="property-advice.html">Property Advice</a></li>
                     <li><a href="healthd360.html">HealthD360</a></li>
-                    <li><a href="about.html">About me</a></li>
                 </ul>
             </div>
-                <!---->
-<div class="grid">
-    <div class="padding"></div>        
+        </div>
+        <div class="nav-about">
+            <p><a href="about.html">About me</a></p>
+        </div>
+        <!--Hamburger knap-->
+        <button class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <!--Navigation-->
+    <!-- Dropdown for phone -->
+    
+    <div class="links show" id="mobileNav">
+        <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="cs-aware.html">CS-Aware</a></li>
+            <li><a href="motostore.html">Motostore</a></li>
+            <li><a href="property-advice.html">Property Advice</a></li>
+            <li><a href="healthd360.html">HealthD360</a></li>
+            <li><a href="about.html">About me</a></li>
+        </ul>
+    </div>
+    <!---->
+    <div class="grid">
+        <div class="padding"></div>
         <h1 class="title">
             HealthD360</h1>
         <p class="tag-text-one">Duration: 2 weeks</p>
         <p class="tag-text-two">Skills used: Planning, Hosting & facilitating</p>
-        <p class="text">During my internship at the Institute for Public Health I worked on a project called HealthD360 that aimed to combine health data from danish citizens’ phones and wearables with health data available from the danish public health system. The project was working with two cases. One case on mental health for children and young adults and a case on treatment of wound for elderly. I worked on the case with mental health for children and young adults. We held workshops with professionals from hospitals, overweight clinics, teachers, social workers and psychologists. One of these workshops were held in the municipality of Favrskov. I worked on planning the workshop and during the workshop I took notes from the conversations the participants had and took some photos.</p>
-    <div class="padding"></div>
-</div>
-<div class="grid">
-    <img src="images/healthd360/healthd360-workshop-1.png" alt="image from a workshop" class="twoimg-first-hd360">
-    <img src="images/healthd360/healthd360-workshop-2.png" alt="image from a workshop" class="twoimg-second-hd360">
-</div>
-<div class="padding"></div>
+        <p class="text">During my internship at the Institute for Public Health I worked on a project called HealthD360
+            that aimed to combine health data from danish citizens’ phones and wearables with health data available from
+            the danish public health system. The project was working with two cases. One case on mental health for
+            children and young adults and a case on treatment of wound for elderly. I worked on the case with mental
+            health for children and young adults. We held workshops with professionals from hospitals, overweight
+            clinics, teachers, social workers and psychologists. One of these workshops were held in the municipality of
+            Favrskov. I worked on planning the workshop and during the workshop I took notes from the conversations the
+            participants had and took some photos.</p>
+        <div class="padding"></div>
+    </div>
     <div class="grid">
-        <p class="text">This specific workshop was looking into how data could help students with low attendence in school. The workshop was divided in to two parts. During the first part the participants discussed the reasons for low attendance. The insights was as follows:</p>
+        <img src="images/healthd360/healthd360-workshop-1.png" alt="image from a workshop" class="twoimg-first-hd360">
+        <img src="images/healthd360/healthd360-workshop-2.png" alt="image from a workshop" class="twoimg-second-hd360">
+    </div>
+    <div class="padding"></div>
+    <div class="grid">
+        <p class="text">This specific workshop was looking into how data could help students with low attendence in
+            school. The workshop was divided in to two parts. During the first part the participants discussed the
+            reasons for low attendance. The insights was as follows:</p>
         <ul class="in-text-list">
             <li>Lack of social or educational resources for the child</li>
             <li>Problems in the home causing despair for the child</li>
@@ -83,33 +97,39 @@
             <li>Too many demands for the child</li>
         </ul>
     </div>
-<div class="padding"></div>
-<div class="grid">
-    <img src="images/healthd360/healthd360-workshop-3.png" alt="image from a workshop" class="twoimg-first-hd360">
-    <img src="images/healthd360/healthd360-workshop-4.png" alt="image from a workshop" class="twoimg-second-hd360">
-</div>
-<div class="padding"></div>
+    <div class="padding"></div>
     <div class="grid">
-        <p class="text">The second part of the workshop mixed the groups up and gave them the assignment to discuss potential solutions based on their previous discussions. Some of the insights that could be incorporated into the HealthD360 project was:</p>
+        <img src="images/healthd360/healthd360-workshop-3.png" alt="image from a workshop" class="twoimg-first-hd360">
+        <img src="images/healthd360/healthd360-workshop-4.png" alt="image from a workshop" class="twoimg-second-hd360">
+    </div>
+    <div class="padding"></div>
+    <div class="grid">
+        <p class="text">The second part of the workshop mixed the groups up and gave them the assignment to discuss
+            potential solutions based on their previous discussions. Some of the insights that could be incorporated
+            into the HealthD360 project was:</p>
         <ul class="in-text-list">
             <li>Sharing of data on attendance between teachers and school nurses to increase collaboration</li>
             <li>Data about sleep and activity might be able to help on mental health</li>
             <li>Adaptive algorithms to set the right goals for children (in terms of scale)</li>
             <li>Counting tags on social media in order to pin point children who might be socially isolated</li>
-            <li>A system that allows children to report their mood when entering class (like red, yellow and green buttons)</li>
+            <li>A system that allows children to report their mood when entering class (like red, yellow and green
+                buttons)</li>
             <li>The insight were used for a later workshop in Hammel that focused on concepts.</li>
         </ul>
     </div>
     <div class="padding"></div>
-<div class="grid-nav">
-    <div class="contacts">
-        <p class="bold">Contact me</p>
-        <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
-            <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
-        </a>
-        <br>
-        <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+    <div class="grid-nav">
+        <div class="contacts">
+            <p class="bold">Contact me</p>
+            <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="blank">
+                <img src="images/linkedinlogo.png" alt="linkedin logo" class="linkedinlogo">
+            </a>
+            <br>
+            <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+        </div>
     </div>
-</div>
 </body>
+
 </html>
+
+

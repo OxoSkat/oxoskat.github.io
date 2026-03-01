@@ -178,15 +178,27 @@ li {
 }
 
 .links {
-   position: absolute;
-   z-index: 5;
-   grid-column: 1 / 4;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 50;
    background-color: rgb(255, 251, 246);
-   width: 100%;
-   height: auto;
+   width: 100vw;
+   height: 100vh;
    transform: translateX(0%);
-   transition: transform 1s ease-in-out;
-   border-bottom: #222 solid 2px;
+   transition: transform 0.4s ease-in-out;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.close-menu-btn {
+   position: absolute;
+   top: 24px;
+   right: 24px;
+   font-size: 36px !important;
+   color: #222222;
+   cursor: pointer;
 }
 
 .links ul {
@@ -247,23 +259,49 @@ h4 {
    color: rgb(34, 34, 34);
 }
 
+.tag-container-one {
+   grid-column: 3 / 5;
+   margin-bottom: 5%;
+}
+
+.tag-container-two {
+   grid-column: 5 / 11;
+   margin-bottom: 5%;
+}
+
+.tag-label {
+   margin: 0 0 8px 0;
+   font-size: 1.1rem;
+}
+
+.tags-wrapper {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+}
+
 .tag-text-one {
    font-family: "Raleway", sans-serif;
    font-weight: 600;
    color: rgb(34, 34, 34);
    text-align: left;
-   grid-column: 3 / 5;
-   padding-bottom: 5%;
+   padding: 4px 12px;
+   background-color: #74ab8f;
+   border-radius: 16px;
+   width: fit-content;
+   margin: 0;
 }
 
 .tag-text-two {
    font-family: "Raleway", sans-serif;
    font-weight: 600;
    color: rgb(34, 34, 34);
-   justify-content: center;
    text-align: left;
-   grid-column: 6 / 11;
-   padding-bottom: 5%;
+   padding: 4px 12px;
+   background-color: #dbb862;
+   border-radius: 16px;
+   width: fit-content;
+   margin: 0;
 }
 
 .grid {
@@ -730,33 +768,46 @@ h4 {
    filter: drop-shadow(2px 2px 10px #22222250);
 }
 
+.download-btn,
+.download-guide-owner-btn,
+.download-guide-investor-btn {
+   background-color: #222;
+   padding: 8px 16px 8px 12px;
+   border-radius: 48px;
+   transition: background-color 0.2s ease;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: fit-content;
+}
+
 .download-btn {
    grid-column: 3 / 4;
-   background-color: #222;
-   text-align: center;
-   padding: 10px 10px;
-   border-radius: 8px;
+}
+
+.download-btn:hover,
+.download-guide-owner-btn:hover,
+.download-guide-investor-btn:hover {
+   background-color: #333;
+}
+
+.download-btn:active,
+.download-guide-owner-btn:active,
+.download-guide-investor-btn:active {
+   background-color: #111;
 }
 
 .download-guide-owner-btn {
    grid-column: 3 / 7;
    grid-row: 4 / 5;
-   background-color: #222;
-   text-align: center;
    margin: auto;
-   padding: 10px 10px;
-   border-radius: 8px;
    z-index: 2;
 }
 
 .download-guide-investor-btn {
    grid-column: 7 / 11;
    grid-row: 4 / 5;
-   background-color: #222;
-   text-align: center;
    margin: auto;
-   padding: 10px 10px;
-   border-radius: 8px;
    z-index: 2;
 }
 
@@ -765,13 +816,16 @@ h4 {
 .download-guide-investor-btn a {
    color: rgb(255, 251, 246);
    font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 4px;
 }
 
-.download-btn:hover a,
-.download-guide-owner-btn:hover a,
-.download-guide-investor-btn:hover a {
-   color: rgb(187, 0, 0);
-   font-weight: 600;
+.download-btn a::after,
+.download-guide-owner-btn a::after,
+.download-guide-investor-btn a::after {
+   display: none;
 }
 
 .guide-placement {
@@ -875,13 +929,24 @@ h4 {
       grid-column: 1 / 4;
    }
 
-   .tag-text-one {
-      grid-column: 1 / 2;
+   .tag-container-one {
+      grid-column: 1 / 4;
+      margin-bottom: 5%;
    }
 
-   .tag-text-two {
-      grid-column: 2 / 4;
+   .tag-container-two {
+      grid-column: 1 / 4;
+      margin-bottom: 5%;
    }
+
+   .tag-label {
+      margin: 0 0 8px 0;
+      font-size: 1.1rem;
+   }
+
+   .tag-text-one {}
+
+   .tag-text-two {}
 
    /** Navigation **/
    .grid-nav {
@@ -910,6 +975,8 @@ h4 {
 
    .nav-toggle {
       visibility: visible;
+      z-index: 100;
+      position: relative;
    }
 
    .grid {

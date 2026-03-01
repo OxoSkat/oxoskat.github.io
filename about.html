@@ -16,8 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
     <!--Hamburger knap css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download"
+        rel="stylesheet" />
     <script src="hamburger.js"></script>
     <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" rel="stylesheet" />
 </head>
 
 <body>
@@ -30,7 +34,7 @@
         </a>
 
         <div class="nav-portfolio">
-            <p><a href="index.html">Portfolio</a></p>
+            <p><a href="index.html">Projects</a></p>
             <div class="dropdown-content">
                 <ul>
                     <li><a href="cs-aware.html">CS-Aware</a></li>
@@ -50,9 +54,11 @@
     </nav>
     <!--Navigation-->
     <!-- Dropdown for phone -->
+    
     <div class="links show" id="mobileNav">
+        <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
         <ul>
-            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="index.html">Projects</a></li>
             <li><a href="cs-aware.html">CS-Aware</a></li>
             <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
             <li><a href="motostore.html">Motostore</a></li>
@@ -88,7 +94,8 @@
             Feel free to reach out if you want to know more.
         </p>
         <div class="padding"></div>
-        <div class="download-btn"><a href="resume.pdf" target="blank">Resume</a></div>
+        <div class="download-btn"><a href="resume.pdf" target="blank"><span
+                    class="material-symbols-outlined">download</span>Resume</a></div>
     </div>
 
 
@@ -106,3 +113,4 @@
 </body>
 
 </html>
+

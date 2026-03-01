@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<!-- Google fonts -->
-<!-- Kanit -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
-<!-- Raleway -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
-<!--Hamburger knap css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-<script src="hamburger.js"></script>
-<title>Dailyui Project</title>
-</head>
-<body>
-<!--Navigation-->
-<nav tabindex="0" class="grid-nav">
-    <a href="index.html" class="nav-logo">
-        <div>
-        <h4>MADS EMMERTSEN</h4>
-    </div>
-</a>
 
-    <div class="nav-portfolio">
-        <p><a href="index.html">Portfolio</a></p>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="cs-aware.html">CS-Aware</a></li>
-                <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-                <li><a href="motostore.html">Motostore</a></li>
-                <li><a href="property-advice.html">Property Advice</a></li>
-            </ul>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <!-- Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,800;1,100&display=swap" rel="stylesheet">
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--Hamburger knap css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="hamburger.js"></script>
+    <title>Dailyui Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav tabindex="0" class="grid-nav">
+        <a href="index.html" class="nav-logo">
+            <div>
+                <h4>MADS EMMERTSEN</h4>
+            </div>
+        </a>
+
+        <div class="nav-portfolio">
+            <p><a href="index.html">Projects</a></p>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="cs-aware.html">CS-Aware</a></li>
+                    <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+                    <li><a href="motostore.html">Motostore</a></li>
+                    <li><a href="property-advice.html">Property Advice</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="nav-about">
-        <p><a href="about.html">About me</a></p>
-    </div>
-    <!--Hamburger knap-->
-    <button class="nav-toggle" onclick="toggleNav()">
-        <i class="fas fa-bars"></i>
+        <div class="nav-about">
+            <p><a href="about.html">About me</a></p>
+        </div>
+        <!--Hamburger knap-->
+        <button class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
         </button>
-</nav>
-<!--Navigation-->
-<!-- Dropdown for phone -->
-<div class="links show" id="mobileNav">
-    <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="cs-aware.html">CS-Aware</a></li>
-        <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
-        <li><a href="motostore.html">Motostore</a></li>
-        <li><a href="property-advice.html">Property Advice</a></li>
-        <li><a href="about.html">About me</a></li>
-    </ul>
-</div>
-<!---->
-<div class="grid">
-    <div class="padding"></div>
+    </nav>
+    <!--Navigation-->
+    <!-- Dropdown for phone -->
+    
+    <div class="links show" id="mobileNav">
+        <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="cs-aware.html">CS-Aware</a></li>
+            <li><a href="institute-for-public-health.html">Institute for Public Health</a></li>
+            <li><a href="motostore.html">Motostore</a></li>
+            <li><a href="property-advice.html">Property Advice</a></li>
+            <li><a href="about.html">About me</a></li>
+        </ul>
+    </div>
+    <!---->
+    <div class="grid">
+        <div class="padding"></div>
 
         <h1 class="title">
             DailyUI</h1>
-        <p class="text">In order to increase my experience with the design platform figma I entered a daily UI design challenge. Each day I get a mail with an assignment to create something UI related. Here I have gathered some examples from the UI I have created during this challenge but all results can be seen under DailyUI on this website.</p>
-    <div class="padding"></div>
-</div>
+        <p class="text">In order to increase my experience with the design platform figma I entered a daily UI design
+            challenge. Each day I get a mail with an assignment to create something UI related. Here I have gathered
+            some examples from the UI I have created during this challenge but all results can be seen under DailyUI on
+            this website.</p>
+        <div class="padding"></div>
+    </div>
     <div class="padding"></div>
     <div class="grid">
         <h2 class="subtitle dailytitle">DailyUI #26 Pop up box</h2>
@@ -80,8 +88,10 @@
     <div class="padding"></div>
     <div class="grid">
         <h2 class="subtitle dailytitle">DailyUI #12 E-commerce shop, single item</h2>
-        <img src="images/dailyui/dailyui-12-desktop.png" alt="image of dailyui#12 desktop version" class="twoimg-twothird">
-        <img src="images/dailyui/dailyui-12-mobile.png" alt="image of dailyui#12 mobile version" class="twoimg-onethird">
+        <img src="images/dailyui/dailyui-12-desktop.png" alt="image of dailyui#12 desktop version"
+            class="twoimg-twothird">
+        <img src="images/dailyui/dailyui-12-mobile.png" alt="image of dailyui#12 mobile version"
+            class="twoimg-onethird">
     </div>
     <div class="padding"></div>
     <div class="grid">
@@ -107,4 +117,7 @@
         </div>
     </div>
 </body>
+
 </html>
+
+
