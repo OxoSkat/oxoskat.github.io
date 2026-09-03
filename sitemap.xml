@@ -4,54 +4,41 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://madsemmertsen.dk/index.html</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
+  <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://madsemmertsen.dk/cs-aware.html</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
+  <loc>https://madsemmertsen.dk/case-01.html</loc>
+  <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://madsemmertsen.dk/institute-for-public-health.html</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
+  <loc>https://madsemmertsen.dk/case-02.html</loc>
+  <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://madsemmertsen.dk/motostore.html</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
+  <loc>https://madsemmertsen.dk/case-03.html</loc>
+  <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://madsemmertsen.dk/property-advice.html</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://madsemmertsen.dk/experiment-ai.html</loc>
+  <lastmod>2026-09-03T00:00:00+00:00</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
   <loc>https://madsemmertsen.dk/about.html</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
+  <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://madsemmertsen.dk/guide-til-ejer.pdf</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://madsemmertsen.dk/guide-til-investor.pdf</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://madsemmertsen.dk/resume.pdf</loc>
-  <lastmod>2022-11-18T09:29:42+00:00</lastmod>
+  <lastmod>2026-09-03T00:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
 
 </urlset>
