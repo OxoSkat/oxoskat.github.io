@@ -147,9 +147,9 @@ a:hover, a:active {
 }
 
 .nav-divider {
-   height: 2px;
-   background: var(--color-ink);
-   filter: url(#sketchy);
+   display: block;
+   width: 100%;
+   height: 14px;
 }
 
 .nav-logo {
@@ -336,9 +336,9 @@ ul { list-style: none; margin: 0; padding: 0; }
    Section divider
    ========================================================= */
 .section-divider {
-   height: 2px;
-   background: var(--color-ink);
-   filter: url(#sketchy);
+   display: block;
+   width: 100%;
+   height: 14px;
    margin: 0 0 var(--space-3) 0;
 }
 
@@ -428,9 +428,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .footer-divider {
-   height: 2px;
-   background: var(--color-ink);
-   filter: url(#sketchy);
+   display: block;
+   width: 100%;
+   height: 14px;
    margin-bottom: var(--space-4);
 }
 
