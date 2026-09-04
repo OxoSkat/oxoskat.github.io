@@ -256,26 +256,31 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* =========================================================
    Wobble-bordered chips
    ========================================================= */
+.chip,
+.btn,
+.work-card,
+.profile-frame,
+.media-frame {
+   border-style: solid;
+   border-color: transparent;
+   border-image-source: url("images/drawn/card-border.svg");
+   border-image-slice: 30;
+   border-image-repeat: stretch;
+}
+
 .chip {
-   position: relative;
    display: inline-flex;
    align-items: center;
    font-family: var(--font-mono);
    font-size: 0.6875rem;
    padding: 4px 10px;
    color: var(--color-ink-soft);
+   border-width: 6px;
+   border-image-width: 6px;
 }
 
 .chip-strong {
    color: var(--color-ink);
-}
-
-.chip svg {
-   position: absolute;
-   inset: 0;
-   width: 100%;
-   height: 100%;
-   pointer-events: none;
 }
 
 .chip-row {
@@ -288,7 +293,6 @@ ul { list-style: none; margin: 0; padding: 0; }
    Buttons
    ========================================================= */
 .btn {
-   position: relative;
    display: inline-flex;
    align-items: center;
    gap: 8px;
@@ -299,18 +303,11 @@ ul { list-style: none; margin: 0; padding: 0; }
    width: fit-content;
    color: var(--color-ink);
    background: var(--color-bg);
-}
-
-.btn svg {
-   position: absolute;
-   inset: 0;
-   width: 100%;
-   height: 100%;
-   pointer-events: none;
+   border-width: 8px;
+   border-image-width: 8px;
 }
 
 .btn span {
-   position: relative;
    display: inline-flex;
    align-items: center;
    gap: 8px;
@@ -355,18 +352,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .work-card {
-   position: relative;
    display: flex;
    flex-direction: column;
    color: var(--color-ink);
-}
-
-.work-card > svg {
-   position: absolute;
-   inset: 0;
-   width: 100%;
-   height: 100%;
-   pointer-events: none;
+   border-width: 16px;
+   border-image-width: 16px;
 }
 
 .work-card::after { display: none; }
@@ -461,8 +451,7 @@ ul { list-style: none; margin: 0; padding: 0; }
    padding: var(--space-5) 0;
 }
 
-.profile-frame { position: relative; }
-.profile-frame > svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.profile-frame { border-width: 14px; border-image-width: 14px; }
 
 .profile-img {
    position: relative;
@@ -515,13 +504,13 @@ ul { list-style: none; margin: 0; padding: 0; }
    position: relative;
    aspect-ratio: 16 / 9;
    background: linear-gradient(135deg, var(--color-tile), var(--color-olive));
+   border-width: 16px;
+   border-image-width: 16px;
 }
 
 .media-frame--terracotta { background: linear-gradient(135deg, var(--color-tile), var(--color-terracotta)); }
 .media-frame--forest { background: linear-gradient(135deg, var(--color-tile), var(--color-forest)); }
 .media-frame--amber { background: linear-gradient(135deg, var(--color-ink), var(--color-accent)); }
-
-.media-frame > svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 
 .media-frame-label {
    position: relative;
