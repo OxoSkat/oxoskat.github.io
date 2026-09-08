@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
     <script src="hamburger.js" defer></script>
-    <script src="mascot.js" defer></script>
-    <title>Case Study 02 — Mads Emmertsen</title>
+    <title>School Health Screening Records — Mads Emmertsen</title>
 </head>
+
 <body>
     <svg class="filter-defs" aria-hidden="true">
         <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
-            <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise"/>
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+            <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
         </filter>
     </svg>
-
-    <div class="mascot" id="mascot" aria-hidden="true">
-        <svg width="72" height="60" viewBox="0 0 76 64">
-            <path d="M18 40 C16 24, 26 13, 40 13 C55 13, 64 25, 61 40 C59 50, 50 55, 39 55 C27 55, 20 49, 18 40 Z" fill="#E4D9BE" stroke="#262015" stroke-width="2.4" stroke-linejoin="round" style="filter:url(#sketchy);"/>
-            <path d="M40 24 C48 19, 58 20, 63 14 C66 10, 65 6, 61 7 C54 9, 49 16, 45 22" fill="none" stroke="#262015" stroke-width="2.4" stroke-linecap="round" style="filter:url(#sketchy);"/>
-            <circle cx="61" cy="8" r="3.2" fill="#E4D9BE" stroke="#262015" stroke-width="2"/>
-            <ellipse cx="32" cy="33" rx="5.5" ry="6.5" fill="#F7F2E6" stroke="#262015" stroke-width="1.6"/>
-            <ellipse cx="47" cy="33" rx="5.5" ry="6.5" fill="#F7F2E6" stroke="#262015" stroke-width="1.6"/>
-            <circle class="mascot-pupil" cx="32" cy="33" r="2.4" fill="#262015"/>
-            <circle class="mascot-pupil" cx="47" cy="33" r="2.4" fill="#262015"/>
-        </svg>
-    </div>
 
     <!--Navigation-->
     <nav class="nav" id="siteNav">
@@ -59,82 +51,176 @@
 
     <header class="container case-hero">
         <span class="eyebrow">Case study</span>
-        <h1>Project name TBD</h1>
-        <p class="case-hero-sub">A one- or two-sentence summary of the problem this project solved and the outcome — this replaces the placeholder once the write-up is ready.</p>
-        <div class="placeholder-note">Placeholder content — swap in the real case study copy and images.</div>
+        <h1>Four tables, three tabs</h1>
+        <p class="case-hero-sub">Redesigning how Novax's school health module shows a child's vision, hearing, and
+            language screening history — replacing four dense tables stacked on one page with three focused tabs
+            built around what a health visitor needs first: the latest result, and whether it needs following up.</p>
 
         <div class="case-meta">
             <div class="case-meta-item">
                 <span class="case-meta-label">Role</span>
-                <span class="case-meta-value">Your role</span>
+                <span class="case-meta-value">Digital Designer</span>
             </div>
             <div class="case-meta-item">
                 <span class="case-meta-label">Company</span>
-                <span class="case-meta-value">Company name</span>
+                <span class="case-meta-value">Novax A/S</span>
             </div>
             <div class="case-meta-item">
                 <span class="case-meta-label">Timeline</span>
-                <span class="case-meta-value">Month Year – Month Year</span>
+                <span class="case-meta-value">Summer 2026</span>
             </div>
             <div class="case-meta-item">
                 <span class="case-meta-label">Tools</span>
-                <span class="case-meta-value">Figma, etc.</span>
+                <span class="case-meta-value">Figma, AI-assisted iteration</span>
             </div>
         </div>
     </header>
 
     <section class="container case-section">
-        <div class="media-frame media-frame--terracotta">
-            <div class="media-frame-label">Cover / hero image</div>
-        </div>
+        <figure class="figure figure--wide">
+            <div class="figure-plate">
+                <div class="media-frame media-frame--photo">
+                    <img src="images/case-02/vision-with-correction.png" width="1340" height="1188" decoding="async"
+                        alt="Synsprøver tab showing a latest-measurement card with values for both eyes and binocular vision, a value-set toggle, and a measurement history table">
+                </div>
+            </div>
+            <figcaption class="media-caption">The Synsprøver tab: latest measurement, the LogMAR/Snellen toggle, and
+                history in one view.</figcaption>
+        </figure>
     </section>
 
     <section class="container case-section">
         <span class="eyebrow">Overview</span>
-        <h2>The problem</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Describe the situation before your involvement: the user pain point, the business constraint,
-            or the legacy system limitation that made this project necessary. Keep it concrete — numbers, quotes,
-            or specific workflows help ground the reader.</p>
+        <h2>Three test types, buried in one page</h2>
+        <p class="prose" style="margin-top: var(--space-2);">The old version of this module put every screening
+            result a child had ever had onto a single page: one table for vision tests, two more for hearing — one
+            per ear — and a fourth for language assessments. Finding the most recent result meant scanning a wide
+            table for the newest date; judging whether it needed attention meant reading every column by hand. The
+            data wasn't wrong, it just wasn't organised around the two questions a health visitor actually asks
+            first: what's the latest measurement, and does it need follow-up?</p>
+        <p class="prose">My task was to redesign the module around those two questions for three quite different
+            kinds of data — a handful of values per eye, up to 22 measurement points across both ears, and a short
+            qualitative language note — without losing any of the detail the old tables held.</p>
     </section>
 
     <section class="container case-section">
         <span class="eyebrow">Process</span>
-        <h2>How I approached it</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Walk through your process — research, ideation, iteration, testing. This is where you show
-            your thinking, not just the final screens.</p>
-        <div class="media-grid-2" style="margin-top: var(--space-3);">
-            <div>
-                <div class="media-frame media-frame--terracotta"><div class="media-frame-label">Process image 1</div></div>
-                <p class="media-caption">Caption describing this artifact.</p>
-            </div>
-            <div>
-                <div class="media-frame media-frame--terracotta"><div class="media-frame-label">Process image 2</div></div>
-                <p class="media-caption">Caption describing this artifact.</p>
-            </div>
-        </div>
+        <h2>Deciding what earns a glance</h2>
+        <p class="prose" style="margin-top: var(--space-2);">I split the page into three tabs — Synsprøver,
+            Høreprøver, and Sprogvurderinger — one per test type, so each could use whatever layout actually fit its
+            data instead of three different shapes forced into one table. Before settling on those layouts, I used an
+            AI as a sparring partner: describing the data and the reading task, asking for alternative ways to lay it
+            out, then iterating on its suggestions rather than taking any of them as-is.</p>
+        <p class="prose">Two patterns came out of that process and carried across the vision and hearing tabs. A
+            summary card for the latest measurement sits above the history table, showing the newest result and its
+            change from the previous one without opening anything — language assessments have too few fields to need
+            one, so that tab stays a plain list instead. And anything worth a second look is marked before you have
+            to go looking for it: a value outside the normal range gets a warning colour wherever it appears, and any
+            measurement flagged with an anmærkning — a note asking for follow-up — adds to a small running count at
+            the top of the page, linking straight to the row it belongs to.</p>
     </section>
 
     <section class="container case-section">
-        <blockquote class="pull-quote">A pull quote or key insight from the project — user feedback, a stakeholder takeaway, or your own reflection.</blockquote>
+        <blockquote class="pull-quote">A vision card, a hearing summary, a language note — three different shapes,
+            built to answer the same question first: does this result need a second look?
+        </blockquote>
     </section>
 
     <section class="container case-section">
         <span class="eyebrow">Solution</span>
-        <h2>What shipped</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Describe the final solution and why it works — link it back to the problem stated earlier.</p>
-        <div class="media-frame media-frame--terracotta" style="margin-top: var(--space-3);">
-            <div class="media-frame-label">Final UI screenshot</div>
+        <h2>Three tabs, three shapes</h2>
+        <p class="prose" style="margin-top: var(--space-2);">What each tab actually shows past that shared
+            foundation depends entirely on its data — a handful of numbers, more than twenty of them, or almost
+            none.</p>
+
+        <div style="margin-top: var(--space-4);">
+            <h4>Synsprøver</h4>
+            <p class="prose" style="margin-top: 8px;">Some municipalities screen with a Snellen chart, others with
+                LogMAR, and health visitors switch between the two depending on which school they're visiting — so a
+                button group lets them pick the active scale, and both "Ny synsprøve" and "Registrer normalt syn"
+                write using whichever one is selected. In the history table, working with AI on the column layout
+                got each eye's reading down to one cell: the corrected measurement if the child wears glasses or
+                lenses, since that's what confirms the prescription is still right, otherwise the uncorrected one.
+                The other value doesn't disappear — it drops into the row's expanded detail, still there for tracking
+                whether vision is drifting over time even when it isn't the number that matters most today.</p>
+            <div class="text-media-row" style="margin-top: var(--space-3);">
+                <p class="prose">The two states below are the same card responding to different children: one with a
+                    prescription to confirm, one without a corrected value to show at all — and flagged for
+                    follow-up on top of that.</p>
+                <figure class="figure figure--sm">
+                    <div class="figure-plate">
+                        <div class="media-frame media-frame--photo">
+                            <img src="images/case-02/vision-without-correction.png" width="1340" height="1056"
+                                loading="lazy" decoding="async"
+                                alt="Synsprøver latest-measurement card for a child without glasses, flagged with an anmærkning and an uncertain colour-vision result">
+                        </div>
+                    </div>
+                    <figcaption class="media-caption">No glasses, no corrected value to show — and this result
+                        carries a follow-up flag.</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div style="margin-top: var(--space-6);">
+            <h4>Høreprøver</h4>
+            <p class="prose" style="margin-top: 8px;">A single hearing test produces up to 22 measurements — eleven
+                frequencies per ear. Read as a raw table, even a completely normal result takes real effort to
+                confirm. Working through it with AI, I landed on two numbers per ear instead: the worst measurement
+                recorded, and how many of the eleven frequencies fall outside the normal range. A normal result
+                becomes obvious at a glance — worst value in range, nothing flagged — and so does a result worth a
+                closer look, along with roughly how much of it is affected.</p>
+            <p class="prose">Seeing which frequencies are the problem — low tones, high tones, one ear or both —
+                means expanding the row into the full reading: the same numbers, plotted on a chart shaped like a
+                clinical audiogram, so a health visitor can see exactly where a child's hearing drops off instead of
+                reading it out of a column of decibels.</p>
+            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+                <div class="figure-plate">
+                    <div class="media-frame media-frame--photo">
+                        <img src="images/case-02/hearing-test.png" width="1340" height="1863" loading="lazy"
+                            decoding="async"
+                            alt="Høreprøver tab showing worst-measurement and out-of-range counts per ear, with audiogram-style charts for the expanded row">
+                    </div>
+                </div>
+                <figcaption class="media-caption">Worst measurement and out-of-range count per ear, expanded into
+                    full audiogram-style charts.</figcaption>
+            </figure>
+        </div>
+
+        <div style="margin-top: var(--space-6);">
+            <h4>Sprogvurderinger</h4>
+            <p class="prose" style="margin-top: 8px;">Language assessments are the simplest of the three: a date and
+                the responsible health visitor identify the entry, a yes/no judgement and a short free-text note
+                describe it, and an optional anmærkning flags it for follow-up — shown only on entries that actually
+                carry one. Five fields, most of them text, is exactly the case a plain list handles better than a
+                table built for numbers.</p>
+            <figure class="figure figure--sm" style="margin-top: var(--space-3);">
+                <div class="figure-plate">
+                    <div class="media-frame media-frame--photo">
+                        <img src="images/case-02/language-assessment.png" width="1340" height="770" loading="lazy"
+                            decoding="async"
+                            alt="Sprogvurderinger tab listing two language assessments as a simple list, one flagged with an anmærkning">
+                    </div>
+                </div>
+                <figcaption class="media-caption">Five fields — two identifying, two descriptive, one optional flag —
+                    fit a plain list.</figcaption>
+            </figure>
         </div>
     </section>
 
     <section class="container case-section">
         <span class="eyebrow">Outcome</span>
-        <h2>Results &amp; reflection</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Share measurable outcomes if you have them (adoption, accessibility scores, time saved), plus
-            what you'd do differently next time.</p>
+        <h2>What carries forward</h2>
+        <p class="prose" style="margin-top: var(--space-2);">The layouts here aren't ones I'd have reached alone on
+            a first pass. Sparring with AI didn't hand me the final design — it gave me a spread of different ways to
+            shape the same data, and iterating against them made it obvious which questions I hadn't actually
+            answered yet, like what a normal hearing result should look like at a glance next to one that needs a
+            second look. What I'd carry forward isn't a specific layout so much as that process, and the pattern it
+            produced: a summary card plus a flag-and-count banner is one I'd now reach for on any results-heavy
+            record, not just this one.</p>
     </section>
 
-    <div class="container"><img src="images/drawn/line-1.svg" class="section-divider" alt="" style="margin-bottom:0;"></div>
+    <div class="container"><img src="images/drawn/line-1.svg" class="section-divider" alt="" style="margin-bottom:0;">
+    </div>
     <nav class="container case-nav">
         <a href="index.html#work" class="case-nav-link">
             <span class="case-meta-label">&larr; Back to</span>
@@ -164,4 +250,5 @@
         </div>
     </footer>
 </body>
+
 </html>
