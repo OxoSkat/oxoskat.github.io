@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+    <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,10 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
+    <script src="i18n.js" defer></script>
     <title>Mads Emmertsen — Digital Designer</title>
 </head>
 
-<body>
+<body data-title-da="Mads Emmertsen — Digital Designer">
     <svg class="filter-defs" aria-hidden="true">
         <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
             <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
@@ -30,87 +32,131 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">MADS EMMERTSEN</a>
             <div class="nav-links">
-                <a href="index.html#work" class="is-active">Work</a>
-                <a href="about.html">About</a>
-                <a href="mailto:madsemmertsen@gmail.com">Contact</a>
+                <a href="index.html#work" class="is-active"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a>
+                <a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om mig</span></a>
+                <a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a>
             </div>
-            <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-controls">
+                <div class="lang-switch" role="group" aria-label="Language / Sprog">
+                    <button type="button" class="lang-btn" data-lang-btn="en" onclick="setLang('en')"
+                        aria-label="English" aria-pressed="true">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang-btn="da" onclick="setLang('da')"
+                        aria-label="Dansk" aria-pressed="false">DA</button>
+                </div>
+                <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <div class="container"><img src="images/drawn/line-1.svg" class="nav-divider" alt=""></div>
+        <div class="container">
+            <div class="nav-divider"></div>
+        </div>
     </nav>
     <!-- Dropdown for phone -->
     <div class="links show" id="mobileNav">
         <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
         <ul>
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="mailto:madsemmertsen@gmail.com">Contact</a></li>
+            <li><a href="index.html#work"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a></li>
+            <li><a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om
+                        mig</span></a></li>
+            <li><a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a></li>
         </ul>
     </div>
 
     <header class="container hero">
-        <span class="eyebrow">Digital Designer &middot; Design Systems</span>
-        <h1>UI production and design systems for products people rely on.</h1>
-        <p class="hero-sub">Currently shaping healthcare IT at NOVAX A/S &mdash; bridging complex user needs and
-            pixel-perfect, accessible interfaces.</p>
+        <span class="eyebrow"><span data-i18n="en">Digital Designer &middot; UX Research</span><span data-i18n="da"
+                lang="da">Digital designer &middot; UX-research</span></span>
+        <h1><span data-i18n="en">Designing and researching products people rely on.</span><span data-i18n="da"
+                lang="da">Designer og undersøger produkter, som folk er afhængige af.</span></h1>
+        <p class="hero-sub"><span data-i18n="en">Currently shaping healthcare IT at NOVAX A/S &mdash; bridging
+                complex user needs and
+                pixel-perfect, accessible interfaces.</span><span data-i18n="da" lang="da">Arbejder for tiden med
+                sundheds-IT hos NOVAX A/S &mdash; med fokus på at bygge bro mellem komplekse brugerbehov og
+                tilgængelige, knivskarpe grænseflader.</span></p>
         <div class="chip-row">
             <span class="chip">FIGMA</span>
-            <span class="chip">DESIGN SYSTEMS</span>
-            <span class="chip">ACCESSIBILITY</span>
+            <span class="chip"><span data-i18n="en">DESIGN SYSTEMS</span><span data-i18n="da"
+                    lang="da">DESIGNSYSTEMER</span></span>
+            <span class="chip"><span data-i18n="en">UX RESEARCH</span><span data-i18n="da"
+                    lang="da">UX-RESEARCH</span></span>
+            <span class="chip"><span data-i18n="en">ACCESSIBILITY</span><span data-i18n="da"
+                    lang="da">TILGÆNGELIGHED</span></span>
         </div>
     </header>
 
     <main class="container section" id="work">
-        <img src="images/drawn/line-1.svg" class="section-divider" alt="">
+        <div class="section-divider"></div>
         <div class="section-head">
-            <span class="eyebrow">Selected work</span>
-            <h2>Case studies &amp; experiments</h2>
+            <span class="eyebrow"><span data-i18n="en">Selected work</span><span data-i18n="da" lang="da">Udvalgt
+                    arbejde</span></span>
+            <h2><span data-i18n="en">Case studies</span><span data-i18n="da" lang="da">Casestudier</span></h2>
         </div>
 
         <div class="work-grid">
             <a href="case-01.html" class="work-card work-card--olive">
-                <div class="work-card-stripe"></div>
+                <div class="work-card-media"><img src="images/case-01/cover-child-journal.png" width="1318" height="892"
+                        decoding="async" alt=""></div>
                 <div class="work-card-body">
-                    <div class="work-card-media"><img src="images/case-01/cover-child-journal.png" width="1318" height="892" loading="lazy" decoding="async" alt=""></div>
                     <div class="work-card-meta">CASE &middot; 01</div>
-                    <h3>One birth record, two journals</h3>
-                    <p>Splitting Denmark's birth notification data across the mother's and child's journal at Novax.</p>
-                    <span class="work-card-link">View &rarr;</span>
+                    <h3><span data-i18n="en">Splitting the birth record</span><span data-i18n="da" lang="da">Opdeling af
+                            fødselsjournalen</span></h3>
+                    <p><span data-i18n="en">Splitting Denmark's birth notification data across the mother's and
+                            child's journal at Novax.</span><span data-i18n="da" lang="da">Opdeling af Danmarks
+                            fødselsanmeldelsesdata mellem mor og barns journal hos Novax.</span></p>
+                    <span class="work-card-link"><span data-i18n="en">View &rarr;</span><span data-i18n="da"
+                            lang="da">Se &rarr;</span></span>
                 </div>
             </a>
 
-            <a href="case-02.html" class="work-card work-card--terracotta">
-                <div class="work-card-stripe"></div>
+            <a href="case-02.html" class="work-card work-card--olive">
+                <div class="work-card-media"><img src="images/case-02/vision-with-correction.png" width="1340"
+                        height="1188" decoding="async" alt=""></div>
                 <div class="work-card-body">
-                    <div class="work-card-media"><img src="images/case-02/vision-with-correction.png" width="1340" height="1188" loading="lazy" decoding="async" alt=""></div>
                     <div class="work-card-meta">CASE &middot; 02</div>
-                    <h3>Four tables, three tabs</h3>
-                    <p>Redesigning how Novax's school health module shows vision, hearing, and language screening results.</p>
-                    <span class="work-card-link">View &rarr;</span>
+                    <h3><span data-i18n="en">Designing for early intervention</span><span data-i18n="da"
+                            lang="da">Design til tidlig indsats</span></h3>
+                    <p><span data-i18n="en">Redesigning how Novax's school health module shows vision, hearing, and
+                            language screening
+                            results.</span><span data-i18n="da" lang="da">Redesign af hvordan Novax' sundhedsplejesystem
+                            viser resultater fra syns-, høre- og sprogscreening.</span></p>
+                    <span class="work-card-link"><span data-i18n="en">View &rarr;</span><span data-i18n="da"
+                            lang="da">Se &rarr;</span></span>
                 </div>
             </a>
 
-            <a href="case-03.html" class="work-card work-card--forest">
-                <div class="work-card-stripe"></div>
+            <a href="case-03.html" class="work-card work-card--olive">
+                <div class="work-card-media"><img src="images/case-03/session-list.png" width="1280" height="720"
+                        decoding="async" alt=""></div>
                 <div class="work-card-body">
-                    <div class="work-card-media"></div>
                     <div class="work-card-meta">CASE &middot; 03</div>
-                    <h3>Project name TBD</h3>
-                    <p>One-line description of the problem and your role.</p>
-                    <span class="work-card-link">View &rarr;</span>
+                    <h3><span data-i18n="en">Screening the Conscript Pool</span><span data-i18n="da" lang="da">Screening
+                            af sessionspligtige</span></h3>
+                    <p><span data-i18n="en">A doctor's review flow for Forsvaret's conscription screening, embedded
+                            in a legacy iframe.
+                            Paused mid-project.</span><span data-i18n="da" lang="da">Et lægefagligt gennemgangsflow til
+                            Forsvarets sessionsscreening, indlejret i et ældre iframe-system.</span></p>
+                    <span class="work-card-link"><span data-i18n="en">View &rarr;</span><span data-i18n="da"
+                            lang="da">Se &rarr;</span></span>
                 </div>
             </a>
 
-            <a href="experiment-ai.html" class="work-card work-card--amber">
-                <div class="work-card-stripe"></div>
+            <a href="case-04.html" class="work-card work-card--olive">
+                <div class="work-card-media"><img src="images/case-04/hero-image-dashboard.png" width="2532"
+                        height="1358" decoding="async" alt=""></div>
                 <div class="work-card-body">
-                    <div class="work-card-media"></div>
-                    <div class="work-card-meta">EXPERIMENT</div>
-                    <h3>Hobby project name TBD</h3>
-                    <p>An AI experiment &mdash; what it explores.</p>
-                    <span class="work-card-link">View &rarr;</span>
+                    <div class="work-card-meta">CASE &middot; 04</div>
+                    <h3><span data-i18n="en">Sourdough app</span><span data-i18n="da" lang="da">Surdejs-app</span></h3>
+                    <p><span data-i18n="en">A recipe manager and baking journal built in close collaboration with
+                            Claude, from Figma design
+                            system to a live, deployed app.</span><span data-i18n="da" lang="da">Fra Figma-designsystem
+                            til driftsklar app: En digital bagejournal skabt i tæt samarbejde med Claude.</span></p>
+                    <span class="work-card-link"><span data-i18n="en">View &rarr;</span><span data-i18n="da"
+                            lang="da">Se &rarr;</span></span>
                 </div>
             </a>
         </div>
@@ -121,7 +167,8 @@
             <img src="images/drawn/line-1.svg" class="footer-divider" alt="">
             <div class="footer-inner">
                 <div class="footer-links">
-                    <p class="bold" style="margin:0 0 4px 0;">Contact me</p>
+                    <p class="bold" style="margin:0 0 4px 0;"><span data-i18n="en">Contact me</span><span data-i18n="da"
+                            lang="da">Kontakt mig</span></p>
                     <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
                 </div>
                 <div class="footer-social">

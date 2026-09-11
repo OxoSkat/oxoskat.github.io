@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
     <script src="hamburger.js" defer></script>
-    <title>Case Study 03 — Mads Emmertsen</title>
+    <script src="i18n.js" defer></script>
+    <title>Screening the Conscript Pool — Mads Emmertsen</title>
 </head>
-<body>
+
+<body data-title-da="Screening af sessionspligtige — Mads Emmertsen">
     <svg class="filter-defs" aria-hidden="true">
         <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
-            <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise"/>
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+            <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
         </filter>
     </svg>
 
@@ -25,111 +32,434 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">MADS EMMERTSEN</a>
             <div class="nav-links">
-                <a href="index.html#work" class="is-active">Work</a>
-                <a href="about.html">About</a>
-                <a href="mailto:madsemmertsen@gmail.com">Contact</a>
+                <a href="index.html#work" class="is-active"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a>
+                <a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om mig</span></a>
+                <a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a>
             </div>
-            <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-controls">
+                <div class="lang-switch" role="group" aria-label="Language / Sprog">
+                    <button type="button" class="lang-btn" data-lang-btn="en" onclick="setLang('en')"
+                        aria-label="English" aria-pressed="true">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang-btn="da" onclick="setLang('da')" aria-label="Dansk"
+                        aria-pressed="false">DA</button>
+                </div>
+                <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <div class="container"><img src="images/drawn/line-1.svg" class="nav-divider" alt=""></div>
+        <div class="container">
+            <div class="nav-divider"></div>
+        </div>
     </nav>
     <div class="links show" id="mobileNav">
         <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
         <ul>
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="mailto:madsemmertsen@gmail.com">Contact</a></li>
+            <li><a href="index.html#work"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a></li>
+            <li><a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om
+                        mig</span></a></li>
+            <li><a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a></li>
         </ul>
     </div>
 
     <header class="container case-hero">
-        <span class="eyebrow">Case study</span>
-        <h1>Project name TBD</h1>
-        <p class="case-hero-sub">A one- or two-sentence summary of the problem this project solved and the outcome — this replaces the placeholder once the write-up is ready.</p>
-        <div class="placeholder-note">Placeholder content — swap in the real case study copy and images.</div>
+        <span class="eyebrow"><span data-i18n="en">Case study</span><span data-i18n="da" lang="da">Case</span></span>
+        <h1><span data-i18n="en">Screening the Conscript Pool</span><span data-i18n="da" lang="da">Screening af
+                sessionspligtige</span></h1>
+        <p class="case-hero-sub">
+            <span data-i18n="en">Designing a doctor's review flow for Forsvaret's conscription health screening — a
+                Way-Out tab for pre-session exemption requests and a Session tab for reviewing a conscript's test
+                results on the day — embedded via iframe inside the legacy system where the actual fit-for-duty
+                verdict
+                still had to be recorded. The collaboration with Forsvaret ended partway through the project.</span>
+            <span data-i18n="da" lang="da">Design af et lægefagligt gennemgangsflow til Forsvarets sessionsscreening
+                — en Way-Out-fane til fritagelsesanmodninger inden sessionen og en Session-fane til gennemgang af en
+                værnepligtigs testresultater på dagen — indlejret via iframe inde i det ældre system, hvor
+                selve godkendelsen til tjeneste stadig skulle registreres. Samarbejdet med Forsvaret ophørte midtvejs
+                i projektet.</span>
+        </p>
 
         <div class="case-meta">
             <div class="case-meta-item">
-                <span class="case-meta-label">Role</span>
-                <span class="case-meta-value">Your role</span>
+                <span class="case-meta-label"><span data-i18n="en">Role</span><span data-i18n="da"
+                        lang="da">Rolle</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Digital Designer</span><span data-i18n="da"
+                        lang="da">Digital designer</span></span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Company</span>
-                <span class="case-meta-value">Company name</span>
+                <span class="case-meta-label"><span data-i18n="en">Company</span><span data-i18n="da"
+                        lang="da">Virksomhed</span></span>
+                <span class="case-meta-value">Novax A/S</span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Timeline</span>
-                <span class="case-meta-value">Month Year – Month Year</span>
+                <span class="case-meta-label"><span data-i18n="en">Timeline</span><span data-i18n="da"
+                        lang="da">Tidsramme</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Summer 2026 — paused</span><span data-i18n="da"
+                        lang="da">Sommer 2026 — sat på pause</span></span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Tools</span>
-                <span class="case-meta-value">Figma, etc.</span>
+                <span class="case-meta-label"><span data-i18n="en">Tools</span><span data-i18n="da"
+                        lang="da">Værktøjer</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Figma, Novax design system</span><span data-i18n="da"
+                        lang="da">Figma, Novax' designsystem</span></span>
             </div>
         </div>
     </header>
 
     <section class="container case-section">
-        <div class="media-frame media-frame--forest">
-            <div class="media-frame-label">Cover / hero image</div>
-        </div>
-    </section>
-
-    <section class="container case-section">
-        <span class="eyebrow">Overview</span>
-        <h2>The problem</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Describe the situation before your involvement: the user pain point, the business constraint,
-            or the legacy system limitation that made this project necessary. Keep it concrete — numbers, quotes,
-            or specific workflows help ground the reader.</p>
-    </section>
-
-    <section class="container case-section">
-        <span class="eyebrow">Process</span>
-        <h2>How I approached it</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Walk through your process — research, ideation, iteration, testing. This is where you show
-            your thinking, not just the final screens.</p>
-        <div class="media-grid-2" style="margin-top: var(--space-3);">
-            <div>
-                <div class="media-frame media-frame--forest"><div class="media-frame-label">Process image 1</div></div>
-                <p class="media-caption">Caption describing this artifact.</p>
+        <figure class="figure figure--wide">
+            <div class="figure-plate">
+                <div class="media-frame media-frame--photo">
+                    <img src="images/case-03/session-list.png" width="1280" height="720" decoding="async"
+                        alt="Session tab listing four conscripts for the day, with columns for the health questionnaire, cognitive test score, and robustness test result, and Jonas Madsen flagged with a rejected Way-Out and a not-ready robustness result"
+                        data-alt-da="Session-fanen med en liste over fire sessionspligtige for dagen, med kolonner for helbredsspørgeskema, kognitiv testscore og robusthedstestresultat, og Jonas Madsen markeret med en afvist Way-Out og et ikke-klart robusthedsresultat">
+                </div>
             </div>
-            <div>
-                <div class="media-frame media-frame--forest"><div class="media-frame-label">Process image 2</div></div>
-                <p class="media-caption">Caption describing this artifact.</p>
+            <figcaption class="media-caption">
+                <span data-i18n="en">The Session tab on the day of screening — three conscripts read as
+                    routine, one flagged before the doctor even opens the record.</span>
+                <span data-i18n="da" lang="da">Session-fanen på screeningsdagen — tre sessionspligtige læses som
+                    rutine, én markeret, før lægen overhovedet åbner journalen.</span>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section class="container case-section">
+        <span class="eyebrow"><span data-i18n="en">Overview</span><span data-i18n="da" lang="da">Overblik</span></span>
+        <h2><span data-i18n="en">Two decision flows inside a legacy system</span><span data-i18n="da" lang="da">To
+                beslutningsflows inde i et ældre system</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">Conscripts called up for Danish military service can
+                apply for a Way-Out — an exemption from attending the screening session at all, submitted with a
+                written
+                explanation and supporting documentation. A doctor has to review and approve or reject every one of
+                those requests. For everyone who does attend, a doctor reviews the results of a cognitive
+                test
+                and a robustness test the conscript completed in advance, together with a health questionnaire filled
+                in
+                from home, and judges whether they're fit for duty.</span>
+            <span data-i18n="da" lang="da">Sessionspligtige, der indkaldes til dansk værnepligt, kan søge om Way-Out
+                — en fritagelse for at møde op til forsvarets dag (session), indsendt med en skriftlig
+                forklaring og understøttende dokumentation. En læge skal gennemgå og godkende eller afvise hver
+                eneste anmodning. For alle, der møder op, gennemgår en læge resultaterne af en
+                kognitiv test og en robusthedstest, som den sessionspligtige har gennemført på forhånd, sammen med et
+                helbredsspørgeskema udfyldt hjemmefra, og vurderer, om vedkommende er egnet til tjeneste.</span>
+        </p>
+        <p class="prose">
+            <span data-i18n="en">My task was to design both from scratch as a single embedded module — a tab living
+                in an
+                iframe next to the legacy "Session" tab doctors already used — covering everything up to the point of
+                decision, since recording the actual verdict was explicitly out of scope for this phase of the
+                project.</span>
+            <span data-i18n="da" lang="da">Min opgave var at designe begge dele fra bunden som ét samlet, indlejret
+                modul — en fane placeret i et iframe ved siden af den ældre "Session"-fane, lægerne allerede brugte —
+                der dækkede alt frem til selve beslutningen, da det at registrere den faktiske afgørelse eksplicit lå
+                uden for denne fases scope.</span>
+        </p>
+    </section>
+
+    <section class="container case-section">
+        <span class="eyebrow"><span data-i18n="en">Process</span><span data-i18n="da" lang="da">Proces</span></span>
+        <h2><span data-i18n="en">Designing from a spec, not a doctor</span><span data-i18n="da" lang="da">At designe
+                ud fra en spec, ikke en læge</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The starting point was a requirements specification
+                Forsvaret's own team had written up — every field a doctor needed to see, every decision they needed
+                to
+                make, but not much on how those fields actually got used in the moment. The plan was to run a
+                workshop
+                with a couple of doctors early on, to pressure-test that spec against how they actually work and
+                review
+                the mockups before anything went further. That workshop never happened: The collaboration with
+                Forsvaret was discontinued while this project was still underway, roughly halfway through.</span>
+            <span data-i18n="da" lang="da">Udgangspunktet var en kravspecifikation, Forsvarets eget team havde
+                udarbejdet — hvert felt en læge skulle kunne se, hver beslutning de skulle træffe, men ikke meget om,
+                hvordan de felter faktisk blev brugt i praksis. Planen var at holde en workshop med et par læger
+                tidligt i forløbet for at stressteste specen mod, hvordan de reelt arbejder, og gennemgå mockuppene,
+                før noget gik videre. Den workshop blev aldrig til noget: Samarbejdet med Forsvaret blev afbrudt, mens
+                projektet stadig var i gang, cirka halvvejs igennem.</span>
+        </p>
+        <p class="prose">
+            <span data-i18n="en">Everything shown here is what I got to before that point — mockups built directly
+                from the
+                spec, reviewed internally, but never in front of the doctors who'd have used them. I've kept that
+                distinction in mind throughout rather than write it up as more finished than it is.</span>
+            <span data-i18n="da" lang="da">Alt, hvad der vises her, er det, jeg nåede frem til inden det punkt —
+                mockups bygget direkte ud fra specen, gennemgået internt, men aldrig fremvist for de læger, der skulle
+                have brugt dem. Den forskel har jeg haft for øje hele vejen igennem; jeg vil hellere være ærlig omkring,
+                at designet mangler den afgørende valideringsfase, end at fremstille det som mere færdigt, end det
+                var.</span>
+        </p>
+        <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+            <div class="figure-plate">
+                <div class="media-frame media-frame--photo">
+                    <img src="images/case-03/way-out-queue.png" width="1280" height="720" loading="lazy"
+                        decoding="async"
+                        alt="Way-Out tab showing a queue of three pending requests, each with the conscript's name, the condition they cited, a timestamp, and an attachment count"
+                        data-alt-da="Way-Out-fanen med en kø af tre afventende anmodninger, hver med den sessionspligtiges navn, den anførte tilstand, et tidsstempel og antal vedhæftninger">
+                </div>
+            </div>
+            <figcaption class="media-caption">
+                <span data-i18n="en">The Way-Out queue — the first of the two flows.</span>
+                <span data-i18n="da" lang="da">Way-Out-køen — det første af de to flows.</span>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section class="container case-section">
+        <span class="eyebrow"><span data-i18n="en">Solution</span><span data-i18n="da" lang="da">Løsning</span></span>
+        <h2><span data-i18n="en">Way-Out and Session, side by side</span><span data-i18n="da" lang="da">Way-Out og
+                Session, side om side</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">Both tabs share the same shell — a list of conscripts. But how the doctor works with
+                the lists is completely different.</span>
+            <span data-i18n="da" lang="da">Begge faner deler samme skal — en liste over sessionspligtige. Men hvordan
+                lægen arbejder med listerne er helt forskelligt.</span>
+        </p>
+
+        <div style="margin-top: var(--space-4);">
+            <h4><span data-i18n="en">Way-Out — reviewing exemption requests</span><span data-i18n="da" lang="da">Way-Out
+                    — gennemgang af fritagelsesanmodninger</span></h4>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">Selecting a conscript from the queue opens their written
+                    explanation next to any attached documentation — a doctor's note, hospital records, or scans.
+                    Approve and reject sit right beside the text, keeping the decision anchored directly in the
+                    context
+                    that informs it.</span>
+                <span data-i18n="da" lang="da">At vælge en værnepligtig fra køen åbner vedkommendes skriftlige
+                    forklaring ved siden af eventuel vedhæftet dokumentation — en lægeerklæring, journaludskrifter
+                    eller scanninger. Godkend og afvis sidder lige ved siden af teksten, så beslutningen forbliver
+                    forankret direkte i den kontekst, der informerer den.</span>
+            </p>
+            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+                <div class="figure-plate">
+                    <div class="media-frame media-frame--photo">
+                        <img src="images/case-03/way-out-citizen-review.png" width="1280" height="720" loading="lazy"
+                            decoding="async"
+                            alt="Way-Out queue with a conscript selected, showing his written explanation, Approve and Reject buttons, and his attached health questionnaire rendered on the right"
+                            data-alt-da="Way-Out-kø med en sessionspligtig valgt, med hans skriftlige forklaring, Godkend- og Afvis-knapper, og hans vedhæftede helbredsspørgeskema vist til højre">
+                    </div>
+                </div>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">Explanation, documentation, and the decision itself, all in one
+                        view.</span>
+                    <span data-i18n="da" lang="da">Forklaring, dokumentation og selve beslutningen, samlet i én
+                        visning.</span>
+                </figcaption>
+            </figure>
+            <p class="prose" style="margin-top: var(--space-3);">
+                <span data-i18n="en">Once a request is decided it moves out of the
+                    working queue entirely — into a separate, filterable list of what's already been handled, so a
+                    doctor picking this up mid-shift only ever sees what's actually theirs to act on. And because a
+                    queue can run dry, the empty state got the same attention as everything else: a plain,
+                    unambiguous
+                    statement that there's nothing left to review right now.</span>
+                <span data-i18n="da" lang="da">Når en anmodning er afgjort, flyttes den helt ud af arbejdskøen — over
+                    i en separat, filtrerbar liste over det, der allerede er behandlet, så en læge, der tager over
+                    midt i en vagt, kun ser det, der reelt er deres at handle på. Og fordi en kø kan løbe tør, fik den
+                    tomme tilstand samme opmærksomhed som alt andet: en enkel, utvetydig besked om, at der ikke er
+                    mere at gennemgå lige nu.</span>
+            </p>
+            <div class="media-grid-2" style="margin-top: var(--space-3);">
+                <div>
+                    <figure class="figure">
+                        <div class="figure-plate">
+                            <div class="media-frame media-frame--photo">
+                                <img src="images/case-03/way-out-treated.png" width="1280" height="720" loading="lazy"
+                                    decoding="async"
+                                    alt="Way-Out tab's Behandlet list showing four decided requests with Godkendt or Afvist status badges"
+                                    data-alt-da="Way-Out-fanens Behandlet-liste med fire afgjorte anmodninger med statusmærker som Godkendt eller Afvist">
+                            </div>
+                        </div>
+                        <figcaption class="media-caption">
+                            <span data-i18n="en">Decided requests, with the outcome as the first thing
+                                you read.</span>
+                            <span data-i18n="da" lang="da">Afgjorte anmodninger, med udfaldet som det første, man
+                                læser.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure class="figure">
+                        <div class="figure-plate">
+                            <div class="media-frame media-frame--photo">
+                                <img src="images/case-03/way-out-empty.png" width="1280" height="720" loading="lazy"
+                                    decoding="async"
+                                    alt="Empty state reading 'Ingen Way-Out sager' when there are no pending Way-Out requests to review"
+                                    data-alt-da="Tom tilstand med teksten 'Ingen Way-Out sager', når der ikke er nogen afventende Way-Out-anmodninger at gennemgå">
+                            </div>
+                        </div>
+                        <figcaption class="media-caption">
+                            <span data-i18n="en">Nothing to review — designed as its own state.</span>
+                            <span data-i18n="da" lang="da">Intet at gennemgå — designet som sin egen tilstand.</span>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section class="container case-section">
-        <blockquote class="pull-quote">A pull quote or key insight from the project — user feedback, a stakeholder takeaway, or your own reflection.</blockquote>
-    </section>
-
-    <section class="container case-section">
-        <span class="eyebrow">Solution</span>
-        <h2>What shipped</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Describe the final solution and why it works — link it back to the problem stated earlier.</p>
-        <div class="media-frame media-frame--forest" style="margin-top: var(--space-3);">
-            <div class="media-frame-label">Final UI screenshot</div>
+        <div style="margin-top: var(--space-7);">
+            <h4><span data-i18n="en">Session — reviewing test results on the day</span><span data-i18n="da"
+                    lang="da">Session — gennemgang af testresultater på dagen</span></h4>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">The Session list, shown at the top of this page, is built
+                    around the same idea that shaped my other projects: put whatever needs a second look ahead of
+                    everything else. A robustness result marked as not ready, a cognitive score flagged for suspected
+                    cheating, a Way-Out that was already rejected — any of those earns a marker on the list before the
+                    doctor opens the record. A conscript with none of them stays unmarked, which is deliberate: that's
+                    the happy path, and it should read as one at a glance. It gives doctors immediate visibility into
+                    potential red flags before they even open a file.</span>
+                <span data-i18n="da" lang="da">Session-listen, vist øverst på denne side, er bygget op omkring samme
+                    idé, som har formet mine andre projekter: sæt det, der kræver et ekstra kig, foran alt andet. Et
+                    robusthedsresultat markeret som ikke klar, en kognitiv score markeret for mistanke om snyd, en
+                    allerede afvist Way-Out — alt det giver en markering på listen, før lægen åbner journalen. En
+                    sessionspligtig uden nogen af delene forbliver umarkeret, hvilket er bevidst: det er den lige vej,
+                    og den skal fremstå som det med det samme. Det giver lægerne øjeblikkeligt overblik over
+                    potentielle advarselstegn, allerede før de åbner en sag.</span>
+            </p>
+            <div class="media-grid-2" style="margin-top: var(--space-3);">
+                <div>
+                    <figure class="figure">
+                        <div class="figure-plate">
+                            <div class="media-frame media-frame--photo">
+                                <img src="images/case-03/session-easy-case.png" width="1280" height="928" loading="lazy"
+                                    decoding="async"
+                                    alt="Session detail page for Magnus, with a green Godkendt cognitive score, a green Klar robustness result, and a single unremarkable health questionnaire answer about hay fever"
+                                    data-alt-da="Session-detaljeside for Magnus, med en grøn Godkendt kognitiv score, et grønt Klar robusthedsresultat, og ét ubemærkelsesværdigt svar i helbredsspørgeskemaet om høfeber">
+                            </div>
+                        </div>
+                        <figcaption class="media-caption">
+                            <span data-i18n="en">Nothing flagged, nothing to chase — a fast read for the
+                                doctor.</span>
+                            <span data-i18n="da" lang="da">Intet markeret, intet at følge op på — en hurtig
+                                gennemlæsning for lægen.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure class="figure">
+                        <div class="figure-plate">
+                            <div class="media-frame media-frame--photo">
+                                <img src="images/case-03/session-flagged-case.png" width="1280" height="978"
+                                    loading="lazy" decoding="async"
+                                    alt="Session detail page for Jonas Madsen, with a yellow cognitive score flagged for suspected cheating, a red not-ready robustness result, a rejected Way-Out badge, and a health questionnaire answer about epilepsy with an attachment"
+                                    data-alt-da="Session-detaljeside for Jonas Madsen, med en gul kognitiv score markeret for mistanke om snyd, et rødt ikke-klart robusthedsresultat, et afvist Way-Out-mærke, og et svar i helbredsspørgeskemaet om epilepsi med en vedhæftning">
+                            </div>
+                        </div>
+                        <figcaption class="media-caption">
+                            <span data-i18n="en">Same layout, three separate flags — everything the doctor
+                                needs to weigh before opening a single answer.</span>
+                            <span data-i18n="da" lang="da">Samme layout, tre separate flag — alt, lægen skal vurdere,
+                                før et eneste svar bliver åbnet.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <p class="prose" style="margin-top: var(--space-4);">
+                <span data-i18n="en">The health questionnaire itself only ever shows
+                    answers where the conscript actually reported something — no wall of "no" answers to scan past.
+                    Where a condition needs proof, like Jonas's epilepsy diagnosis, the answer carries an attachment;
+                    a
+                    doctor selects it to render the document itself alongside the questionnaire, rather than
+                    downloading
+                    it blind.</span>
+                <span data-i18n="da" lang="da">Selve helbredsspørgeskemaet viser kun svar, hvor den sessionspligtige
+                    rent faktisk har oplyst noget — ingen mur af "nej"-svar at scanne forbi. Hvor en tilstand kræver
+                    dokumentation, som Jonas' epilepsidiagnose, har svaret en vedhæftning; en læge vælger den for at
+                    få dokumentet vist direkte ved siden af spørgeskemaet i stedet for at downloade det blindt.</span>
+            </p>
+            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+                <div class="figure-plate">
+                    <div class="media-frame media-frame--photo">
+                        <img src="images/case-03/session-attachment-preview.png" width="1280" height="1282"
+                            loading="lazy" decoding="async"
+                            alt="Session detail page with the epilepsy questionnaire answer selected and its attached health-questionnaire scan rendered in a preview pane on the right"
+                            data-alt-da="Session-detaljeside med epilepsi-svaret i spørgeskemaet valgt, og dets vedhæftede scannede helbredsspørgeskema vist i et forhåndsvisningspanel til højre">
+                    </div>
+                </div>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">An answer with proof attached, rendered next to it instead of
+                        hidden behind a download.</span>
+                    <span data-i18n="da" lang="da">Et svar med dokumentation vedhæftet, vist ved siden af i stedet
+                        for gemt bag en download.</span>
+                </figcaption>
+            </figure>
+            <p class="prose" style="margin-top: var(--space-3);">
+                <span data-i18n="en">A rejected Way-Out follows the conscript into this
+                    view too, but it's a fact to weigh, not a verdict to repeat — the doctor can open when the
+                    decision
+                    was made and by whom without leaving the page, but has to reach their own conclusion for the
+                    session.</span>
+                <span data-i18n="da" lang="da">En afvist Way-Out følger også den sessionspligtige ind i denne
+                    visning, men det er et faktum der skal vises, ikke en afgørelse at gentage — lægen kan åbne og se
+                    hvornår beslutningen blev truffet, og af hvem, uden at forlade siden, men skal selv nå frem til
+                    sin egen konklusion for sessionen.</span>
+            </p>
+            <figure class="figure figure--wide" style="margin-top: var(--space-2);">
+                <div class="figure-plate">
+                    <div class="media-frame media-frame--photo">
+                        <img src="images/case-03/session-rejected-modal.png" width="1280" height="720" loading="lazy"
+                            decoding="async"
+                            alt="A modal titled 'Afvist Way-Out' open over Jonas Madsen's Session record, showing when the request was received, when it was decided, and which doctor decided it"
+                            data-alt-da="En modal med titlen 'Afvist Way-Out' åbnet over Jonas Madsens Session-journal, med hvornår anmodningen blev modtaget, hvornår den blev afgjort, og hvilken læge der afgjorde den">
+                    </div>
+                </div>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">Received, decided, by whom — the rejection's paper trail, one
+                        click away.</span>
+                    <span data-i18n="da" lang="da">Modtaget, afgjort, af hvem — Way-out afvisningens papirspor.</span>
+                </figcaption>
+            </figure>
         </div>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Outcome</span>
-        <h2>Results &amp; reflection</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Share measurable outcomes if you have them (adoption, accessibility scores, time saved), plus
-            what you'd do differently next time.</p>
+        <span class="eyebrow"><span data-i18n="en">Outcome</span><span data-i18n="da" lang="da">Resultat</span></span>
+        <h2><span data-i18n="en">Where it stopped</span><span data-i18n="da" lang="da">Hvor det stoppede</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">Every screen here ends the same way: a free-text field
+                for the doctor's overall assessment, and then a switch back to the legacy Session tab to actually
+                record
+                the conscript as fit or unfit for duty. Folding that decision into the new design was outside this
+                phase's scope — a compromise I'd have liked to revisit once the module had proven itself, not one I'd
+                have chosen to ship long-term.</span>
+            <span data-i18n="da" lang="da">Hvert skærmbillede her ender på samme måde: et fritekstfelt til lægens
+                samlede vurdering, og derefter et skift tilbage til den ældre Session-fane for rent faktisk at
+                registrere den sessionspligtige som egnet eller uegnet til tjeneste. At folde den beslutning ind i
+                det nye design lå uden for denne fases scope — et kompromis, jeg gerne ville have genbesøgt, når
+                modulet havde bevist sit værd, men ikke et, jeg selv ville have valgt at sende i drift på lang
+                sigt.</span>
+        </p>
+        <p class="prose">
+            <span data-i18n="en">The project didn't get that far. It was discontinued when our collaboration with
+                Forsvaret
+                ended, before the workshop that would have tested these mockups against how doctors actually work
+                ever
+                happened.</span>
+            <span data-i18n="da" lang="da">Projektet nåede ikke så langt. Det blev afbrudt, da vores samarbejde med
+                Forsvaret ophørte, inden den workshop, der skulle have testet disse mockups mod, hvordan lægerne
+                reelt arbejder, nogensinde blev til noget.</span>
+        </p>
     </section>
 
-    <div class="container"><img src="images/drawn/line-1.svg" class="section-divider" alt="" style="margin-bottom:0;"></div>
+    <div class="container">
+        <div class="section-divider" style="margin-bottom:0;"></div>
+    </div>
     <nav class="container case-nav">
         <a href="index.html#work" class="case-nav-link">
-            <span class="case-meta-label">&larr; Back to</span>
-            <h4>All work</h4>
+            <span class="case-meta-label"><span data-i18n="en">&larr; Back to</span><span data-i18n="da"
+                    lang="da">&larr; Tilbage til</span></span>
+            <h4><span data-i18n="en">All work</span><span data-i18n="da" lang="da">Alt arbejde</span></h4>
         </a>
-        <a href="experiment-ai.html" class="case-nav-link is-next">
-            <span class="case-meta-label">Next project</span>
-            <h4>AI Experiment</h4>
+        <a href="case-04.html" class="case-nav-link is-next">
+            <span class="case-meta-label"><span data-i18n="en">Next project</span><span data-i18n="da" lang="da">Næste
+                    projekt</span></span>
+            <h4><span data-i18n="en">Sourdough app</span><span data-i18n="da" lang="da">Surdejs-app</span></h4>
         </a>
     </nav>
 
@@ -138,7 +468,8 @@
             <img src="images/drawn/line-1.svg" class="footer-divider" alt="">
             <div class="footer-inner">
                 <div class="footer-links">
-                    <p class="bold" style="margin:0 0 4px 0;">Contact me</p>
+                    <p class="bold" style="margin:0 0 4px 0;"><span data-i18n="en">Contact me</span><span data-i18n="da"
+                            lang="da">Kontakt mig</span></p>
                     <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
                 </div>
                 <div class="footer-social">
@@ -151,4 +482,5 @@
         </div>
     </footer>
 </body>
+
 </html>

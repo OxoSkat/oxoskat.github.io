@@ -12,6 +12,7 @@
    --color-olive: #735817;
    --color-terracotta: #A96C4F;
    --color-forest: #33533C;
+   --color-rust: #8A3B2B;
    --color-tile: #E4D9BE;
 
    --font-display: "Hanken Grotesk", system-ui, sans-serif;
@@ -50,6 +51,21 @@ body {
 ::selection {
    background: var(--color-accent);
    color: var(--color-ink);
+}
+
+/* =========================================================
+   Language toggle
+   ========================================================= */
+[data-i18n="da"] {
+   display: none;
+}
+
+html[data-lang="da"] [data-i18n="da"] {
+   display: revert;
+}
+
+html[data-lang="da"] [data-i18n="en"] {
+   display: none;
 }
 
 /* =========================================================
@@ -167,11 +183,9 @@ a:active {
    padding: 0 var(--space-4);
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   gap: var(--space-4);
 }
 
-.nav-divider,
-.section-divider,
 .footer-divider {
    display: block;
    width: 100%;
@@ -179,11 +193,25 @@ a:active {
    aspect-ratio: 1201 / 2;
 }
 
+.nav-divider,
+.section-divider {
+   display: block;
+   width: 100%;
+   height: 0;
+   border: none;
+   border-top: 1px solid var(--color-ink);
+}
+
+.section-divider {
+   border-top-color: var(--color-ink-faint);
+}
+
 .nav-logo {
    font-family: var(--font-mono);
    font-size: 0.8125rem;
    letter-spacing: 0.08em;
    color: var(--color-ink);
+   margin-right: auto;
 }
 
 .nav-links {
@@ -216,6 +244,47 @@ a:active {
    font-size: 1.3rem;
    cursor: pointer;
    padding: 4px;
+}
+
+.nav-controls {
+   display: flex;
+   align-items: center;
+   gap: var(--space-3);
+}
+
+.lang-switch {
+   display: flex;
+   align-items: baseline;
+   gap: 10px;
+   padding-left: var(--space-3);
+   border-left: 1px solid var(--color-line);
+   font-family: var(--font-mono);
+   font-size: 0.75rem;
+   letter-spacing: 0.06em;
+}
+
+.lang-btn {
+   padding: 0;
+   border: none;
+   background: transparent;
+   cursor: pointer;
+   font: inherit;
+   font-family: inherit;
+   color: var(--color-ink-faint);
+   transition: color .15s var(--ease);
+}
+
+.lang-btn:hover {
+   color: var(--color-ink-soft);
+}
+
+.lang-btn.is-active {
+   color: var(--color-ink);
+   font-weight: 500;
+}
+
+.lang-sep {
+   color: var(--color-ink-faint);
 }
 
 .links {
@@ -266,16 +335,6 @@ ul {
 /* =========================================================
    Wobble-bordered chips
    ========================================================= */
-.btn,
-.work-card,
-.profile-frame,
-.media-frame {
-   border-style: solid;
-   border-color: transparent;
-   border-image-source: url("images/drawn/card-border.svg");
-   border-image-slice: 30;
-   border-image-repeat: stretch;
-}
 
 .chip {
    display: inline-flex;
@@ -283,18 +342,13 @@ ul {
    font-family: var(--font-mono);
    font-size: 0.6875rem;
    padding: 4px 10px;
-   color: var(--color-ink-soft);
-   border-style: solid;
-   border-color: transparent;
-   border-image-source: url("images/drawn/chip-border.svg");
-   border-image-slice: 10;
-   border-image-repeat: stretch;
-   border-width: 4px;
-   border-image-width: 4px;
+   color: var(--color-bg);
+   background-color: var(--color-terracotta);
+   border: none;
 }
 
 .chip-strong {
-   color: var(--color-ink);
+   color: var(--color-bg);
 }
 
 .chip-row {
@@ -316,9 +370,11 @@ ul {
    padding: 12px 22px;
    width: fit-content;
    color: var(--color-ink);
-   background: var(--color-bg);
-   border-width: 16px;
-   border-image-width: 16px;
+   background: var(--color-accent);
+   border: none;
+   border-radius: 999px;
+   cursor: pointer;
+   transition: background-color .15s var(--ease), transform .1s var(--ease);
 }
 
 .btn span {
@@ -327,8 +383,14 @@ ul {
    gap: 8px;
 }
 
-.btn:hover {
-   color: var(--color-accent-ink);
+.btn:hover,
+.btn:active {
+   color: var(--color-ink);
+   background: var(--color-accent-ink);
+}
+
+.btn:active {
+   transform: scale(0.96);
 }
 
 /* =========================================================
@@ -377,48 +439,23 @@ ul {
    display: flex;
    flex-direction: column;
    color: var(--color-ink);
-   border-width: 28px;
-   border-image-width: 28px;
+   border: 0.5px solid var(--color-olive);
+   border-radius: 24px;
+   overflow: hidden;
+   transition: border-color .15s var(--ease), box-shadow .15s var(--ease), transform .1s var(--ease);
 }
 
-.work-card::after {
-   display: none;
+.work-card:hover {
+   border-color: var(--color-accent-ink);
+   box-shadow: 0 0 0 0.5px var(--color-accent-ink), 0 12px 24px -12px rgba(38, 32, 21, 0.35);
 }
 
-.work-card-stripe {
-   height: 6px;
-}
-
-.work-card--olive .work-card-stripe {
-   background: var(--color-olive);
-}
-
-.work-card--terracotta .work-card-stripe {
-   background: var(--color-terracotta);
-}
-
-.work-card--forest .work-card-stripe {
-   background: var(--color-forest);
-}
-
-.work-card--amber .work-card-stripe {
-   background: var(--color-accent);
+.work-card:active {
+   transform: scale(0.99);
 }
 
 .work-card--olive .work-card-meta {
    color: var(--color-olive);
-}
-
-.work-card--terracotta .work-card-meta {
-   color: var(--color-terracotta);
-}
-
-.work-card--forest .work-card-meta {
-   color: var(--color-forest);
-}
-
-.work-card--amber .work-card-meta {
-   color: var(--color-accent-ink);
 }
 
 .work-card-body {
@@ -443,19 +480,7 @@ ul {
 }
 
 .work-card--olive .work-card-media {
-   background: linear-gradient(135deg, var(--color-tile), var(--color-olive));
-}
-
-.work-card--terracotta .work-card-media {
-   background: linear-gradient(135deg, var(--color-tile), var(--color-terracotta));
-}
-
-.work-card--forest .work-card-media {
-   background: linear-gradient(135deg, var(--color-tile), var(--color-forest));
-}
-
-.work-card--amber .work-card-media {
-   background: linear-gradient(135deg, var(--color-ink), var(--color-accent));
+   background: var(--color-bg);
 }
 
 .work-card-meta {
@@ -652,6 +677,7 @@ ul {
    aspect-ratio: auto;
    background: none;
    border: none;
+   border-image: none;
    margin: 0 auto;
 }
 
@@ -663,7 +689,7 @@ ul {
    height: auto;
    max-width: 100%;
    max-height: 88vh;
-   margin: 0;
+   margin: 0 auto;
 }
 
 /* The plate is a full-width "shelf" behind a screenshot — it's what gives a
@@ -734,11 +760,41 @@ ul {
    gap: var(--space-3);
 }
 
+/* Same idea as media-grid-2, but for three screenshots of one page at
+   different breakpoints. align-items: end keeps them foot-aligned even
+   though a portrait mobile shot is taller than the landscape ones. */
+.media-grid-3 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: var(--space-3);
+   align-items: end;
+}
+
 .media-caption {
    margin-top: var(--space-1);
    font-size: 0.8rem;
    line-height: 1.5;
    color: var(--color-ink-faint);
+}
+
+.prose-list {
+   margin-top: var(--space-2);
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-2);
+   max-width: var(--measure);
+}
+
+.prose-list li {
+   padding-left: var(--space-2);
+   border-left: 3px solid var(--color-accent);
+   line-height: 1.6;
+}
+
+.prose-list strong {
+   font-family: var(--font-display);
+   font-weight: 700;
+   color: var(--color-ink);
 }
 
 .pull-quote {
@@ -798,7 +854,8 @@ ul {
       grid-template-columns: repeat(2, 1fr);
    }
 
-   .media-grid-2 {
+   .media-grid-2,
+   .media-grid-3 {
       grid-template-columns: 1fr;
    }
 

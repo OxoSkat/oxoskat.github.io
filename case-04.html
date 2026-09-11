@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <script src="hamburger.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <title>Sourdough App — Mads Emmertsen</title>
+</head>
+
+<body data-title-da="Surdejs-app — Mads Emmertsen">
+    <svg class="filter-defs" aria-hidden="true">
+        <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
+            <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!--Navigation-->
+    <nav class="nav" id="siteNav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MADS EMMERTSEN</a>
+            <div class="nav-links">
+                <a href="index.html#work" class="is-active"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a>
+                <a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om mig</span></a>
+                <a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a>
+            </div>
+            <div class="nav-controls">
+                <div class="lang-switch" role="group" aria-label="Language / Sprog">
+                    <button type="button" class="lang-btn" data-lang-btn="en" onclick="setLang('en')"
+                        aria-label="English" aria-pressed="true">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang-btn="da" onclick="setLang('da')" aria-label="Dansk"
+                        aria-pressed="false">DA</button>
+                </div>
+                <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav-divider"></div>
+        </div>
+    </nav>
+    <div class="links show" id="mobileNav">
+        <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
+        <ul>
+            <li><a href="index.html#work"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a></li>
+            <li><a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om
+                        mig</span></a></li>
+            <li><a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a></li>
+        </ul>
+    </div>
+
+    <header class="container case-hero">
+        <span class="eyebrow"><span data-i18n="en">Case study</span><span data-i18n="da" lang="da">Case</span></span>
+        <h1><span data-i18n="en">Sourdough app</span><span data-i18n="da" lang="da">Surdejs-app</span></h1>
+        <p class="case-hero-sub">
+            <span data-i18n="en">As someone who has had the pleasure of discovering the journey of making sourdough
+                loaves, I wanted to create a tool that could support me while I bake and help me track my progress —
+                a
+                recipe manager and baking journal for sourdough bakers, designed and built in close collaboration
+                with
+                Claude (Anthropic's AI).</span>
+            <span data-i18n="da" lang="da">Som en, der har haft fornøjelsen af at opdage rejsen med at bage
+                surdejsbrød, ville jeg skabe et værktøj, der kunne støtte mig undervejs og hjælpe mig med at følge min
+                udvikling — en opskriftshåndterings- og bagejournal til surdejsbagere, designet og bygget i tæt
+                samarbejde med Claude (Anthropics AI).</span>
+        </p>
+
+        <div class="case-meta">
+            <div class="case-meta-item">
+                <span class="case-meta-label"><span data-i18n="en">Role</span><span data-i18n="da"
+                        lang="da">Rolle</span></span>
+                <span class="case-meta-value">
+                    <span data-i18n="en">Designer + product owner, working hands-on with AI for
+                        implementation</span>
+                    <span data-i18n="da" lang="da">Designer + produktejer, med hands-on AI-samarbejde om
+                        implementeringen</span>
+                </span>
+            </div>
+            <div class="case-meta-item">
+                <span class="case-meta-label"><span data-i18n="en">Type</span><span data-i18n="da"
+                        lang="da">Type</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Personal project</span><span data-i18n="da"
+                        lang="da">Personligt projekt</span></span>
+            </div>
+            <div class="case-meta-item">
+                <span class="case-meta-label"><span data-i18n="en">Stack</span><span data-i18n="da"
+                        lang="da">Stack</span></span>
+                <span class="case-meta-value">React 19, TypeScript, Vite, Tailwind, React Router 7, Supabase,
+                    dnd-kit</span>
+            </div>
+            <div class="case-meta-item">
+                <span class="case-meta-label"><span data-i18n="en">Live</span><span data-i18n="da"
+                        lang="da">Live</span></span>
+                <span class="case-meta-value"><a href="https://sourdough-app-rust.vercel.app/" target="_blank"
+                        rel="noopener"><span data-i18n="en">View live app &rarr;</span><span data-i18n="da" lang="da">Se
+                            den live app &rarr;</span></a></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="container case-section">
+        <figure class="figure figure--wide">
+            <div class="figure-plate">
+                <div class="media-frame media-frame--photo">
+                    <img src="images/case-04/hero-image-dashboard.png" width="2532" height="1358" decoding="async"
+                        alt="Dashboard's Results tab on desktop, showing a feed of logged bakes with photos and ratings"
+                        data-alt-da="Dashboardets Resultater-fane på desktop, med et feed af loggede bagninger med billeder og bedømmelser">
+                </div>
+            </div>
+            <figcaption class="media-caption">
+                <span data-i18n="en">The Results feed on desktop.</span>
+                <span data-i18n="da" lang="da">Resultatfeedet på desktop.</span>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section class="container case-section">
+        <span class="eyebrow"><span data-i18n="en">Overview</span><span data-i18n="da" lang="da">Overblik</span></span>
+        <h2><span data-i18n="en">A lab notebook, not a document</span><span data-i18n="da" lang="da">En
+                laboratoriejournal, ikke et dokument</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">Sourdough baking is inherently iterative — the same
+                base recipe gets tweaked bake after bake, making it easy to lose track of what changed and whether it
+                actually improved the final loaf.</span>
+            <span data-i18n="da" lang="da">Surdejsbagning er i sagens natur iterativt — den samme grundopskrift
+                bliver justeret bagning efter bagning, hvilket gør det let at miste overblikket over, hvad der er
+                ændret, og om det rent faktisk forbedrede det færdige brød.</span>
+        </p>
+        <p class="prose" style="margin-top: var(--space-3);">
+            <span data-i18n="en">Most recipe apps treat a recipe as a static document.
+                Sourdough bakers need something closer to a lab notebook — a system that maintains a clear history of
+                modifications and makes it effortless to review or revert to previous iterations.</span>
+            <span data-i18n="da" lang="da">De fleste opskrift-apps behandler en opskrift som et statisk dokument.
+                Surdejsbagere har brug for noget tættere på en laboratoriejournal — et system, der bevarer en klar
+                historik over ændringer og gør det nemt at gennemgå eller vende tilbage til tidligere
+                iterationer.</span>
+        </p>
+    </section>
+
+    <section class="container case-section">
+        <span class="eyebrow"><span data-i18n="en">Process</span><span data-i18n="da" lang="da">Proces</span></span>
+        <h2><span data-i18n="en">Active sparring rather than blindly handing off</span><span data-i18n="da"
+                lang="da">Aktiv sparring frem for blind aflevering</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The project began with low-fidelity wireframes before
+                moving into a fully realized Figma component library — around 19 components with comprehensive
+                variants,
+                from core buttons to custom history-timeline elements — before a single line of app code was
+                written.
+                From there, the design system served as the foundation for building a fully functional web
+                app.</span>
+            <span data-i18n="da" lang="da">Projektet startede med low-fidelity wireframes, før det bevægede sig
+                videre til et fuldt udbygget Figma-komponentbibliotek — omkring 19 komponenter med omfattende
+                varianter, fra grundlæggende knapper til specialbyggede historik-tidslinjeelementer — før en eneste
+                linje kode blev skrevet. Derfra fungerede designsystemet som fundamentet for at bygge en fuldt
+                funktionel webapp.</span>
+        </p>
+        <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+            <div class="figure-plate">
+                <div class="media-frame media-frame--photo">
+                    <img src="images/case-04/component-library.png" width="4273" height="1730" loading="lazy"
+                        decoding="async"
+                        alt="Figma component library showing variants of Button, Chip, Recipe Step, and Rating Stars components side by side"
+                        data-alt-da="Figma-komponentbibliotek med varianter af komponenterne Button, Chip, Recipe Step og Rating Stars side om side">
+                </div>
+            </div>
+            <figcaption class="media-caption">
+                <span data-i18n="en">The Figma component library — buttons through history-timeline
+                    elements.</span>
+                <span data-i18n="da" lang="da">Figma-komponentbiblioteket — fra knapper til
+                    historik-tidslinjeelementer.</span>
+            </figcaption>
+        </figure>
+        <div style="margin-top: var(--space-5);">
+            <h4><span data-i18n="en">Choosing an optimized stack</span><span data-i18n="da" lang="da">At vælge en
+                    optimeret stack</span></h4>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">Navigating unfamiliar architectural territory, the technology
+                    stack — React, Vite, Tailwind CSS, and Supabase, handling auth, database, and storage — was
+                    selected as tech-stack in collaboration with Claude.</span>
+                <span data-i18n="da" lang="da">Undervejs i projektet blev
+                    React, Vite, Tailwind CSS og Supabase til at håndtere auth, database og storage valgt som tech-stack
+                    i samarbejde
+                    med Claude.</span>
+            </p>
+        </div>
+
+        <div style="margin-top: var(--space-6);">
+            <h4><span data-i18n="en">Iterating live in the browser</span><span data-i18n="da" lang="da">Iteration
+                    live i browseren</span></h4>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">Development was a true back-and-forth dialogue rather than a
+                    traditional handoff. Pointing out UI friction or mobile layout breaks allowed for rapid, live
+                    iteration directly in the browser until the execution matched the design intent.</span>
+                <span data-i18n="da" lang="da">Udviklingen var en frem-og-tilbage-dialog snarere end en
+                    traditionel aflevering. Ved at pege på UI-friktion eller brud i mobillayoutet kunne der ske
+                    hurtig, live iterering direkte i browseren, indtil resultatet matchede designintentionen.</span>
+            </p>
+            <div class="media-grid-3" style="margin-top: var(--space-3);">
+                <figure class="figure">
+                    <div class="figure-plate">
+                        <div class="media-frame media-frame--photo">
+                            <img src="images/case-04/recipe-page-mobile.png" width="688" height="1136" loading="lazy"
+                                decoding="async" alt="Recipe page at mobile width"
+                                data-alt-da="Opskriftsside i mobilbredde">
+                        </div>
+                    </div>
+                    <figcaption class="media-caption"><span data-i18n="en">Mobile</span><span data-i18n="da"
+                            lang="da">Mobil</span></figcaption>
+                </figure>
+                <figure class="figure">
+                    <div class="figure-plate">
+                        <div class="media-frame media-frame--photo">
+                            <img src="images/case-04/recipe-page-tablet.png" width="1466" height="1138" loading="lazy"
+                                decoding="async" alt="Recipe page at tablet width"
+                                data-alt-da="Opskriftsside i tabletbredde">
+                        </div>
+                    </div>
+                    <figcaption class="media-caption">Tablet</figcaption>
+                </figure>
+                <figure class="figure">
+                    <div class="figure-plate">
+                        <div class="media-frame media-frame--photo">
+                            <img src="images/case-04/recipe-page-desktop.png" width="1424" height="1142" loading="lazy"
+                                decoding="async" alt="Recipe page at desktop width"
+                                data-alt-da="Opskriftsside i desktopbredde">
+                        </div>
+                    </div>
+                    <figcaption class="media-caption">Desktop</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div style="margin-top: var(--space-6);">
+            <h4><span data-i18n="en">Rebuilding the Journal</span><span data-i18n="da" lang="da">Genopbygning af
+                    Journalen</span></h4>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">Major feature pivots evolved organically as the design changed and slowly settled.
+                    For example, the Journal feature underwent a complete redesign because the initial
+                    implementation drifted too heavily into version-control jargon — numbered versions, "restore" as
+                    the
+                    primary action.</span>
+                <span data-i18n="da" lang="da">Større ændringer i funktioner opstod organisk mens designet ændrede sig
+                    og gradvist fandt sin form. For eksempel gennemgik Journal-funktionen et komplet redesign, fordi den
+                    oprindelige
+                    implementering bevægede sig for langt over i versionsstyrings-jargon — nummererede versioner,
+                    "gendan"
+                    som den primære handling.</span>
+            </p>
+            <p class="prose" style="margin-top: var(--space-2);">
+                <span data-i18n="en">Transforming a vague critique into a streamlined UX
+                    meant pivoting back to the core purpose: documenting an experiment and evaluating its
+                    results.</span>
+                <span data-i18n="da" lang="da">At forvandle en vag kritik til et strømlinet UX betød, at jeg måtte vende
+                    tilbage til formålet med det hele: at dokumentere et eksperiment og evaluere resultaterne.</span>
+            </p>
+            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+                <div class="figure-plate">
+                    <div class="media-frame media-frame--photo">
+                        <img src="images/case-04/journal-history.png" width="2526" height="1352" loading="lazy"
+                            decoding="async"
+                            alt="Journal timeline for a recipe showing version entries with a plain-language diff line and Active/Attempt badges"
+                            data-alt-da="Journal-tidslinje for en opskrift med versionsposter, en diff-linje i almindeligt sprog og Aktiv/Forsøg-mærker">
+                    </div>
+                </div>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">The Journal timeline — a plain-language diff between versions, and
+                        the Active/Attempt distinction that replaced "restore."</span>
+                    <span data-i18n="da" lang="da">Journal-tidslinjen — en letforståelig ændringslog mellem versioner,
+                        og skellet mellem 'aktiv' og 'forsøg', som erstattede 'gendan'.</span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div style="margin-top: var(--space-6);">
+            <h4><span data-i18n="en">Smaller features, same process</span><span data-i18n="da" lang="da">Mindre
+                    features, samme proces</span></h4>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">Smaller features — such as the step-timer alarm and the live
+                    language toggle — followed the exact same iterative loop: identifying a real-world friction point
+                    and shaping the solution collaboratively.</span>
+                <span data-i18n="da" lang="da">Mindre funktioner — såsom trin-timerens alarm og det live sprogskift —
+                    fulgte præcis samme iterative forløb: at identificere et reelt friktionspunkt i den virkelige
+                    verden og forme løsningen i fællesskab.</span>
+            </p>
+            <figure class="figure figure--sm" style="margin-top: var(--space-3);">
+                <div class="figure-plate">
+                    <div class="media-frame media-frame--photo">
+                        <img src="images/case-04/timer-alarm.gif" width="792" height="1116" loading="lazy"
+                            alt="Alarm banner visible mid-bake on the Recipe page in Cook Mode, at phone width, when a step timer finishes"
+                            data-alt-da="Alarmbanner synligt midt i bagningen på opskriftssiden i tilberedningstilstand, i telefonbredde, når en trintimer udløber">
+                    </div>
+                </div>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">The alarm banner mid-bake, on the phone-in-the-kitchen screen it
+                        was built for.</span>
+                    <span data-i18n="da" lang="da">Alarmbanneret midt i bagningen, på den telefon-i-køkkenet-skærm,
+                        det blev bygget til.</span>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="container case-section">
+        <span class="eyebrow"><span data-i18n="en">Solution</span><span data-i18n="da" lang="da">Løsning</span></span>
+        <h2><span data-i18n="en">A baking journal, not just a recipe box</span><span data-i18n="da" lang="da">En
+                bagejournal, ikke bare en opskriftssamling</span></h2>
+
+        <div style="margin-top: var(--space-2);">
+            <h4><span data-i18n="en">What it does</span><span data-i18n="da" lang="da">Hvad den gør</span></h4>
+            <ul class="prose-list" style="margin-top: 8px;">
+                <li>
+                    <span data-i18n="en"><strong>Recipes</strong> — built around baker's percentages (flour, water,
+                        starter ratios), with
+                        live, bidirectional hydration calculation, step-by-step timers, and dynamic batch
+                        scaling.</span>
+                    <span data-i18n="da" lang="da"><strong>Opskrifter</strong> — bygget op omkring bagerprocenter
+                        (forholdet mellem mel, vand og surdej), med live, tovejs hydreringsberegning,
+                        trin-for-trin-timere og dynamisk skalering af portionsstørrelse.</span>
+                </li>
+                <li>
+                    <span data-i18n="en"><strong>Version-controlled history</strong> — every save preserves a
+                        version; the timeline
+                        displays clean, plain-language diffs ("hydration 72% → 75%"), lets you set the active
+                        version,
+                        and holds private notes per attempt.</span>
+                    <span data-i18n="da" lang="da"><strong>Versionsstyret historik</strong> — hver gang man gemmer
+                        oprettes en
+                        version; tidslinjen viser overskuelige ændringer i et letforståeligt sprog (&quot;hydration 72%
+                        → 75%&quot;), giver dig mulighed for at indstille den aktive version og indeholder private noter
+                        for hvert forsøg.</span>
+                </li>
+                <li>
+                    <span data-i18n="en"><strong>Bake results</strong> — log bakes with photos and breakdown ratings
+                        (crumb, crust, rise,
+                        ear); each bake links directly back to the exact recipe version it originated from.</span>
+                    <span data-i18n="da" lang="da"><strong>Bageresultater</strong> — log bagninger med billeder og
+                        opdelte bedømmelser (krumme, skorpe, hævning, ear); hver bagning linker direkte tilbage til
+                        den præcise opskriftsversion, den stammer fra.</span>
+                </li>
+                <li>
+                    <span data-i18n="en"><strong>Background timers</strong> — reliable step timers that run in the
+                        background, triggering
+                        a persistent alarm banner with sound when a step completes, including on
+                        iOS.</span>
+                    <span data-i18n="da" lang="da"><strong>Baggrundstimere</strong> — pålidelige trintimere, der
+                        kører i baggrunden, og som udløser et vedvarende alarmbanner med lyd, når et
+                        trin er fuldført, også på iOS.</span>
+                </li>
+                <li>
+                    <span data-i18n="en"><strong>Real accounts</strong> — signup, login, password reset, account
+                        deletion, all backed by
+                        Supabase with row-level security, public/private recipes, and profile avatars.</span>
+                    <span data-i18n="da" lang="da"><strong>Rigtige konti</strong> — oprettelse, login, nulstilling af
+                        adgangskode, sletning af konto, alt sammen understøttet af Supabase med row-level security,
+                        offentlige/private opskrifter og profilbilleder.</span>
+                </li>
+                <li>
+                    <span data-i18n="en"><strong>Responsive architecture</strong> — optimized seamlessly from mobile
+                        to desktop, with a
+                        dedicated desktop navigation treatment.</span>
+                    <span data-i18n="da" lang="da"><strong>Responsivt design</strong> — optimeret fra
+                        mobil til desktop, med en dedikeret navigationsløsning til desktop.</span>
+                </li>
+                <li>
+                    <span data-i18n="en"><strong>English/Danish localization</strong> with a live language
+                        toggle.</span>
+                    <span data-i18n="da" lang="da"><strong>Engelsk/dansk lokalisering</strong> med et live
+                        sprogskift.</span>
+                </li>
+            </ul>
+        </div>
+
+        <figure class="figure figure--wide" style="margin-top: var(--space-4);">
+            <div class="figure-plate">
+                <div class="media-frame media-frame--photo">
+                    <img src="images/case-04/edit-page.png" width="2524" height="1358" loading="lazy" decoding="async"
+                        alt="Recipe editor with ingredients and steps filled in, hydration percentage visible, desktop width"
+                        data-alt-da="Opskriftseditor med udfyldte ingredienser og trin, hydreringsprocent synlig, i desktopbredde">
+                </div>
+            </div>
+            <figcaption class="media-caption">
+                <span data-i18n="en">Building a recipe — hydration percentage updates live as ingredients
+                    change.</span>
+                <span data-i18n="da" lang="da">Opbygning af en opskrift — hydreringsprocenten opdateres live, når
+                    ingredienserne ændres.</span>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section class="container case-section">
+        <span class="eyebrow"><span data-i18n="en">Outcome</span><span data-i18n="da" lang="da">Resultat</span></span>
+        <h2><span data-i18n="en">Live, not a prototype</span><span data-i18n="da" lang="da">Live, ikke en
+                prototype</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The project resulted in a fully working, deployed
+                multi-user application rather than a high-fidelity mockup — live at
+                <a href="https://sourdough-app-rust.vercel.app/" target="_blank"
+                    rel="noopener">sourdough-app-rust.vercel.app</a>.</span>
+            <span data-i18n="da" lang="da">Projektet resulterede i en fuldt fungerende, driftsat
+                multibruger-applikation frem for en detaljeret mockup — live på
+                <a href="https://sourdough-app-rust.vercel.app/" target="_blank"
+                    rel="noopener">sourdough-app-rust.vercel.app</a>.</span>
+        </p>
+        <p class="prose" style="margin-top: var(--space-3);">
+            <span data-i18n="en">Honestly, it's a bit overkill for a typical UX design
+                exercise, but it was fun to create something that functions as an actual live product (barring
+                real-world production security considerations). The primary takeaway is how accessible it's becoming
+                to
+                build fully working software with these new technologies. It bridges the gap between designers and
+                developers, making handoffs smoother and allowing developers to potentially pull structural or
+                component
+                work straight from the prototype.</span>
+            <span data-i18n="da" lang="da">Ærligt talt er det lidt overkill til en typisk UX-designøvelse, men det
+                var sjovt at skabe noget, der fungerer som et rigtigt, live produkt (bortset fra reelle
+                produktionssikkerhedshensyn). Den primære læring er, hvor tilgængeligt det er ved at blive at bygge
+                fuldt fungerende software med disse nye teknologier. Det bygger bro mellem designere og udviklere,
+                gør overleveringer smidigere og gør det muligt for udviklere potentielt at trække struktur- eller
+                komponentarbejde direkte fra prototypen.</span>
+        </p>
+        <p class="prose" style="margin-top: var(--space-3);">
+            <span data-i18n="en">At the same time, this workflow introduces a new kind
+                of challenge: adding features has never been easier. Because of that, revisiting the original design
+                vision and maintaining strict discipline is more critical than ever.</span>
+            <span data-i18n="da" lang="da">Samtidig introducerer denne arbejdsgang en ny slags udfordring: det har
+                aldrig været nemmere at tilføje funktioner. Derfor er det vigtigere end nogensinde at genbesøge den
+                oprindelige designvision og fastholde streng disciplin.</span>
+        </p>
+    </section>
+
+    <div class="container">
+        <div class="section-divider" style="margin-bottom:0;"></div>
+    </div>
+    <nav class="container case-nav">
+        <a href="index.html#work" class="case-nav-link">
+            <span class="case-meta-label"><span data-i18n="en">&larr; Back to</span><span data-i18n="da"
+                    lang="da">&larr; Tilbage til</span></span>
+            <h4><span data-i18n="en">All work</span><span data-i18n="da" lang="da">Alt arbejde</span></h4>
+        </a>
+        <a href="case-01.html" class="case-nav-link is-next">
+            <span class="case-meta-label"><span data-i18n="en">Next project</span><span data-i18n="da" lang="da">Næste
+                    projekt</span></span>
+            <h4><span data-i18n="en">Splitting the birth record</span><span data-i18n="da" lang="da">Opdeling af
+                    fødselsjournalen</span></h4>
+        </a>
+    </nav>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="images/drawn/line-1.svg" class="footer-divider" alt="">
+            <div class="footer-inner">
+                <div class="footer-links">
+                    <p class="bold" style="margin:0 0 4px 0;"><span data-i18n="en">Contact me</span><span data-i18n="da"
+                            lang="da">Kontakt mig</span></p>
+                    <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/mads-emmertsen-398651181/" target="_blank" class="social-icon">
+                        <img src="images/linkedinlogo.png" alt="LinkedIn">
+                    </a>
+                    <span class="footer-note">&copy; 2026 Mads Emmertsen</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

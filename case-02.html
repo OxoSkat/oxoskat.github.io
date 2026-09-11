@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+    <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,10 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
-    <title>School Health Screening Records — Mads Emmertsen</title>
+    <script src="i18n.js" defer></script>
+    <title>Designing for Early Intervention — Mads Emmertsen</title>
 </head>
 
-<body>
+<body data-title-da="Design til tidlig indsats — Mads Emmertsen">
     <svg class="filter-defs" aria-hidden="true">
         <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
             <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
@@ -30,48 +32,81 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">MADS EMMERTSEN</a>
             <div class="nav-links">
-                <a href="index.html#work" class="is-active">Work</a>
-                <a href="about.html">About</a>
-                <a href="mailto:madsemmertsen@gmail.com">Contact</a>
+                <a href="index.html#work" class="is-active"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a>
+                <a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om mig</span></a>
+                <a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a>
             </div>
-            <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-controls">
+                <div class="lang-switch" role="group" aria-label="Language / Sprog">
+                    <button type="button" class="lang-btn" data-lang-btn="en" onclick="setLang('en')"
+                        aria-label="English" aria-pressed="true">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang-btn="da" onclick="setLang('da')" aria-label="Dansk"
+                        aria-pressed="false">DA</button>
+                </div>
+                <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <div class="container"><img src="images/drawn/line-1.svg" class="nav-divider" alt=""></div>
+        <div class="container">
+            <div class="nav-divider"></div>
+        </div>
     </nav>
     <div class="links show" id="mobileNav">
         <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
         <ul>
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="mailto:madsemmertsen@gmail.com">Contact</a></li>
+            <li><a href="index.html#work"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a></li>
+            <li><a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om
+                        mig</span></a></li>
+            <li><a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a></li>
         </ul>
     </div>
 
     <header class="container case-hero">
-        <span class="eyebrow">Case study</span>
-        <h1>Four tables, three tabs</h1>
-        <p class="case-hero-sub">Redesigning how Novax's school health module shows a child's vision, hearing, and
-            language screening history — replacing four dense tables stacked on one page with three focused tabs
-            built around what a health visitor needs first: the latest result, and whether it needs following up.</p>
+        <span class="eyebrow"><span data-i18n="en">Case study</span><span data-i18n="da" lang="da">Case</span></span>
+        <h1><span data-i18n="en">Designing for early intervention</span><span data-i18n="da" lang="da">Design til
+                tidlig indsats</span></h1>
+        <p class="case-hero-sub">
+            <span data-i18n="en">Streamlining vision, hearing, and language testing in Sundhedsplejen — redesigning
+                how Novax's school health module shows a child's screening history, replacing four stacked, dense
+                tables
+                with three data-tailored tabs built around two critical questions: what's the latest result, and does
+                it
+                require follow-up?</span>
+            <span data-i18n="da" lang="da">Streamlining af syns-, høre- og sprogtest i Sundhedsplejen — redesign af
+                hvordan Novax' skolesundhedsmodul viser et barns screeninghistorik, hvor fire tætpakkede tabeller
+                erstattes af tre datatilpassede faner bygget op om to centrale spørgsmål: hvad er det seneste
+                resultat, og kræver det opfølgning?</span>
+        </p>
 
         <div class="case-meta">
             <div class="case-meta-item">
-                <span class="case-meta-label">Role</span>
-                <span class="case-meta-value">Digital Designer</span>
+                <span class="case-meta-label"><span data-i18n="en">Role</span><span data-i18n="da"
+                        lang="da">Rolle</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Digital Designer</span><span data-i18n="da"
+                        lang="da">Digital designer</span></span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Company</span>
+                <span class="case-meta-label"><span data-i18n="en">Company</span><span data-i18n="da"
+                        lang="da">Virksomhed</span></span>
                 <span class="case-meta-value">Novax A/S</span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Timeline</span>
-                <span class="case-meta-value">Summer 2026</span>
+                <span class="case-meta-label"><span data-i18n="en">Timeline</span><span data-i18n="da"
+                        lang="da">Tidsramme</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Summer 2026</span><span data-i18n="da"
+                        lang="da">Sommer 2026</span></span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Tools</span>
-                <span class="case-meta-value">Figma, AI-assisted iteration</span>
+                <span class="case-meta-label"><span data-i18n="en">Tools</span><span data-i18n="da"
+                        lang="da">Værktøjer</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Figma, AI-assisted iteration</span><span
+                        data-i18n="da" lang="da">Figma, AI-assisteret iteration</span></span>
             </div>
         </div>
     </header>
@@ -81,154 +116,341 @@
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-02/vision-with-correction.png" width="1340" height="1188" decoding="async"
-                        alt="Synsprøver tab showing a latest-measurement card with values for both eyes and binocular vision, a value-set toggle, and a measurement history table">
+                        alt="Synsprøver tab showing a latest-measurement card with values for both eyes and binocular vision, a value-set toggle, and a measurement history table"
+                        data-alt-da="Fanen Synsprøver med et kort for seneste måling med værdier for begge øjne og binokulært syn, et skift mellem værdisæt og en historiktabel over målinger">
                 </div>
             </div>
-            <figcaption class="media-caption">The Synsprøver tab: latest measurement, the LogMAR/Snellen toggle, and
-                history in one view.</figcaption>
+            <figcaption class="media-caption">
+                <span data-i18n="en">The Synsprøver tab: latest measurement, the LogMAR/Snellen toggle, and
+                    history in one view.</span>
+                <span data-i18n="da" lang="da">Fanen Synsprøver: seneste måling, LogMAR/Snellen-skift og historik i
+                    én visning.</span>
+            </figcaption>
         </figure>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Overview</span>
-        <h2>Three test types, buried in one page</h2>
-        <p class="prose" style="margin-top: var(--space-2);">The old version of this module put every screening
-            result a child had ever had onto a single page: one table for vision tests, two more for hearing — one
-            per ear — and a fourth for language assessments. Finding the most recent result meant scanning a wide
-            table for the newest date; judging whether it needed attention meant reading every column by hand. The
-            data wasn't wrong, it just wasn't organised around the two questions a health visitor actually asks
-            first: what's the latest measurement, and does it need follow-up?</p>
-        <p class="prose">My task was to redesign the module around those two questions for three quite different
-            kinds of data — a handful of values per eye, up to 22 measurement points across both ears, and a short
-            qualitative language note — without losing any of the detail the old tables held.</p>
+        <span class="eyebrow"><span data-i18n="en">Overview</span><span data-i18n="da" lang="da">Overblik</span></span>
+        <h2><span data-i18n="en">Three test types, buried in one page</span><span data-i18n="da" lang="da">Tre
+                testtyper, gemt på én side</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The old version of this module put every screening
+                result a child had ever had onto a single page: one table for vision tests, two more for hearing —
+                one
+                per ear — and a fourth for language assessments. Finding the most recent result meant scanning a wide
+                table for the newest date; judging whether it needed attention meant reading every column by hand.
+                The
+                data wasn't wrong, it just wasn't organised around the two questions a health visitor actually asks
+                first: what's the latest measurement, and does it need follow-up?</span>
+            <span data-i18n="da" lang="da">Den gamle version af modulet samlede alle et barns screeningsresultater
+                på én side: én tabel til synsprøver, to mere til høreprøver — én pr. øre — og en fjerde til
+                sprogvurderinger. At finde det seneste resultat betød at man skulle scanne en bred tabel for den nyeste
+                dato; at vurdere om det krævede opmærksomhed betød at man skulle læse hver kolonne manuelt. Dataene var
+                ikke
+                forkerte, de var bare ikke organiseret omkring de to spørgsmål; hvad er den seneste måling, og kræver
+                den opfølgning?</span>
+        </p>
+        <p class="prose">
+            <span data-i18n="en">My task was to redesign the module around those two questions for three quite
+                different
+                kinds of data — a handful of values per eye, up to 22 measurement points across both ears, and a
+                short
+                qualitative language note — without losing any of the detail the old tables held.</span>
+            <span data-i18n="da" lang="da">Min opgave var at redesigne modulet omkring de to spørgsmål for tre ret
+                forskellige datatyper — en håndfuld værdier pr. øje, op til 22 målepunkter fordelt på begge ører, og
+                en kort kvalitativ sprognote — uden at miste noget af den detaljerigdom, de gamle tabeller
+                indeholdt.</span>
+        </p>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Process</span>
-        <h2>Deciding what earns a glance</h2>
-        <p class="prose" style="margin-top: var(--space-2);">I split the page into three tabs — Synsprøver,
-            Høreprøver, and Sprogvurderinger — one per test type, so each could use whatever layout actually fit its
-            data instead of three different shapes forced into one table. Before settling on those layouts, I used an
-            AI as a sparring partner: describing the data and the reading task, asking for alternative ways to lay it
-            out, then iterating on its suggestions rather than taking any of them as-is.</p>
-        <p class="prose">Two patterns came out of that process and carried across the vision and hearing tabs. A
-            summary card for the latest measurement sits above the history table, showing the newest result and its
-            change from the previous one without opening anything — language assessments have too few fields to need
-            one, so that tab stays a plain list instead. And anything worth a second look is marked before you have
-            to go looking for it: a value outside the normal range gets a warning colour wherever it appears, and any
-            measurement flagged with an anmærkning — a note asking for follow-up — adds to a small running count at
-            the top of the page, linking straight to the row it belongs to.</p>
+        <span class="eyebrow"><span data-i18n="en">Process</span><span data-i18n="da" lang="da">Proces</span></span>
+        <h2><span data-i18n="en">Observing the workflow firsthand</span><span data-i18n="da" lang="da">Observation af
+                arbejdsgangen på nært hold</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">Before diving into layouts, I spent time shadowing a
+                health visitor (sundhedsplejerske) at a local school during a full session of student health checks.
+                Watching her conduct vision, hearing, and language tests in real time made one thing instantly clear:
+                her
+                attention needed to stay on the child, not on navigating software. Every extra second spent
+                deciphering a
+                dense table or clicking through menus took her focus away from the student sitting in front of
+                her.</span>
+            <span data-i18n="da" lang="da">Før jeg kastede mig over layouts, brugte jeg tid på at følge en
+                sundhedsplejerske på en lokal skole gennem en hel runde af elevsundhedstjek. At se hende udføre syns-,
+                høre- og sprogtest i realtid gjorde én ting krystalklar: hendes opmærksomhed skulle blive hos barnet,
+                ikke på at navigere i software. Hvert ekstra sekund brugt på at afkode en tætpakket tabel eller klikke
+                gennem menuer tog hendes fokus væk fra eleven, der sad foran hende.</span>
+        </p>
+
+        <h4 style="margin-top: var(--space-5);"><span data-i18n="en">Deciding what earns a glance</span><span
+                data-i18n="da" lang="da">At afgøre, hvad der fanger øjet</span></h4>
+        <p class="prose" style="margin-top: 8px;">
+            <span data-i18n="en">I split the page into three tabs — Synsprøver, Høreprøver, and
+                Sprogvurderinger — so each could adapt to its specific data shape rather than forcing three distinct
+                test
+                types into a one-size-fits-all table.</span>
+            <span data-i18n="da" lang="da">Jeg delte siden op i tre faner — Synsprøver, Høreprøver og
+                Sprogvurderinger — så hver enkelt kunne tilpasses sin specifikke datatype i stedet for at presse tre
+                forskellige testtyper ind i én tabel, der skulle passe til det hele.</span>
+        </p>
+        <p class="prose">
+            <span data-i18n="en">Using the insights from my school visit, I used AI as a design sparring partner to
+                explore
+                how to lay out each test type. I described the clinical environment, the physical constraints of a
+                health checkup, and the specific reading tasks I had observed. Instead of taking the AI's suggestions
+                as-is, I used them to rapidly stress-test alternative layouts and iterate on edge cases.</span>
+            <span data-i18n="da" lang="da">Med indsigterne fra mit skolebesøg brugte jeg AI som sparringspartner til
+                at undersøge, hvordan hver testtype kunne layoutes. Jeg beskrev det kliniske miljø, de fysiske rammer
+                for et sundhedstjek og de konkrete aflæsningsopgaver, jeg havde observeret. I stedet for at tage
+                AI'ens forslag for pålydende brugte jeg dem til hurtigt at stressteste alternative layouts og iterere på
+                edge-cases.</span>
+        </p>
+        <p class="prose"><span data-i18n="en">Two core patterns emerged from this synthesis of field research and AI
+                exploration:</span><span data-i18n="da" lang="da">To centrale mønstre opstod fra dette arbejde:</span>
+        </p>
+        <ul class="prose-list">
+            <li>
+                <span data-i18n="en"><strong>Immediate context</strong> — a summary card for the latest measurement
+                    sits above the
+                    history table, showing the newest result and its change from the previous test at a glance.
+                    Language assessments have too few fields to need one, so that tab remains a focused, plain
+                    list.</span>
+                <span data-i18n="da" lang="da"><strong>Umiddelbar kontekst</strong> — et opsummeringskort med den
+                    seneste måling sidder over historiktabellen og viser det nyeste resultat og ændringen fra forrige
+                    måling med det samme. Sprogvurderinger har for få felter til at behøve ét, så den fane forbliver en
+                    enkel, fokuseret liste.</span>
+            </li>
+            <li>
+                <span data-i18n="en"><strong>Proactive warning flags</strong> — anything requiring follow-up is
+                    brought to the surface
+                    before a clinician has to search for it. Values outside the normal range are visually highlighted
+                    wherever they appear, and any test flagged with an anmærkning (remark) adds to a running counter
+                    at
+                    the top of the page, linking directly to the entry.</span>
+                <span data-i18n="da" lang="da"><strong>Proaktive advarselsflag</strong> — alt, der kræver opfølgning,
+                    bringes frem, før en sundhedsplejerske skal lede efter det. Værdier uden for normalområdet fremhæves
+                    visuelt, uanset hvor de optræder, og enhver test markeret med en anmærkning lægges til en løbende
+                    tæller øverst på siden, der linker direkte til målingen.</span>
+            </li>
+        </ul>
     </section>
 
     <section class="container case-section">
-        <blockquote class="pull-quote">A vision card, a hearing summary, a language note — three different shapes,
-            built to answer the same question first: does this result need a second look?
-        </blockquote>
-    </section>
-
-    <section class="container case-section">
-        <span class="eyebrow">Solution</span>
-        <h2>Three tabs, three shapes</h2>
-        <p class="prose" style="margin-top: var(--space-2);">What each tab actually shows past that shared
-            foundation depends entirely on its data — a handful of numbers, more than twenty of them, or almost
-            none.</p>
+        <span class="eyebrow"><span data-i18n="en">Solution</span><span data-i18n="da" lang="da">Løsning</span></span>
+        <h2><span data-i18n="en">Three tabs, three shapes</span><span data-i18n="da" lang="da">Tre faner, tre
+                former</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">What each tab actually shows past that shared
+                foundation depends entirely on its data — a handful of numbers, more than twenty of them, or almost
+                none.</span>
+            <span data-i18n="da" lang="da">Hvad hver fane rent faktisk viser ud over det fælles fundament, afhænger
+                helt af dens data — en håndfuld tal, mere end tyve af dem, eller næsten ingen.</span>
+        </p>
 
         <div style="margin-top: var(--space-4);">
             <h4>Synsprøver</h4>
-            <p class="prose" style="margin-top: 8px;">Some municipalities screen with a Snellen chart, others with
-                LogMAR, and health visitors switch between the two depending on which school they're visiting — so a
-                button group lets them pick the active scale, and both "Ny synsprøve" and "Registrer normalt syn"
-                write using whichever one is selected. In the history table, working with AI on the column layout
-                got each eye's reading down to one cell: the corrected measurement if the child wears glasses or
-                lenses, since that's what confirms the prescription is still right, otherwise the uncorrected one.
-                The other value doesn't disappear — it drops into the row's expanded detail, still there for tracking
-                whether vision is drifting over time even when it isn't the number that matters most today.</p>
-            <div class="text-media-row" style="margin-top: var(--space-3);">
-                <p class="prose">The two states below are the same card responding to different children: one with a
-                    prescription to confirm, one without a corrected value to show at all — and flagged for
-                    follow-up on top of that.</p>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">Some municipalities screen with Snellen charts, others with
+                    LogMAR, and health visitors often switch between the two depending on the school. A primary
+                    selector
+                    lets them set the active scale so that both "Ny synsprøve" and "Registrer normalt syn" save under
+                    the
+                    correct standard. In the history table, each eye's results are condensed into a single cell:
+                    uncorrected measurements show by default, but for children wearing glasses or contact lenses, the
+                    corrected value takes priority while the uncorrected baseline stays visible below to track
+                    long-term
+                    vision drift.</span>
+                <span data-i18n="da" lang="da">Nogle kommuner screener med Snellen-tavler, andre med LogMAR, og
+                    sundhedsplejersker skifter ofte mellem de to afhængigt af skolen. En button group lader dem sætte
+                    det aktive værdisæt, så både "Ny synsprøve" og "Registrer normalt syn" gemmes under den korrekte
+                    standard. I historiktabellen er hvert øjes resultater kondenseret til én celle: ukorrigerede
+                    målinger vises som standard, men for børn med briller eller kontaktlinser har den korrigerede
+                    værdi forrang, mens den ukorrigerede baseline forbliver synlig nedenunder til at følge barnets
+                    langsigtet
+                    synsudvikling.</span>
+            </p>
+            <p class="prose" style="margin-top: var(--space-3);">
+                <span data-i18n="en">The two states below are the same card responding to different children: one
+                    child
+                    with glasses and one without.</span>
+                <span data-i18n="da" lang="da">De to tilstande nedenfor er det samme kort, der reagerer på
+                    forskellige børn: ét barn med briller og ét uden.</span>
+            </p>
+            <div class="media-grid-2" style="margin-top: var(--space-3);">
                 <figure class="figure figure--sm">
                     <div class="figure-plate">
                         <div class="media-frame media-frame--photo">
                             <img src="images/case-02/vision-without-correction.png" width="1340" height="1056"
                                 loading="lazy" decoding="async"
-                                alt="Synsprøver latest-measurement card for a child without glasses, flagged with an anmærkning and an uncertain colour-vision result">
+                                alt="Synsprøver latest-measurement card for a child without glasses, flagged with an anmærkning and an uncertain colour-vision result"
+                                data-alt-da="Synsprøver-kort for seneste måling for et barn uden briller, markeret med en anmærkning og et usikkert farvesynsresultat">
                         </div>
                     </div>
-                    <figcaption class="media-caption">No glasses, no corrected value to show — and this result
-                        carries a follow-up flag.</figcaption>
+                    <figcaption class="media-caption">
+                        <span data-i18n="en">No glasses, no corrected value to show — and this result
+                            carries a follow-up flag.</span>
+                        <span data-i18n="da" lang="da">Ingen briller, ingen korrigeret værdi at vise — og dette
+                            resultat bærer et opfølgningsflag.</span>
+                    </figcaption>
+                </figure>
+                <figure class="figure figure--sm">
+                    <div class="figure-plate">
+                        <div class="media-frame media-frame--photo">
+                            <img src="images/case-02/vision-with-correction.png" width="1340" height="1188"
+                                loading="lazy" decoding="async"
+                                alt="Synsprøver latest-measurement card for a child with glasses, showing the corrected value with the uncorrected baseline underneath it"
+                                data-alt-da="Synsprøver-kort for seneste måling for et barn med briller, med den korrigerede værdi og den ukorrigerede baseline nedenunder">
+                        </div>
+                    </div>
+                    <figcaption class="media-caption">
+                        <span data-i18n="en">With glasses, the corrected reading takes priority — the
+                            uncorrected baseline stays right below it.</span>
+                        <span data-i18n="da" lang="da">Med briller har den korrigerede aflæsning forrang — den
+                            ukorrigerede baseline forbliver lige nedenunder.</span>
+                    </figcaption>
                 </figure>
             </div>
         </div>
 
         <div style="margin-top: var(--space-6);">
             <h4>Høreprøver</h4>
-            <p class="prose" style="margin-top: 8px;">A single hearing test produces up to 22 measurements — eleven
-                frequencies per ear. Read as a raw table, even a completely normal result takes real effort to
-                confirm. Working through it with AI, I landed on two numbers per ear instead: the worst measurement
-                recorded, and how many of the eleven frequencies fall outside the normal range. A normal result
-                becomes obvious at a glance — worst value in range, nothing flagged — and so does a result worth a
-                closer look, along with roughly how much of it is affected.</p>
-            <p class="prose">Seeing which frequencies are the problem — low tones, high tones, one ear or both —
-                means expanding the row into the full reading: the same numbers, plotted on a chart shaped like a
-                clinical audiogram, so a health visitor can see exactly where a child's hearing drops off instead of
-                reading it out of a column of decibels.</p>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">A single hearing test produces up to 22 measurements — eleven
+                    frequencies per ear. Read as a raw table, even a completely normal result takes real effort to
+                    confirm. Working through it with AI, I landed on two numbers per ear instead: the worst
+                    measurement
+                    recorded, and how many of the eleven frequencies fall outside the normal range. A normal result
+                    becomes obvious at a glance — worst value in range, nothing flagged — and so does a result worth a
+                    closer look, along with roughly how much of it is affected.</span>
+                <span data-i18n="da" lang="da">En enkelt høreprøve giver op til 22 målinger — elleve frekvenser pr.
+                    øre. Læst som en rå tabel kræver selv et helt normalt resultat en reel indsats at bekræfte. Ved at
+                    arbejde det igennem med AI landede jeg i stedet på to tal pr. øre: den værste registrerede
+                    måling, og hvor mange af de elleve frekvenser der ligger uden for normalområdet. Et normalt
+                    resultat bliver tydeligt med det samme — hvis værste værdi er inden for normalen, er intet markeret
+                    — omvendt vil et resultat uden for normalområdet, være markeret og hurtigt at spotte.</span>
+            </p>
+            <p class="prose">
+                <span data-i18n="en">To see exactly where issues lie — low tones, high tones, one ear or both —
+                    expanding
+                    the row plots the same numbers on a chart shaped like a clinical audiogram, so a health visitor
+                    can
+                    see exactly where a child's hearing drops off instead of reading it out of a column of
+                    decibels.</span>
+                <span data-i18n="da" lang="da">For at se præcis, hvor problemerne ligger — lave toner, høje toner, ét
+                    øre eller begge — udfolder rækken de samme tal på et diagram formet som et klinisk audiogram, så
+                    en sundhedsplejerske kan se præcis, hvor et barns hørelse falder fra, i stedet for at aflæse det
+                    ud af en kolonne af decibel.</span>
+            </p>
             <figure class="figure figure--wide" style="margin-top: var(--space-3);">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-02/hearing-test.png" width="1340" height="1863" loading="lazy"
                             decoding="async"
-                            alt="Høreprøver tab showing worst-measurement and out-of-range counts per ear, with audiogram-style charts for the expanded row">
+                            alt="Høreprøver tab showing worst-measurement and out-of-range counts per ear, with audiogram-style charts for the expanded row"
+                            data-alt-da="Fanen Høreprøver med værste måling og antal uden for normalområdet pr. øre, med audiogramlignende diagrammer for den udfoldede række">
                     </div>
                 </div>
-                <figcaption class="media-caption">Worst measurement and out-of-range count per ear, expanded into
-                    full audiogram-style charts.</figcaption>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">Worst measurement and out-of-range count per ear, expanded into
+                        full audiogram-style charts.</span>
+                    <span data-i18n="da" lang="da">Værste måling og antal uden for normalområdet pr. øre, udfoldet
+                        til fulde audiogramlignende diagrammer.</span>
+                </figcaption>
             </figure>
         </div>
 
         <div style="margin-top: var(--space-6);">
             <h4>Sprogvurderinger</h4>
-            <p class="prose" style="margin-top: 8px;">Language assessments are the simplest of the three: a date and
-                the responsible health visitor identify the entry, a yes/no judgement and a short free-text note
-                describe it, and an optional anmærkning flags it for follow-up — shown only on entries that actually
-                carry one. Five fields, most of them text, is exactly the case a plain list handles better than a
-                table built for numbers.</p>
+            <p class="prose" style="margin-top: 8px;">
+                <span data-i18n="en">Language assessments are the simplest of the three: a date and
+                    the responsible health visitor identify the entry, a yes/no judgement and a short free-text note
+                    describe it, and an optional remark flags it for follow-up — shown only on entries that actually
+                    carry one. Five fields, most of them text, is exactly the case a plain list handles better than a
+                    table built for numbers.</span>
+                <span data-i18n="da" lang="da">Sprogvurderinger er den simpleste af de tre: en dato og den ansvarlige
+                    sundhedsplejerske identificerer posten, en ja/nej-vurdering og en kort fritekstnote beskriver den,
+                    og en valgfri anmærkning markerer den til opfølgning.
+                    Fem felter, de fleste af dem tekst, er præcis det tilfælde, hvor en enkel liste fungerer bedre end
+                    en tabel bygget til tal.</span>
+            </p>
             <figure class="figure figure--sm" style="margin-top: var(--space-3);">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-02/language-assessment.png" width="1340" height="770" loading="lazy"
                             decoding="async"
-                            alt="Sprogvurderinger tab listing two language assessments as a simple list, one flagged with an anmærkning">
+                            alt="Sprogvurderinger tab listing two language assessments as a simple list, one flagged with an anmærkning"
+                            data-alt-da="Fanen Sprogvurderinger med to sprogvurderinger vist som en enkel liste, én markeret med en anmærkning">
                     </div>
                 </div>
-                <figcaption class="media-caption">Five fields — two identifying, two descriptive, one optional flag —
-                    fit a plain list.</figcaption>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">Five fields — two identifying, two descriptive, one optional flag —
+                        fit a plain list.</span>
+                    <span data-i18n="da" lang="da">Fem felter — to identificerende, to beskrivende, én valgfri markering
+                        — passer til en enkel liste.</span>
+                </figcaption>
             </figure>
         </div>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Outcome</span>
-        <h2>What carries forward</h2>
-        <p class="prose" style="margin-top: var(--space-2);">The layouts here aren't ones I'd have reached alone on
-            a first pass. Sparring with AI didn't hand me the final design — it gave me a spread of different ways to
-            shape the same data, and iterating against them made it obvious which questions I hadn't actually
-            answered yet, like what a normal hearing result should look like at a glance next to one that needs a
-            second look. What I'd carry forward isn't a specific layout so much as that process, and the pattern it
-            produced: a summary card plus a flag-and-count banner is one I'd now reach for on any results-heavy
-            record, not just this one.</p>
+        <span class="eyebrow"><span data-i18n="en">Outcome</span><span data-i18n="da" lang="da">Resultat</span></span>
+        <h2><span data-i18n="en">Bridging clinical reality and AI exploration</span><span data-i18n="da" lang="da">At
+                bygge bro mellem klinisk virkelighed og AI-udforskning</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The final design transforms a cluttered audit trail
+                into a proactive early-intervention tool. Beyond the UI itself, the strength of this project came
+                from
+                combining real-world observation with rapid AI iteration:</span>
+            <span data-i18n="da" lang="da">Det endelige design forvandler en uoverskuelig oversigt over undersøgelser
+                til et proaktivt værktøj til tidlig indsats. Ud over selve UI'et kom projektets styrke fra at kombinere
+                observation fra
+                den virkelige verden med hurtig AI-iteration:</span>
+        </p>
+        <ul class="prose-list">
+            <li>
+                <span data-i18n="en"><strong>Fieldwork provided the ground truth</strong> — observing a health
+                    visitor in action
+                    established the mental model and user constraints, knowing what questions needed answering in the
+                    first five seconds of a session.</span>
+                <span data-i18n="da" lang="da"><strong>Feltarbejdet lagde fundamentet</strong> — at observere en
+                    sundhedsplejerske i aktion etablerede den mentale model for brugerens rammer, og hvilke spørgsmål
+                    der skulle besvares i de første fem sekunder af en session.</span>
+            </li>
+            <li>
+                <span data-i18n="en"><strong>AI accelerated the exploration</strong> — sparring with AI allowed me to
+                    quickly test
+                    different ways to structure complex data, like 22 raw hearing frequencies, to match that clinical
+                    mental model.</span>
+                <span data-i18n="da" lang="da"><strong>AI accelererede udforskningen</strong> — sparring med AI
+                    gjorde det muligt hurtigt at afprøve forskellige måder at strukturere komplekse data på, som 22
+                    rå høreprøvefrekvenser, så de matchede den kliniske mentale model.</span>
+            </li>
+        </ul>
+        <p class="prose" style="margin-top: var(--space-3);">
+            <span data-i18n="en">It proved that the best results come from grounding
+                design decisions in real human workflows first, using AI not to guess the user's needs, but to
+                stress-test solutions against them.</span>
+            <span data-i18n="da" lang="da">Det viste, at de bedste resultater kommer af først at forankre
+                designbeslutninger i virkelige menneskelige arbejdsgange og bruge AI ikke til at gætte brugerens
+                behov, men til at stressteste løsninger op imod dem.</span>
+        </p>
     </section>
 
-    <div class="container"><img src="images/drawn/line-1.svg" class="section-divider" alt="" style="margin-bottom:0;">
+    <div class="container">
+        <div class="section-divider" style="margin-bottom:0;"></div>
     </div>
     <nav class="container case-nav">
         <a href="index.html#work" class="case-nav-link">
-            <span class="case-meta-label">&larr; Back to</span>
-            <h4>All work</h4>
+            <span class="case-meta-label"><span data-i18n="en">&larr; Back to</span><span data-i18n="da"
+                    lang="da">&larr; Tilbage til</span></span>
+            <h4><span data-i18n="en">All work</span><span data-i18n="da" lang="da">Alt arbejde</span></h4>
         </a>
         <a href="case-03.html" class="case-nav-link is-next">
-            <span class="case-meta-label">Next project</span>
-            <h4>Case Study 03</h4>
+            <span class="case-meta-label"><span data-i18n="en">Next project</span><span data-i18n="da" lang="da">Næste
+                    projekt</span></span>
+            <h4><span data-i18n="en">Screening the Conscript Pool</span><span data-i18n="da" lang="da">Screening af
+                    sessionspligtige</span></h4>
         </a>
     </nav>
 
@@ -237,7 +459,8 @@
             <img src="images/drawn/line-1.svg" class="footer-divider" alt="">
             <div class="footer-inner">
                 <div class="footer-links">
-                    <p class="bold" style="margin:0 0 4px 0;">Contact me</p>
+                    <p class="bold" style="margin:0 0 4px 0;"><span data-i18n="en">Contact me</span><span data-i18n="da"
+                            lang="da">Kontakt mig</span></p>
                     <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
                 </div>
                 <div class="footer-social">

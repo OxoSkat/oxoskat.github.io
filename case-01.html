@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+    <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,10 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
-    <title>Birth Notification Record — Mads Emmertsen</title>
+    <script src="i18n.js" defer></script>
+    <title>Splitting the Birth Record — Mads Emmertsen</title>
 </head>
 
-<body class="page-case-01">
+<body class="page-case-01" data-title-da="Opdeling af fødselsjournalen — Mads Emmertsen">
     <svg class="filter-defs" aria-hidden="true">
         <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
             <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
@@ -30,48 +32,78 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">MADS EMMERTSEN</a>
             <div class="nav-links">
-                <a href="index.html#work" class="is-active">Work</a>
-                <a href="about.html">About</a>
-                <a href="mailto:madsemmertsen@gmail.com">Contact</a>
+                <a href="index.html#work" class="is-active"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a>
+                <a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om mig</span></a>
+                <a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a>
             </div>
-            <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-controls">
+                <div class="lang-switch" role="group" aria-label="Language / Sprog">
+                    <button type="button" class="lang-btn" data-lang-btn="en" onclick="setLang('en')"
+                        aria-label="English" aria-pressed="true">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang-btn="da" onclick="setLang('da')"
+                        aria-label="Dansk" aria-pressed="false">DA</button>
+                </div>
+                <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <div class="container"><img src="images/drawn/line-1.svg" class="nav-divider" alt=""></div>
+        <div class="container">
+            <div class="nav-divider"></div>
+        </div>
     </nav>
     <div class="links show" id="mobileNav">
         <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
         <ul>
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="mailto:madsemmertsen@gmail.com">Contact</a></li>
+            <li><a href="index.html#work"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a></li>
+            <li><a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om
+                        mig</span></a></li>
+            <li><a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a></li>
         </ul>
     </div>
 
     <header class="container case-hero">
-        <span class="eyebrow">Case study</span>
-        <h1>One birth record, two journals</h1>
-        <p class="case-hero-sub">Redesigning how Denmark's official birth notification (fødselsanmeldelse) is split
-            across the mother's and the child's medical record at Novax — so each surfaces exactly what's clinically
-            relevant, without losing access to the full notification.</p>
+        <span class="eyebrow"><span data-i18n="en">Case study</span><span data-i18n="da" lang="da">Case</span></span>
+        <h1><span data-i18n="en">Splitting the birth record</span><span data-i18n="da" lang="da">Opdeling af
+                fødselsjournalen</span></h1>
+        <p class="case-hero-sub">
+            <span data-i18n="en">Redesigning how Denmark's official birth notification (fødselsanmeldelse) is split
+                across the mother's and the child's medical record at Novax — so each surfaces exactly what's
+                clinically
+                relevant, without losing access to the full notification.</span>
+            <span data-i18n="da" lang="da">Redesign af hvordan den officielle danske fødselsanmeldelse opdeles mellem
+                mors og barnets journal hos Novax — så hver journal viser præcis det, der er klinisk relevant, uden at
+                miste adgang til hele anmeldelsen.</span>
+        </p>
 
         <div class="case-meta">
             <div class="case-meta-item">
-                <span class="case-meta-label">Role</span>
-                <span class="case-meta-value">Digital Designer</span>
+                <span class="case-meta-label"><span data-i18n="en">Role</span><span data-i18n="da"
+                        lang="da">Rolle</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Digital Designer</span><span data-i18n="da"
+                        lang="da">Digital designer</span></span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Company</span>
+                <span class="case-meta-label"><span data-i18n="en">Company</span><span data-i18n="da"
+                        lang="da">Virksomhed</span></span>
                 <span class="case-meta-value">Novax A/S</span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Timeline</span>
-                <span class="case-meta-value">Spring 2026</span>
+                <span class="case-meta-label"><span data-i18n="en">Timeline</span><span data-i18n="da"
+                        lang="da">Tidsramme</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Spring 2026</span><span data-i18n="da"
+                        lang="da">Forår 2026</span></span>
             </div>
             <div class="case-meta-item">
-                <span class="case-meta-label">Tools</span>
-                <span class="case-meta-value">Figma, design system components</span>
+                <span class="case-meta-label"><span data-i18n="en">Tools</span><span data-i18n="da"
+                        lang="da">Værktøjer</span></span>
+                <span class="case-meta-value"><span data-i18n="en">Figma, design system components</span><span
+                        data-i18n="da" lang="da">Figma, designsystemkomponenter</span></span>
             </div>
         </div>
     </header>
@@ -81,157 +113,281 @@
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-01/cover-child-journal.png" width="1318" height="892" decoding="async"
-                        alt="Child's journal in Novax, showing birth notification data including gestational age and measurements">
+                        alt="Child's journal in Novax, showing birth notification data including gestational age and measurements"
+                        data-alt-da="Barnets journal i Novax, der viser fødselsanmeldelsesdata inklusive gestationsalder og mål">
                 </div>
             </div>
         </figure>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Overview</span>
-        <h2>One journal, half the picture</h2>
-        <p class="prose" style="margin-top: var(--space-2);">Every birth in Denmark is followed by an official birth
-            notification — a fødselsanmeldelse —
-            submitted by the hospital, covering everything from the child's measurements to the mother's delivery
-            details. In Novax's existing system, all of that data lived in exactly one place: the child's journal.
-            That worked for data that belonged to the child, but a large share of the notification — gestational age,
-            mode of delivery, blood loss, complications — is just as relevant to the mother's care. A health visitor
-            working from the mother's record had no way to see any of it without leaving her journal to search for
-            the child's instead.</p>
-        <p class="prose">My task was to redesign how this data reached its readers: split it sensibly across both
-            journals, and keep the complete, unedited notification available from either side. Nothing in a legal
-            health record can be hidden — only re-presented so the right person finds the right thing faster.</p>
+        <span class="eyebrow"><span data-i18n="en">Overview</span><span data-i18n="da" lang="da">Overblik</span></span>
+        <h2><span data-i18n="en">One journal, half the picture</span><span data-i18n="da" lang="da">Én journal,
+                halvdelen af billedet</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">Every birth in Denmark is followed by an official birth
+                notification — a fødselsanmeldelse —
+                submitted by the hospital, covering everything from the child's measurements to the mother's delivery
+                details. In Novax's existing system, all of that data lived in exactly one place: the child's
+                journal.
+                That worked for data that belonged to the child, but a large share of the notification — gestational
+                age,
+                mode of delivery, blood loss, complications — is just as relevant to the mother's care. A health
+                visitor
+                working from the mother's record had no way to see any of it without leaving her journal to search
+                for
+                the child's instead.</span>
+            <span data-i18n="da" lang="da">Enhver fødsel i Danmark efterfølges af en officiel fødselsanmeldelse, som
+                hospitalet indsender, og som dækker alt fra barnets mål til mors fødselsforløb. I Novax' eksisterende
+                system lå alle disse data ét sted: barnets journal. Det fungerede fint for data, der hørte til
+                barnet, men en stor del af anmeldelsen — gestationsalder, fødselsmåde, blødningsmængde,
+                komplikationer — er lige så relevant for plejen af moren. En sundhedsplejerske, der arbejdede i mors
+                journal, havde ingen mulighed for at se noget af det uden at forlade journalen for i stedet at søge
+                det frem i barnets.</span>
+        </p>
+        <p class="prose">
+            <span data-i18n="en">My task was to redesign how this data reached its readers: split it sensibly across
+                both
+                journals, and keep the complete, unedited notification available from either side. Nothing in a
+                legal
+                health record can be hidden — only presented in a way that helps the right person find the right
+                thing
+                faster.</span>
+            <span data-i18n="da" lang="da">Min opgave var at redesigne, hvordan disse data når frem til
+                sundhedsplejersken: fordele dem fornuftigt mellem de to journaler og samtidig holde hele den uredigerede
+                fødselsanmeldelse tilgængelig fra begge sider. Intet i en lovpligtig sundhedsjournal må skjules — men
+                det
+                kan
+                præsenteres på en måde, der hjælper den brugeren med at finde den rette information hurtigere.</span>
+        </p>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Process</span>
-        <h2>Deciding what matters, and to whom</h2>
-        <p class="prose" style="margin-top: var(--space-2);">The notification form covers dozens of fields, from routine
-            measurements to free-text clinical
-            remarks. Before I could design a single screen, I had to work through the entire dataset and decide,
-            field by field, whether it belonged on the child's journal, the mother's, or both — and within each,
-            whether it needed to be visible at a glance or could sit one tap deeper in the full notification.</p>
-        <p class="prose">I did this together with one of our implementation consultants — a former health visitor
-            (sundhedsplejerske) who now works close to the system's day-to-day users. Her sense of what a health
-            visitor actually reaches for first, versus what's just formally part of the record, shaped almost every
-            priority decision in the layout.</p>
+        <span class="eyebrow"><span data-i18n="en">Process</span><span data-i18n="da" lang="da">Proces</span></span>
+        <h2><span data-i18n="en">Deciding what matters, and to whom</span><span data-i18n="da" lang="da">Hvad der
+                betyder noget, og for hvem</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The notification form covers dozens of fields, from routine
+                measurements to free-text clinical
+                remarks. Before I could design a single screen, I had to work through the entire dataset and decide,
+                field by field, whether it belonged on the child's journal, the mother's, or both — and within each,
+                whether it needed to be visible at a glance or could sit one tap deeper in the full
+                notification.</span>
+            <span data-i18n="da" lang="da">Anmeldelsesskemaet dækker et hav af felter, fra rutinemæssige målinger til
+                kliniske fritekstbemærkninger. Før jeg kunne designe et eneste skærmbillede, måtte jeg gennemgå hele
+                datasættet og felt for felt afgøre, om det hørte hjemme i barnets journal, mors, eller begge — og for
+                hvert felt, om det skulle være synligt med det samme, eller om det kunne ligge ét klik dybere i den
+                fulde anmeldelse.</span>
+        </p>
+        <p class="prose">
+            <span data-i18n="en">I did this together with one of our implementation consultants — a former health
+                visitor
+                (sundhedsplejerske) who now works close to the system's day-to-day users. Her sense of what a health
+                visitor actually reaches for first, versus what's just formally part of the record, shaped how we
+                prioritized and highlighted data in the layout.</span>
+            <span data-i18n="da" lang="da">Det gjorde jeg sammen med en af vores implementeringskonsulenter — en
+                tidligere sundhedsplejerske, som i dag arbejder tæt på systemets daglige brugere. Hendes fornemmelse
+                for, hvad en sundhedsplejerske faktisk griber efter først, i modsætning til hvad der blot formelt er
+                en del af journalen, formede, hvordan vi prioriterede og fremhævede data i layoutet.</span>
+        </p>
         <figure class="figure figure--wide" style="margin-top: var(--space-3);">
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-01/notification-expanded.png" width="1280" height="720" loading="lazy"
                         decoding="async"
-                        alt="The full birth notification opened as a panel over the child's journal, showing its version number">
+                        alt="The full birth notification opened as a panel over the child's journal, showing its version number"
+                        data-alt-da="Den fulde fødselsanmeldelse åbnet som et panel over barnets journal, med versionsnummer vist">
                 </div>
             </div>
-            <figcaption class="media-caption">The full birth notification — still one click away from either journal,
-                and the dataset I had to sort field by field.</figcaption>
+            <figcaption class="media-caption">
+                <span data-i18n="en">The full birth notification — still one click away from either journal,
+                    and the dataset I had to sort field by field.</span>
+                <span data-i18n="da" lang="da">Den fulde fødselsanmeldelse — stadig kun ét klik væk fra begge
+                    journaler, og det datasæt jeg skulle sortere felt for felt.</span>
+            </figcaption>
         </figure>
     </section>
 
     <section class="container case-section">
-        <blockquote class="pull-quote">A birth notification is really two records folded into one. Burying either half
-            behind the other put staff an extra click away from exactly the information they needed fastest.
+        <blockquote class="pull-quote">
+            <span data-i18n="en">A birth notification is two distinct records folded into one. By curating key
+                data specifically for the mother and the child, health visitors get an immediate overview without the
+                cognitive overload.</span>
+            <span data-i18n="da" lang="da">En fødselsanmeldelse er to forskellige journaler foldet sammen til én. Ved
+                at udvælge nøgledata specifikt til mor og barn får sundhedsplejersker et øjeblikkeligt overblik uden
+                den kognitive overbelastning.</span>
         </blockquote>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Solution</span>
-        <h2>The redesigned journals</h2>
-        <p class="prose" style="margin-top: var(--space-2);">The final design keeps the full birth notification intact
-            and accessible from both journals, but
-            leads with a curated, role-specific view on each side:</p>
+        <span class="eyebrow"><span data-i18n="en">Solution</span><span data-i18n="da" lang="da">Løsning</span></span>
+        <h2><span data-i18n="en">The redesigned journals</span><span data-i18n="da" lang="da">De redesignede
+                journaler</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The final design keeps the full birth notification intact
+                and accessible from both journals, but
+                leads with a curated, role-specific view on each side:</span>
+            <span data-i18n="da" lang="da">Det endelige design holder den fulde fødselsanmeldelse intakt og
+                tilgængelig fra begge journaler, men lægger ud med en udvalgt, rollespecifik visning på hver
+                side:</span>
+        </p>
         <div class="media-grid-2" style="margin-top: var(--space-3);">
             <div>
-                <h4>Child's journal</h4>
-                <p class="prose" style="margin-top: 8px;">Gestational age and the child's core measurements — weight,
-                    length, head circumference — are surfaced immediately, with a clear marker when a birth was
-                    premature. Stillbirths get the strongest treatment of all: an unmissable flag at the top of the
-                    record, since it changes how staff should read everything else on the page.</p>
+                <h4><span data-i18n="en">Child's journal</span><span data-i18n="da" lang="da">Barnets
+                        journal</span></h4>
+                <p class="prose" style="margin-top: 8px;">
+                    <span data-i18n="en">Gestational age and the child's core measurements — weight,
+                        length, head circumference — are surfaced immediately, with a clear marker when a birth was
+                        premature. Stillbirths get the strongest treatment of all: an unmissable flag at the top of
+                        the
+                        record, since it changes how staff should read everything else on the page.</span>
+                    <span data-i18n="da" lang="da">Gestationsalder og barnets centrale mål — vægt, længde, hovedomkreds
+                        — vises med det samme, med en tydelig markering, hvis fødslen var for tidlig. Dødfødsler får
+                        en markant markering: et tag øverst i journalen, der er umuligt at overse, fordi
+                        det ændrer, hvordan personalet skal læse resten af siden.</span>
+                </p>
                 <figure class="figure" style="margin-top: var(--space-2);">
                     <div class="figure-plate">
                         <div class="media-frame media-frame--photo">
                             <img src="images/case-01/child-journal-stillbirth.png" width="1318" height="854"
                                 loading="lazy" decoding="async"
-                                alt="Child's journal with a red &quot;Dødfødt&quot; (stillborn) flag next to the birth heading">
+                                alt="Child's journal with a red &quot;Dødfødt&quot; (stillborn) flag next to the birth heading"
+                                data-alt-da="Barnets journal med et rødt &quot;Dødfødt&quot;-flag ved siden af fødselsoverskriften">
                         </div>
                     </div>
-                    <figcaption class="media-caption">The "Dødfødt" flag next to the birth heading.</figcaption>
+                    <figcaption class="media-caption">
+                        <span data-i18n="en">The "Dødfødt" flag next to the birth heading.</span>
+                        <span data-i18n="da" lang="da">"Dødfødt"-flaget ved siden af fødselsoverskriften.</span>
+                    </figcaption>
                 </figure>
             </div>
             <div>
-                <h4>Mother's journal</h4>
-                <p class="prose" style="margin-top: 8px;">Gestational age reappears here alongside mode of delivery
-                    and blood loss volume — the details a health visitor or midwife needs to assess the mother's own
-                    recovery, without cross-referencing the child's record.</p>
+                <h4><span data-i18n="en">Mother's journal</span><span data-i18n="da" lang="da">Mors
+                        journal</span></h4>
+                <p class="prose" style="margin-top: 8px;">
+                    <span data-i18n="en">Gestational age reappears here alongside mode of delivery
+                        and blood loss volume — the details a health visitor needs to assess the mother's own
+                        recovery,
+                        without cross-referencing the child's record. The birthing method is surfaced to give the
+                        health
+                        visitor immediate context of the birth.</span>
+                    <span data-i18n="da" lang="da">Gestationsalder går igen her sammen med fødselsmåde og
+                        blødningsmængde — de detaljer en sundhedsplejerske skal bruge for at vurdere mors eget
+                        forløb, uden at skulle slå op i barnets journal. Fødselsmåden vises tydeligt, så
+                        sundhedsplejersken straks har konteksten for fødslen.</span>
+                </p>
                 <figure class="figure" style="margin-top: var(--space-2);">
                     <div class="figure-plate">
                         <div class="media-frame media-frame--photo">
                             <img src="images/case-01/mother-journal-default.png" width="1318" height="1325"
                                 loading="lazy" decoding="async"
-                                alt="Mother's journal listing her births, with delivery method, gestational age, and blood loss for each">
+                                alt="Mother's journal listing her births, with delivery method, gestational age, and blood loss for each"
+                                data-alt-da="Mors journal med en liste over hendes fødsler, med fødselsmåde, gestationsalder og blødningsmængde for hver">
                         </div>
                     </div>
-                    <figcaption class="media-caption">Fødselsmåde and blødningsmængde sit next to gestationsalder,
-                        per birth.</figcaption>
+                    <figcaption class="media-caption">
+                        <span data-i18n="en">Fødselsmåde and blødningsmængde sit next to gestationsalder,
+                            per birth.</span>
+                        <span data-i18n="da" lang="da">Fødselsmåde og blødningsmængde ligger ved siden af
+                            gestationsalder, for hver fødsel.</span>
+                    </figcaption>
                 </figure>
             </div>
         </div>
         <div class="text-media-row" style="margin-top: var(--space-7);">
-            <p class="prose">Across both views, clinical remarks are pulled out and
-                visually highlighted rather than left in the general data table — they're free text, and free text is
-                exactly where critical information tends to hide. Birth location, interpreter needs, and discharge date
-                were moved to the top of both journals too: none of them are complex data, but all three are the kind of
-                fact a clinician needs in the first five seconds, not the fifth scroll.</p>
+            <p class="prose">
+                <span data-i18n="en">Across both views, clinical remarks are pulled out and
+                    visually highlighted rather than left in the general data table — they're free text, and free
+                    text is
+                    exactly where critical information tends to hide. Birth location, interpreter needs, and
+                    discharge date
+                    were moved to the top of both journals too: none of them are complex data, but all three are the
+                    kind of
+                    fact a clinician needs in the first five seconds, not the fifth scroll.</span>
+                <span data-i18n="da" lang="da">I begge visninger bliver kliniske bemærkninger trukket ud og fremhævet
+                    visuelt i stedet for at blive gemt i den generelle datatabel — de er fritekst, og fritekst er
+                    netop, hvor kritisk information har en tendens til at gemme sig. Fødested, tolkebehov og
+                    udskrivelsesdato er også flyttet op øverst i begge journaler: ingen af dem er komplekse data, men
+                    alle tre er den slags fakta, en kliniker skal bruge i de første fem sekunder — ikke efter femte
+                    scroll.</span>
+            </p>
             <figure class="figure figure--sm">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-01/child-journal-premature.png" width="1318" height="920" loading="lazy"
                             decoding="async"
-                            alt="Gestational age card showing 36+6 weeks with an orange &quot;Præmatur&quot; marker">
+                            alt="Gestational age card showing 36+6 weeks with an orange &quot;Præmatur&quot; marker"
+                            data-alt-da="Gestationsalderkort med 36+6 uger og en orange &quot;Præmatur&quot;-markering">
                     </div>
                 </div>
-                <figcaption class="media-caption">Premature births get their own marker on the gestational age
-                    card.</figcaption>
+                <figcaption class="media-caption">
+                    <span data-i18n="en">Premature births get their own marker on the gestational age
+                        card.</span>
+                    <span data-i18n="da" lang="da">For tidlige fødsler får deres eget mærke på
+                        gestationsalderkortet.</span>
+                </figcaption>
             </figure>
         </div>
-        <p class="prose" style="margin-top: var(--space-7);">A birth notification can also be corrected or added to
-            after the fact, so the full notification view needed more than just its current numbers — it needed a
-            history. The expanded view lays out every change with when it happened and what it replaced, so staff can
-            trust the story behind the record, not just its latest state.</p>
+        <p class="prose" style="margin-top: var(--space-7);">
+            <span data-i18n="en">A birth notification can also be corrected or added to
+                after the fact, so the full notification view needed more than just its current numbers — it needed
+                a
+                history. The expanded view lays out every change with when it happened and what it replaced, so
+                staff can
+                trust the story behind the record, not just its latest state.</span>
+            <span data-i18n="da" lang="da">En fødselsanmeldelse kan også rettes eller suppleres efterfølgende, så den
+                fulde anmeldelsesvisning skulle vise mere end blot de aktuelle tal — den skulle have en historik. Den
+                udvidede visning lægger hver ændring frem med, hvornår den skete, og hvad den erstattede, så
+                personalet kan stole på historien bag journalen, ikke kun dens seneste tilstand.</span>
+        </p>
         <figure class="figure figure--wide" style="margin-top: var(--space-2);">
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-01/notification-history.png" width="1280" height="720" loading="lazy"
                         decoding="async"
-                        alt="History panel for the birth notification, listing three versions with what changed in each">
+                        alt="History panel for the birth notification, listing three versions with what changed in each"
+                        data-alt-da="Historikpanel for fødselsanmeldelsen, med tre versioner og hvad der ændrede sig i hver">
                 </div>
             </div>
-            <figcaption class="media-caption">Every version of the notification, with what changed and
-                when.</figcaption>
+            <figcaption class="media-caption">
+                <span data-i18n="en">Every version of the notification, with what changed and
+                    when.</span>
+                <span data-i18n="da" lang="da">Hver version af anmeldelsen, med hvad der ændrede sig, og
+                    hvornår.</span>
+            </figcaption>
         </figure>
     </section>
 
     <section class="container case-section">
-        <span class="eyebrow">Outcome</span>
-        <h2>Where it landed</h2>
-        <p class="prose" style="margin-top: var(--space-2);">The design was reviewed and approved by the product owner —
-            fully specced and ready to move
-            into development. More than the specific layout, the part of this project I'd carry forward is the
-            process: sitting down with someone who has actually stood in a delivery ward and asked which numbers she
-            reached for first. That's not a step I'd skip on future healthcare work — the difference between a
-            technically complete record and a genuinely usable one usually comes down to exactly that kind of input.</p>
+        <span class="eyebrow"><span data-i18n="en">Outcome</span><span data-i18n="da" lang="da">Resultat</span></span>
+        <h2><span data-i18n="en">Where it landed</span><span data-i18n="da" lang="da">Hvor det endte</span></h2>
+        <p class="prose" style="margin-top: var(--space-2);">
+            <span data-i18n="en">The design was reviewed and approved by the product owner —
+                fully specced and ready to move
+                into development. More than the specific layout, the part of this project I'd carry forward is the
+                process: sitting down with someone who has actually stood in a delivery ward grounded the
+                decision-making in real users' needs and strengthened the final design.</span>
+            <span data-i18n="da" lang="da">Designet blev gennemgået og godkendt af product owneren — fuldt specificeret
+                og klar til udvikling. Mere end det konkrete layout er det processen fra dette projekt, jeg tager med
+                mig videre: at sætte sig sammen med en, der rent faktisk har stået på en fødegang, forankrede
+                beslutningerne i de virkelige brugeres behov og styrkede det endelige design.</span>
+        </p>
     </section>
 
-    <div class="container"><img src="images/drawn/line-1.svg" class="section-divider" alt="" style="margin-bottom:0;">
+    <div class="container">
+        <div class="section-divider" style="margin-bottom:0;"></div>
     </div>
     <nav class="container case-nav">
         <a href="index.html#work" class="case-nav-link">
-            <span class="case-meta-label">&larr; Back to</span>
-            <h4>All work</h4>
+            <span class="case-meta-label"><span data-i18n="en">&larr; Back to</span><span data-i18n="da"
+                    lang="da">&larr; Tilbage til</span></span>
+            <h4><span data-i18n="en">All work</span><span data-i18n="da" lang="da">Alt arbejde</span></h4>
         </a>
         <a href="case-02.html" class="case-nav-link is-next">
-            <span class="case-meta-label">Next project</span>
-            <h4>Four tables, three tabs</h4>
+            <span class="case-meta-label"><span data-i18n="en">Next project</span><span data-i18n="da" lang="da">Næste
+                    projekt</span></span>
+            <h4><span data-i18n="en">Designing for early intervention</span><span data-i18n="da" lang="da">Design til
+                    tidlig indsats</span></h4>
         </a>
     </nav>
 
@@ -240,7 +396,8 @@
             <img src="images/drawn/line-1.svg" class="footer-divider" alt="">
             <div class="footer-inner">
                 <div class="footer-links">
-                    <p class="bold" style="margin:0 0 4px 0;">Contact me</p>
+                    <p class="bold" style="margin:0 0 4px 0;"><span data-i18n="en">Contact me</span><span data-i18n="da"
+                            lang="da">Kontakt mig</span></p>
                     <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
                 </div>
                 <div class="footer-social">

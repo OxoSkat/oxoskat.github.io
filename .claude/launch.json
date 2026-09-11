@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "portfolio-static",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "4321"],
-      "port": 4321
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "http-server", "-c-1"],
+      "port": 4321,
+      "autoPort": true
     }
   ]
 }

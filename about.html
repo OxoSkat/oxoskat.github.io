@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
     <script src="hamburger.js" defer></script>
+    <script src="i18n.js" defer></script>
     <title>About — Mads Emmertsen</title>
 </head>
-<body>
+
+<body data-title-da="Om — Mads Emmertsen">
     <svg class="filter-defs" aria-hidden="true">
         <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
-            <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise"/>
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+            <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
         </filter>
     </svg>
 
@@ -25,40 +32,80 @@
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">MADS EMMERTSEN</a>
             <div class="nav-links">
-                <a href="index.html#work">Work</a>
-                <a href="about.html" class="is-active">About</a>
-                <a href="mailto:madsemmertsen@gmail.com">Contact</a>
+                <a href="index.html#work"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a>
+                <a href="about.html" class="is-active"><span data-i18n="en">About</span><span data-i18n="da"
+                        lang="da">Om mig</span></a>
+                <a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a>
             </div>
-            <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-controls">
+                <div class="lang-switch" role="group" aria-label="Language / Sprog">
+                    <button type="button" class="lang-btn" data-lang-btn="en" onclick="setLang('en')"
+                        aria-label="English" aria-pressed="true">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang-btn="da" onclick="setLang('da')" aria-label="Dansk"
+                        aria-pressed="false">DA</button>
+                </div>
+                <button class="nav-toggle" onclick="toggleNav()" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <div class="container"><img src="images/drawn/line-1.svg" class="nav-divider" alt=""></div>
+        <div class="container">
+            <div class="nav-divider"></div>
+        </div>
     </nav>
     <div class="links show" id="mobileNav">
         <span class="material-symbols-outlined close-menu-btn" onclick="toggleNav()">close</span>
         <ul>
-            <li><a href="index.html#work">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="mailto:madsemmertsen@gmail.com">Contact</a></li>
+            <li><a href="index.html#work"><span data-i18n="en">Work</span><span data-i18n="da"
+                        lang="da">Arbejde</span></a></li>
+            <li><a href="about.html"><span data-i18n="en">About</span><span data-i18n="da" lang="da">Om mig</span></a>
+            </li>
+            <li><a href="mailto:madsemmertsen@gmail.com"><span data-i18n="en">Contact</span><span data-i18n="da"
+                        lang="da">Kontakt</span></a></li>
         </ul>
     </div>
 
     <main class="container about-hero">
         <div class="profile-frame">
-            <img src="images/profile_img.svg" alt="Portrait of Mads Emmertsen" class="profile-img">
+            <img src="images/profile_img.svg" alt="Portrait of Mads Emmertsen" data-alt-da="Portræt af Mads Emmertsen"
+                class="profile-img">
         </div>
         <div class="about-copy">
-            <span class="eyebrow">About me</span>
-            <h1>Digital design with a focus on systems and accessibility</h1>
-            <p class="prose" style="margin-top: var(--space-3);">I am a Digital Designer (Cand.IT) based in Aarhus, Denmark, with a passion for creating
-                structured, scalable, and inclusive digital experiences. For the past three years, I have been working
-                within the healthcare sector, transforming complex legacy systems into modern, user-centric web solutions.
-                My expertise lies in the technical execution of UI design. I thrive when building robust design systems in
-                Figma and ensuring that every component is not only visually polished but also fully accessible and WCAG 2.2
-                compliant.</p>
+            <span class="eyebrow"><span data-i18n="en">About me</span><span data-i18n="da" lang="da">Om
+                    mig</span></span>
+            <h1><span data-i18n="en">Digital design grounded in research, systems, and accessibility</span><span
+                    data-i18n="da" lang="da">Digitalt design forankret i research, systemer og tilgængelighed</span>
+            </h1>
+            <p class="prose" style="margin-top: var(--space-3);">
+                <span data-i18n="en">I am a Digital Designer (Cand.IT) based in Aarhus, Denmark, with a passion for
+                    creating
+                    structured, scalable, and inclusive digital experiences. For the past three years, I have been
+                    working
+                    within the healthcare sector, turning complex legacy systems into modern, user-centric web solutions
+                    —
+                    starting with field research and user interviews to understand how people actually work, then
+                    translating those findings into interfaces. I'm strongest in Figma, where I build and maintain the
+                    design
+                    systems that keep that work consistent and scalable, and I make sure every component is not only
+                    visually
+                    polished but also fully accessible and WCAG 2.2 compliant.</span>
+                <span data-i18n="da" lang="da">Jeg er digital designer (cand.it.) baseret i Aarhus med en passion for at
+                    skabe strukturerede, skalerbare og inkluderende digitale oplevelser. De seneste tre år har jeg
+                    arbejdet
+                    inden for sundhedssektoren, hvor jeg omdanner komplekse legacy-systemer til moderne,
+                    brugercentrerede
+                    webløsninger — med udgangspunkt i feltresearch og brugerinterviews, der afdækker, hvordan folk
+                    faktisk arbejder, før jeg omsætter det til interfaces. Min styrke ligger i Figma, hvor jeg opbygger
+                    og
+                    vedligeholder de designsystemer, der holder arbejdet konsistent og skalerbart, og sikrer, at hver
+                    komponent ikke kun er visuelt poleret, men også fuldt tilgængelig og WCAG 2.2-kompatibel.</span>
+            </p>
             <a href="resume.pdf" target="_blank" class="btn">
-                <span><span class="material-symbols-outlined">download</span>Resume</span>
+                <span><span class="material-symbols-outlined">download</span><span data-i18n="en">Resume</span><span
+                        data-i18n="da" lang="da">CV</span></span>
             </a>
         </div>
     </main>
@@ -68,7 +115,8 @@
             <img src="images/drawn/line-1.svg" class="footer-divider" alt="">
             <div class="footer-inner">
                 <div class="footer-links">
-                    <p class="bold" style="margin:0 0 4px 0;">Contact me</p>
+                    <p class="bold" style="margin:0 0 4px 0;"><span data-i18n="en">Contact me</span><span data-i18n="da"
+                            lang="da">Kontakt mig</span></p>
                     <a href="mailto:madsemmertsen@gmail.com">madsemmertsen@gmail.com</a>
                 </div>
                 <div class="footer-social">
@@ -81,4 +129,5 @@
         </div>
     </footer>
 </body>
+
 </html>
