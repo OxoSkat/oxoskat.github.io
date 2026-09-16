@@ -618,6 +618,7 @@ ul {
    font-family: var(--font-mono);
    font-size: 0.8rem;
    width: fit-content;
+   border-radius: 16px;
 }
 
 .case-meta {
