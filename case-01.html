@@ -3,9 +3,10 @@
 
 <head>
     <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
+    <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-reveal');</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,6 +17,7 @@
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
     <script src="i18n.js" defer></script>
+    <script src="reveal.js" defer></script>
     <title>Splitting the Birth Record — Mads Emmertsen</title>
 </head>
 
@@ -163,6 +165,8 @@
     </section>
 
     <section class="container case-section">
+        <div class="split">
+            <div class="split-text">
         <span class="eyebrow"><span data-i18n="en">Process</span><span data-i18n="da" lang="da">Proces</span></span>
         <h2><span data-i18n="en">Deciding what matters, and to whom</span><span data-i18n="da" lang="da">Hvad der
                 betyder noget, og for hvem</span></h2>
@@ -190,7 +194,8 @@
                 for, hvad en sundhedsplejerske faktisk griber efter først, i modsætning til hvad der blot formelt er
                 en del af journalen, formede, hvordan vi prioriterede og fremhævede data i layoutet.</span>
         </p>
-        <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+        </div>
+        <figure class="figure">
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-01/notification-expanded.png" width="1280" height="720" loading="lazy"
@@ -206,6 +211,7 @@
                     journaler, og det datasæt jeg skulle sortere felt for felt.</span>
             </figcaption>
         </figure>
+        </div>
     </section>
 
     <section class="container case-section">
@@ -294,7 +300,8 @@
                 </figure>
             </div>
         </div>
-        <div class="text-media-row" style="margin-top: var(--space-7);">
+        <div class="case-block split">
+            <div class="split-text">
             <p class="prose">
                 <span data-i18n="en">Across both views, clinical remarks are pulled out and
                     visually highlighted rather than left in the general data table — they're free text, and free
@@ -311,7 +318,8 @@
                     alle tre er den slags fakta, en kliniker skal bruge i de første fem sekunder — ikke efter femte
                     scroll.</span>
             </p>
-            <figure class="figure figure--sm">
+            </div>
+            <figure class="figure">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-01/child-journal-premature.png" width="1318" height="920" loading="lazy"
@@ -328,7 +336,9 @@
                 </figcaption>
             </figure>
         </div>
-        <p class="prose" style="margin-top: var(--space-7);">
+        <div class="case-block split">
+            <div class="split-text">
+        <p class="prose">
             <span data-i18n="en">A birth notification can also be corrected or added to
                 after the fact, so the full notification view needed more than just its current numbers — it needed
                 a
@@ -340,7 +350,8 @@
                 udvidede visning lægger hver ændring frem med, hvornår den skete, og hvad den erstattede, så
                 personalet kan stole på historien bag journalen, ikke kun dens seneste tilstand.</span>
         </p>
-        <figure class="figure figure--wide" style="margin-top: var(--space-2);">
+        </div>
+        <figure class="figure">
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-01/notification-history.png" width="1280" height="720" loading="lazy"
@@ -356,6 +367,7 @@
                     hvornår.</span>
             </figcaption>
         </figure>
+        </div>
     </section>
 
     <section class="container case-section">

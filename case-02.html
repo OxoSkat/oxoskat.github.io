@@ -3,9 +3,10 @@
 
 <head>
     <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
+    <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-reveal');</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,6 +17,7 @@
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
     <script src="i18n.js" defer></script>
+    <script src="reveal.js" defer></script>
     <title>Designing for Early Intervention — Mads Emmertsen</title>
 </head>
 
@@ -313,7 +315,8 @@
             </div>
         </div>
 
-        <div style="margin-top: var(--space-6);">
+        <div class="case-block split split--tall">
+            <div class="split-text">
             <h4>Høreprøver</h4>
             <p class="prose" style="margin-top: 8px;">
                 <span data-i18n="en">A single hearing test produces up to 22 measurements — eleven
@@ -342,7 +345,8 @@
                     en sundhedsplejerske kan se præcis, hvor et barns hørelse falder fra, i stedet for at aflæse det
                     ud af en kolonne af decibel.</span>
             </p>
-            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+            </div>
+            <figure class="figure">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-02/hearing-test.png" width="1340" height="1863" loading="lazy"
@@ -360,7 +364,8 @@
             </figure>
         </div>
 
-        <div style="margin-top: var(--space-6);">
+        <div class="case-block split">
+            <div class="split-text">
             <h4>Sprogvurderinger</h4>
             <p class="prose" style="margin-top: 8px;">
                 <span data-i18n="en">Language assessments are the simplest of the three: a date and
@@ -374,7 +379,8 @@
                     Fem felter, de fleste af dem tekst, er præcis det tilfælde, hvor en enkel liste fungerer bedre end
                     en tabel bygget til tal.</span>
             </p>
-            <figure class="figure figure--sm" style="margin-top: var(--space-3);">
+            </div>
+            <figure class="figure">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-02/language-assessment.png" width="1340" height="770" loading="lazy"
