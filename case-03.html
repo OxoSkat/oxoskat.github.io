@@ -3,9 +3,10 @@
 
 <head>
     <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
+    <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-reveal');</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,6 +17,7 @@
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
     <script src="i18n.js" defer></script>
+    <script src="reveal.js" defer></script>
     <title>Screening the Conscript Pool — Mads Emmertsen</title>
 </head>
 
@@ -171,6 +173,8 @@
     </section>
 
     <section class="container case-section">
+        <div class="split">
+            <div class="split-text">
         <span class="eyebrow"><span data-i18n="en">Process</span><span data-i18n="da" lang="da">Proces</span></span>
         <h2><span data-i18n="en">Designing from a spec, not a doctor</span><span data-i18n="da" lang="da">At designe
                 ud fra en spec, ikke en læge</span></h2>
@@ -202,7 +206,8 @@
                 at designet mangler den afgørende valideringsfase, end at fremstille det som mere færdigt, end det
                 var.</span>
         </p>
-        <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+        </div>
+        <figure class="figure">
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-03/way-out-queue.png" width="1280" height="720" loading="lazy"
@@ -216,6 +221,7 @@
                 <span data-i18n="da" lang="da">Way-Out-køen — det første af de to flows.</span>
             </figcaption>
         </figure>
+        </div>
     </section>
 
     <section class="container case-section">
@@ -229,7 +235,8 @@
                 lægen arbejder med listerne er helt forskelligt.</span>
         </p>
 
-        <div style="margin-top: var(--space-4);">
+        <div class="split" style="margin-top: var(--space-4);">
+            <div class="split-text">
             <h4><span data-i18n="en">Way-Out — reviewing exemption requests</span><span data-i18n="da" lang="da">Way-Out
                     — gennemgang af fritagelsesanmodninger</span></h4>
             <p class="prose" style="margin-top: 8px;">
@@ -243,7 +250,8 @@
                     eller scanninger. Godkend og afvis sidder lige ved siden af teksten, så beslutningen forbliver
                     forankret direkte i den kontekst, der informerer den.</span>
             </p>
-            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+            </div>
+            <figure class="figure">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-03/way-out-citizen-review.png" width="1280" height="720" loading="lazy"
@@ -259,7 +267,9 @@
                         visning.</span>
                 </figcaption>
             </figure>
-            <p class="prose" style="margin-top: var(--space-3);">
+            </div>
+            <div class="case-block">
+            <p class="prose">
                 <span data-i18n="en">Once a request is decided it moves out of the
                     working queue entirely — into a separate, filterable list of what's already been handled, so a
                     doctor picking this up mid-shift only ever sees what's actually theirs to act on. And because a
@@ -310,7 +320,7 @@
             </div>
         </div>
 
-        <div style="margin-top: var(--space-7);">
+        <div class="case-block">
             <h4><span data-i18n="en">Session — reviewing test results on the day</span><span data-i18n="da"
                     lang="da">Session — gennemgang af testresultater på dagen</span></h4>
             <p class="prose" style="margin-top: 8px;">
@@ -367,7 +377,10 @@
                     </figure>
                 </div>
             </div>
-            <p class="prose" style="margin-top: var(--space-4);">
+            </div>
+            <div class="case-block split split--tall">
+                <div class="split-text">
+            <p class="prose">
                 <span data-i18n="en">The health questionnaire itself only ever shows
                     answers where the conscript actually reported something — no wall of "no" answers to scan past.
                     Where a condition needs proof, like Jonas's epilepsy diagnosis, the answer carries an attachment;
@@ -380,7 +393,8 @@
                     dokumentation, som Jonas' epilepsidiagnose, har svaret en vedhæftning; en læge vælger den for at
                     få dokumentet vist direkte ved siden af spørgeskemaet i stedet for at downloade det blindt.</span>
             </p>
-            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+            </div>
+            <figure class="figure">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-03/session-attachment-preview.png" width="1280" height="1282"
@@ -396,7 +410,10 @@
                         for gemt bag en download.</span>
                 </figcaption>
             </figure>
-            <p class="prose" style="margin-top: var(--space-3);">
+            </div>
+            <div class="case-block split">
+                <div class="split-text">
+            <p class="prose">
                 <span data-i18n="en">A rejected Way-Out follows the conscript into this
                     view too, but it's a fact to weigh, not a verdict to repeat — the doctor can open when the
                     decision
@@ -407,7 +424,8 @@
                     hvornår beslutningen blev truffet, og af hvem, uden at forlade siden, men skal selv nå frem til
                     sin egen konklusion for sessionen.</span>
             </p>
-            <figure class="figure figure--wide" style="margin-top: var(--space-2);">
+            </div>
+            <figure class="figure">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-03/session-rejected-modal.png" width="1280" height="720" loading="lazy"

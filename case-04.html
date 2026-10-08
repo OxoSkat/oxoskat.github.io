@@ -3,9 +3,10 @@
 
 <head>
     <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
+    <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-reveal');</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,6 +17,7 @@
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
     <script src="i18n.js" defer></script>
+    <script src="reveal.js" defer></script>
     <title>Sourdough App — Mads Emmertsen</title>
 </head>
 
@@ -189,7 +191,8 @@
                     historik-tidslinjeelementer.</span>
             </figcaption>
         </figure>
-        <div style="margin-top: var(--space-5);">
+        <div class="case-block">
+        <div>
             <h4><span data-i18n="en">Choosing an optimized stack</span><span data-i18n="da" lang="da">At vælge en
                     optimeret stack</span></h4>
             <p class="prose" style="margin-top: 8px;">
@@ -203,7 +206,7 @@
             </p>
         </div>
 
-        <div style="margin-top: var(--space-6);">
+        <div style="margin-top: var(--space-5);">
             <h4><span data-i18n="en">Iterating live in the browser</span><span data-i18n="da" lang="da">Iteration
                     live i browseren</span></h4>
             <p class="prose" style="margin-top: 8px;">
@@ -248,8 +251,10 @@
                 </figure>
             </div>
         </div>
+        </div>
 
-        <div style="margin-top: var(--space-6);">
+        <div class="case-block split">
+            <div class="split-text">
             <h4><span data-i18n="en">Rebuilding the Journal</span><span data-i18n="da" lang="da">Genopbygning af
                     Journalen</span></h4>
             <p class="prose" style="margin-top: 8px;">
@@ -272,7 +277,8 @@
                 <span data-i18n="da" lang="da">At forvandle en vag kritik til et strømlinet UX betød, at jeg måtte vende
                     tilbage til formålet med det hele: at dokumentere et eksperiment og evaluere resultaterne.</span>
             </p>
-            <figure class="figure figure--wide" style="margin-top: var(--space-3);">
+            </div>
+            <figure class="figure">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-04/journal-history.png" width="2526" height="1352" loading="lazy"
@@ -290,7 +296,8 @@
             </figure>
         </div>
 
-        <div style="margin-top: var(--space-6);">
+        <div class="case-block split split--tall">
+            <div class="split-text">
             <h4><span data-i18n="en">Smaller features, same process</span><span data-i18n="da" lang="da">Mindre
                     features, samme proces</span></h4>
             <p class="prose" style="margin-top: 8px;">
@@ -301,7 +308,8 @@
                     fulgte præcis samme iterative forløb: at identificere et reelt friktionspunkt i den virkelige
                     verden og forme løsningen i fællesskab.</span>
             </p>
-            <figure class="figure figure--sm" style="margin-top: var(--space-3);">
+            </div>
+            <figure class="figure figure--sm">
                 <div class="figure-plate">
                     <div class="media-frame media-frame--photo">
                         <img src="images/case-04/timer-alarm.gif" width="792" height="1116" loading="lazy"
@@ -324,7 +332,8 @@
         <h2><span data-i18n="en">A baking journal, not just a recipe box</span><span data-i18n="da" lang="da">En
                 bagejournal, ikke bare en opskriftssamling</span></h2>
 
-        <div style="margin-top: var(--space-2);">
+            <div class="split" style="margin-top: var(--space-2);">
+            <div class="split-text">
             <h4><span data-i18n="en">What it does</span><span data-i18n="da" lang="da">Hvad den gør</span></h4>
             <ul class="prose-list" style="margin-top: 8px;">
                 <li>
@@ -387,9 +396,9 @@
                         sprogskift.</span>
                 </li>
             </ul>
-        </div>
+            </div>
 
-        <figure class="figure figure--wide" style="margin-top: var(--space-4);">
+        <figure class="figure">
             <div class="figure-plate">
                 <div class="media-frame media-frame--photo">
                     <img src="images/case-04/edit-page.png" width="2524" height="1358" loading="lazy" decoding="async"
@@ -404,6 +413,7 @@
                     ingredienserne ændres.</span>
             </figcaption>
         </figure>
+        </div>
     </section>
 
     <section class="container case-section">
