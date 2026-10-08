@@ -5,7 +5,7 @@
     <script>document.documentElement.setAttribute('data-lang', (function () {try {return localStorage.getItem('oxoskat-lang') || 'en';} catch (e) {return 'en';} })());</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,6 +16,7 @@
         rel="stylesheet" />
     <script src="hamburger.js" defer></script>
     <script src="i18n.js" defer></script>
+    <script src="hero-loop.js" defer></script>
     <title>Mads Emmertsen — Digital Designer</title>
 </head>
 
@@ -69,6 +70,7 @@
     </div>
 
     <header class="container hero">
+        <div class="hero-text">
         <span class="eyebrow"><span data-i18n="en">Digital Designer &middot; UX Research</span><span data-i18n="da"
                 lang="da">Digital designer &middot; UX-research</span></span>
         <h1><span data-i18n="en">Designing and researching products people rely on.</span><span data-i18n="da"
@@ -87,6 +89,36 @@
             <span class="chip"><span data-i18n="en">ACCESSIBILITY</span><span data-i18n="da"
                     lang="da">TILGÆNGELIGHED</span></span>
         </div>
+        </div>
+
+        <!-- Design loop: draws itself on load, steps advance as the page scrolls (hero-loop.js) -->
+        <svg class="hero-loop" id="heroLoop" viewBox="0 0 560 460" role="img"
+            aria-label="Iterative design loop: research, define, design, test, repeat"
+            data-label-da="Iterativt designloop: research, definér, design, test, gentag">
+            <circle class="loop-track" cx="280" cy="230" r="160" pathLength="1" transform="rotate(-90 280 230)" />
+            <circle class="loop-progress" cx="280" cy="230" r="160" pathLength="1" transform="rotate(-90 280 230)" />
+            <g class="loop-pen"><circle cx="280" cy="70" r="6" /></g>
+
+            <circle class="loop-ripple is-step-1" cx="280" cy="70" r="30" />
+            <circle class="loop-ripple is-step-2" cx="440" cy="230" r="30" />
+            <circle class="loop-ripple is-step-3" cx="280" cy="390" r="30" />
+            <circle class="loop-ripple is-step-4" cx="120" cy="230" r="30" />
+
+            <g class="loop-node is-step-1"><circle cx="280" cy="70" r="28" /><text x="280" y="75">1</text></g>
+            <g class="loop-node is-step-2"><circle cx="440" cy="230" r="28" /><text x="440" y="235">2</text></g>
+            <g class="loop-node is-step-3"><circle cx="280" cy="390" r="28" /><text x="280" y="395">3</text></g>
+            <g class="loop-node is-step-4"><circle cx="120" cy="230" r="28" /><text x="120" y="235">4</text></g>
+
+            <text class="loop-label is-top" x="280" y="20" text-anchor="middle">RESEARCH</text>
+            <text class="loop-label is-right" x="490" y="235" text-anchor="start"><tspan data-i18n="en">DEFINE</tspan><tspan data-i18n="da">DEFINÉR</tspan></text>
+            <text class="loop-label is-bottom" x="280" y="452" text-anchor="middle">DESIGN</text>
+            <text class="loop-label is-left" x="70" y="235" text-anchor="end">TEST</text>
+
+            <g class="loop-center">
+                <text class="loop-round" x="280" y="222" text-anchor="middle"></text>
+                <text class="loop-step" x="280" y="252" text-anchor="middle"></text>
+            </g>
+        </svg>
     </header>
 
     <main class="container section" id="work">
