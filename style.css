@@ -475,7 +475,7 @@ ul {
    stroke-width: 3;
    transform-box: fill-box;
    transform-origin: center;
-   transition: fill .35s ease, transform .35s var(--ease);
+   transition: fill .35s ease, stroke-width .35s ease, transform .35s var(--ease);
 }
 
 .loop-node text {
@@ -489,6 +489,7 @@ ul {
 
 .loop-node.is-current circle {
    fill: var(--color-accent);
+   stroke-width: 0;
    transform: scale(1.28);
 }
 
