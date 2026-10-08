@@ -947,25 +947,35 @@ ul {
 }
 
 /* =========================================================
-   Case page motion: reveal on scroll + section snapping
+   Reveal on scroll (all pages) + section snapping (case pages)
    ========================================================= */
-/* The inline script in each case page's <head> sets .js-reveal (only when
-   motion is allowed), so without JS or with reduced motion everything is
-   simply visible. reveal.js adds .is-revealed as things scroll into view —
-   keep its selector list in sync with the one below. */
-.js-reveal :is(.case-hero>*, .case-section :is(.eyebrow, h2, h4, p.prose, .prose-list>li, .pull-quote), .case-nav) {
+/* The inline script in each page's <head> sets .js-reveal (only when motion
+   is allowed), so without JS or with reduced motion everything is simply
+   visible. reveal.js adds .is-revealed as things scroll into view — keep its
+   selector list in sync with the three groups below. */
+
+/* Text: fades and rises */
+.js-reveal :is(.case-hero>*, .case-section :is(.eyebrow, h2, h4, p.prose, .prose-list>li, .pull-quote), .case-nav,
+   .hero-text>:not(.chip-row), .chip-row>.chip, .section-divider, .section-head, .about-copy>:not(.btn)) {
    transition:
       opacity .7s var(--ease),
       translate .8s var(--ease);
    transition-delay: var(--reveal-delay, 0ms);
 }
 
-.js-reveal :is(.case-hero>*, .case-section :is(.eyebrow, h2, h4, p.prose, .prose-list>li, .pull-quote), .case-nav):not(.is-revealed) {
+.js-reveal :is(.case-hero>*, .case-section :is(.eyebrow, h2, h4, p.prose, .prose-list>li, .pull-quote), .case-nav,
+   .hero-text>:not(.chip-row), .chip-row>.chip, .section-divider, .section-head, .about-copy>:not(.btn)):not(.is-revealed) {
    opacity: 0;
    translate: 0 28px;
 }
 
-.js-reveal .case-section .figure {
+/* Chips are small, so a smaller hop reads better */
+.js-reveal .chip-row>.chip:not(.is-revealed) {
+   translate: 0 12px;
+}
+
+/* Media: a longer rise with a slight scale-up */
+.js-reveal :is(.case-section .figure, .profile-frame) {
    transition:
       opacity .8s var(--ease),
       translate 1s var(--ease),
@@ -973,7 +983,7 @@ ul {
    transition-delay: var(--reveal-delay, 0ms);
 }
 
-.js-reveal .case-section .figure:not(.is-revealed) {
+.js-reveal :is(.case-section .figure, .profile-frame):not(.is-revealed) {
    opacity: 0;
    translate: 0 48px;
    scale: .97;
@@ -985,10 +995,15 @@ ul {
       translate: 56px 0;
       scale: 1;
    }
+
+   .js-reveal .profile-frame:not(.is-revealed) {
+      translate: -56px 0;
+      scale: 1;
+   }
 }
 
 /* Keeps the slide-in offset from widening the page while it plays */
-.js-reveal .case-section {
+.js-reveal :is(.case-section, .about-hero) {
    overflow-x: clip;
 }
 
@@ -1000,6 +1015,43 @@ ul {
 
 .js-reveal .case-section .figure:not(.is-revealed) img {
    translate: 0 18px;
+}
+
+/* Interactive pieces already transition on hover, and a reveal delay would
+   make that hover lag — so they enter with a keyframe animation instead. */
+.js-reveal :is(.work-card, .about-copy>.btn):not(.is-revealed) {
+   opacity: 0;
+}
+
+.js-reveal :is(.work-card, .about-copy>.btn).is-revealed {
+   animation: reveal-rise .9s var(--ease) var(--reveal-delay, 0ms) both;
+}
+
+/* The card's screenshot zooms back into frame as the card lands */
+.js-reveal .work-card.is-revealed .work-card-media img {
+   animation: reveal-settle 1.3s var(--ease) var(--reveal-delay, 0ms) both;
+}
+
+@keyframes reveal-rise {
+   from {
+      opacity: 0;
+      translate: 0 40px;
+   }
+
+   to {
+      opacity: 1;
+      translate: 0 0;
+   }
+}
+
+@keyframes reveal-settle {
+   from {
+      scale: 1.12;
+   }
+
+   to {
+      scale: 1;
+   }
 }
 
 /* Snapping only where a section actually fits on screen: on phones and
