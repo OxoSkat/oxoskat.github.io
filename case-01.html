@@ -19,10 +19,10 @@
     <script src="i18n.js" defer></script>
     <script src="copy-email.js" defer></script>
     <script src="reveal.js" defer></script>
-    <title>Splitting the Birth Record — Mads Emmertsen</title>
+    <title>Splitting the Birth Record | Mads Emmertsen</title>
 </head>
 
-<body class="page-case-01" data-title-da="Opdeling af fødselsjournalen — Mads Emmertsen">
+<body class="page-case-01" data-title-da="Opdeling af fødselsjournalen | Mads Emmertsen">
     <svg class="filter-defs" aria-hidden="true">
         <filter id="sketchy" x="-12%" y="-12%" width="124%" height="124%">
             <feTurbulence type="turbulence" baseFrequency="0.02 0.06" numOctaves="2" seed="7" result="noise" />
@@ -76,11 +76,11 @@
                 fødselsjournalen</span></h1>
         <p class="case-hero-sub">
             <span data-i18n="en">Redesigning how Denmark's official birth notification (fødselsanmeldelse) is split
-                across the mother's and the child's medical record at Novax — so each surfaces exactly what's
+                across the mother's and the child's medical record at Novax, so each surfaces exactly what's
                 clinically
                 relevant, without losing access to the full notification.</span>
             <span data-i18n="da" lang="da">Redesign af hvordan den officielle danske fødselsanmeldelse opdeles mellem
-                mors og barnets journal hos Novax — så hver journal viser præcis det, der er klinisk relevant, uden at
+                mors og barnets journal hos Novax, så hver journal viser præcis det, der er klinisk relevant, uden at
                 miste adgang til hele anmeldelsen.</span>
         </p>
 
@@ -129,13 +129,13 @@
                 halvdelen af billedet</span></h2>
         <p class="prose" style="margin-top: var(--space-2);">
             <span data-i18n="en">Every birth in Denmark is followed by an official birth
-                notification — a fødselsanmeldelse —
+                notification (a fødselsanmeldelse)
                 submitted by the hospital, covering everything from the child's measurements to the mother's delivery
                 details. In Novax's existing system, all of that data lived in exactly one place: the child's
                 journal.
-                That worked for data that belonged to the child, but a large share of the notification — gestational
+                That worked for data that belonged to the child, but a large share of the notification (gestational
                 age,
-                mode of delivery, blood loss, complications — is just as relevant to the mother's care. A health
+                mode of delivery, blood loss, complications) is just as relevant to the mother's care. A health
                 visitor
                 working from the mother's record had no way to see any of it without leaving her journal to search
                 for
@@ -143,8 +143,8 @@
             <span data-i18n="da" lang="da">Enhver fødsel i Danmark efterfølges af en officiel fødselsanmeldelse, som
                 hospitalet indsender, og som dækker alt fra barnets mål til mors fødselsforløb. I Novax' eksisterende
                 system lå alle disse data ét sted: barnets journal. Det fungerede fint for data, der hørte til
-                barnet, men en stor del af anmeldelsen — gestationsalder, fødselsmåde, blødningsmængde,
-                komplikationer — er lige så relevant for plejen af moren. En sundhedsplejerske, der arbejdede i mors
+                barnet, men en stor del af anmeldelsen (gestationsalder, fødselsmåde, blødningsmængde,
+                komplikationer) er lige så relevant for plejen af moren. En sundhedsplejerske, der arbejdede i mors
                 journal, havde ingen mulighed for at se noget af det uden at forlade journalen for i stedet at søge
                 det frem i barnets.</span>
         </p>
@@ -153,12 +153,12 @@
                 both
                 journals, and keep the complete, unedited notification available from either side. Nothing in a
                 legal
-                health record can be hidden — only presented in a way that helps the right person find the right
+                health record can be hidden. It can only be presented in a way that helps the right person find the right
                 thing
                 faster.</span>
             <span data-i18n="da" lang="da">Min opgave var at redesigne, hvordan disse data når frem til
                 sundhedsplejersken: fordele dem fornuftigt mellem de to journaler og samtidig holde hele den uredigerede
-                fødselsanmeldelse tilgængelig fra begge sider. Intet i en lovpligtig sundhedsjournal må skjules — men
+                fødselsanmeldelse tilgængelig fra begge sider. Intet i en lovpligtig sundhedsjournal må skjules, men
                 det
                 kan
                 præsenteres på en måde, der hjælper den brugeren med at finde den rette information hurtigere.</span>
@@ -175,22 +175,22 @@
             <span data-i18n="en">The notification form covers dozens of fields, from routine
                 measurements to free-text clinical
                 remarks. Before I could design a single screen, I had to work through the entire dataset and decide,
-                field by field, whether it belonged on the child's journal, the mother's, or both — and within each,
+                field by field, whether it belonged on the child's journal, the mother's, or both. And within each,
                 whether it needed to be visible at a glance or could sit one tap deeper in the full
                 notification.</span>
             <span data-i18n="da" lang="da">Anmeldelsesskemaet dækker et hav af felter, fra rutinemæssige målinger til
                 kliniske fritekstbemærkninger. Før jeg kunne designe et eneste skærmbillede, måtte jeg gennemgå hele
-                datasættet og felt for felt afgøre, om det hørte hjemme i barnets journal, mors, eller begge — og for
+                datasættet og felt for felt afgøre, om det hørte hjemme i barnets journal, mors, eller begge. Og for
                 hvert felt, om det skulle være synligt med det samme, eller om det kunne ligge ét klik dybere i den
                 fulde anmeldelse.</span>
         </p>
         <p class="prose">
-            <span data-i18n="en">I did this together with one of our implementation consultants — a former health
+            <span data-i18n="en">I did this together with one of our implementation consultants, a former health
                 visitor
                 (sundhedsplejerske) who now works close to the system's day-to-day users. Her sense of what a health
                 visitor actually reaches for first, versus what's just formally part of the record, shaped how we
                 prioritized and highlighted data in the layout.</span>
-            <span data-i18n="da" lang="da">Det gjorde jeg sammen med en af vores implementeringskonsulenter — en
+            <span data-i18n="da" lang="da">Det gjorde jeg sammen med en af vores implementeringskonsulenter, en
                 tidligere sundhedsplejerske, som i dag arbejder tæt på systemets daglige brugere. Hendes fornemmelse
                 for, hvad en sundhedsplejerske faktisk griber efter først, i modsætning til hvad der blot formelt er
                 en del af journalen, formede, hvordan vi prioriterede og fremhævede data i layoutet.</span>
@@ -206,9 +206,9 @@
                 </div>
             </div>
             <figcaption class="media-caption">
-                <span data-i18n="en">The full birth notification — still one click away from either journal,
+                <span data-i18n="en">The full birth notification, still one click away from either journal,
                     and the dataset I had to sort field by field.</span>
-                <span data-i18n="da" lang="da">Den fulde fødselsanmeldelse — stadig kun ét klik væk fra begge
+                <span data-i18n="da" lang="da">Den fulde fødselsanmeldelse, stadig kun ét klik væk fra begge
                     journaler, og det datasæt jeg skulle sortere felt for felt.</span>
             </figcaption>
         </figure>
@@ -243,13 +243,13 @@
                 <h4><span data-i18n="en">Child's journal</span><span data-i18n="da" lang="da">Barnets
                         journal</span></h4>
                 <p class="prose" style="margin-top: 8px;">
-                    <span data-i18n="en">Gestational age and the child's core measurements — weight,
-                        length, head circumference — are surfaced immediately, with a clear marker when a birth was
+                    <span data-i18n="en">Gestational age and the child's core measurements (weight,
+                        length, head circumference) are surfaced immediately, with a clear marker when a birth was
                         premature. Stillbirths get the strongest treatment of all: an unmissable flag at the top of
                         the
                         record, since it changes how staff should read everything else on the page.</span>
-                    <span data-i18n="da" lang="da">Gestationsalder og barnets centrale mål — vægt, længde, hovedomkreds
-                        — vises med det samme, med en tydelig markering, hvis fødslen var for tidlig. Dødfødsler får
+                    <span data-i18n="da" lang="da">Gestationsalder og barnets centrale mål (vægt, længde, hovedomkreds)
+                        vises med det samme, med en tydelig markering, hvis fødslen var for tidlig. Dødfødsler får
                         en markant markering: et tag øverst i journalen, der er umuligt at overse, fordi
                         det ændrer, hvordan personalet skal læse resten af siden.</span>
                 </p>
@@ -273,13 +273,13 @@
                         journal</span></h4>
                 <p class="prose" style="margin-top: 8px;">
                     <span data-i18n="en">Gestational age reappears here alongside mode of delivery
-                        and blood loss volume — the details a health visitor needs to assess the mother's own
+                        and blood loss volume: the details a health visitor needs to assess the mother's own
                         recovery,
                         without cross-referencing the child's record. The birthing method is surfaced to give the
                         health
                         visitor immediate context of the birth.</span>
                     <span data-i18n="da" lang="da">Gestationsalder går igen her sammen med fødselsmåde og
-                        blødningsmængde — de detaljer en sundhedsplejerske skal bruge for at vurdere mors eget
+                        blødningsmængde: de detaljer en sundhedsplejerske skal bruge for at vurdere mors eget
                         forløb, uden at skulle slå op i barnets journal. Fødselsmåden vises tydeligt, så
                         sundhedsplejersken straks har konteksten for fødslen.</span>
                 </p>
@@ -305,7 +305,7 @@
             <div class="split-text">
             <p class="prose">
                 <span data-i18n="en">Across both views, clinical remarks are pulled out and
-                    visually highlighted rather than left in the general data table — they're free text, and free
+                    visually highlighted rather than left in the general data table. They're free text, and free
                     text is
                     exactly where critical information tends to hide. Birth location, interpreter needs, and
                     discharge date
@@ -313,10 +313,10 @@
                     kind of
                     fact a clinician needs in the first five seconds, not the fifth scroll.</span>
                 <span data-i18n="da" lang="da">I begge visninger bliver kliniske bemærkninger trukket ud og fremhævet
-                    visuelt i stedet for at blive gemt i den generelle datatabel — de er fritekst, og fritekst er
+                    visuelt i stedet for at blive gemt i den generelle datatabel. De er fritekst, og fritekst er
                     netop, hvor kritisk information har en tendens til at gemme sig. Fødested, tolkebehov og
                     udskrivelsesdato er også flyttet op øverst i begge journaler: ingen af dem er komplekse data, men
-                    alle tre er den slags fakta, en kliniker skal bruge i de første fem sekunder — ikke efter femte
+                    alle tre er den slags fakta, en kliniker skal bruge i de første fem sekunder, ikke efter femte
                     scroll.</span>
             </p>
             </div>
@@ -341,13 +341,13 @@
             <div class="split-text">
         <p class="prose">
             <span data-i18n="en">A birth notification can also be corrected or added to
-                after the fact, so the full notification view needed more than just its current numbers — it needed
+                after the fact, so the full notification view needed more than just its current numbers. It needed
                 a
                 history. The expanded view lays out every change with when it happened and what it replaced, so
                 staff can
                 trust the story behind the record, not just its latest state.</span>
             <span data-i18n="da" lang="da">En fødselsanmeldelse kan også rettes eller suppleres efterfølgende, så den
-                fulde anmeldelsesvisning skulle vise mere end blot de aktuelle tal — den skulle have en historik. Den
+                fulde anmeldelsesvisning skulle vise mere end blot de aktuelle tal. Den skulle have en historik. Den
                 udvidede visning lægger hver ændring frem med, hvornår den skete, og hvad den erstattede, så
                 personalet kan stole på historien bag journalen, ikke kun dens seneste tilstand.</span>
         </p>
@@ -375,12 +375,13 @@
         <span class="eyebrow"><span data-i18n="en">Outcome</span><span data-i18n="da" lang="da">Resultat</span></span>
         <h2><span data-i18n="en">Where it landed</span><span data-i18n="da" lang="da">Hvor det endte</span></h2>
         <p class="prose" style="margin-top: var(--space-2);">
-            <span data-i18n="en">The design was reviewed and approved by the product owner —
+            <span data-i18n="en">The design was reviewed and approved by the product owner,
                 fully specced and ready to move
                 into development. More than the specific layout, the part of this project I'd carry forward is the
                 process: sitting down with someone who has actually stood in a delivery ward grounded the
                 decision-making in real users' needs and strengthened the final design.</span>
-            <span data-i18n="da" lang="da">Designet blev gennemgået og godkendt af product owneren — fuldt specificeret
+            <span data-i18n="da" lang="da">Designet blev gennemgået og godkendt af product owneren, fuldt
+ specificeret
                 og klar til udvikling. Mere end det konkrete layout er det processen fra dette projekt, jeg tager med
                 mig videre: at sætte sig sammen med en, der rent faktisk har stået på en fødegang, forankrede
                 beslutningerne i de virkelige brugeres behov og styrkede det endelige design.</span>
