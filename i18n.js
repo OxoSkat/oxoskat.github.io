@@ -17,6 +17,13 @@
             el.setAttribute("alt", lang === "da" ? el.dataset.altDa : el.dataset.altEn);
         });
 
+        document.querySelectorAll("[data-href-da]").forEach(function (el) {
+            if (!el.dataset.hrefEn) {
+                el.dataset.hrefEn = el.getAttribute("href") || "";
+            }
+            el.setAttribute("href", lang === "da" ? el.dataset.hrefDa : el.dataset.hrefEn);
+        });
+
         var titleDa = document.body.getAttribute("data-title-da");
         if (titleDa) {
             if (!document.body.getAttribute("data-title-en")) {
